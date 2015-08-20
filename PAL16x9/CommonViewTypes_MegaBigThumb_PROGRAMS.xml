@@ -1,0 +1,105 @@
+<includes>
+	<!-- Mega Big Thumb PROGRAMS		59 -->
+	<include name="MegaBigThumb169Programs">
+		<!-- <control type="image">
+		 <posx>0</posx>
+    		 <posy>0</posy>
+     		 <width>720</width>
+     		 <height>576</height>
+     		 <texture>wide icon overlay.png</texture>
+                 <visible>Control.HasFocus(59)</visible>
+		</control> -->
+		<!-- 	<control type="image" id="0">
+			<description>contentpanel slice Custom background Music</description>
+			<posx>40</posx>
+			<posy>55</posy>
+			<width>640</width>
+			<height>466</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="Content_Panel_Diffuse.png" />
+			<info>Skin.String(MusicBackground)</info>
+			<visible>Control.HasFocus(59)</visible>
+			<visible>Skin.HasSetting(MusicBackground)</visible>
+			<visible>![!IsEmpty(Fanart.Image) + Skin.HasSetting(ShowFanart)]</visible>
+		</control> -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>overlay-big-pictures.png</texture>
+			<colordiffuse>ffffffff</colordiffuse>
+			<visible>Control.HasFocus(59)</visible>
+		</control>
+		<control type="label">
+			<posx>10</posx>
+			<posy>529</posy>
+			<width>700</width>
+			<height>30</height>
+			<align>center</align>
+			<font>alwin22</font>
+			<textcolor>90FFFFFF</textcolor>
+			<info>ListItem.Label</info>
+			<visible>Control.HasFocus(59)</visible>
+		</control>
+		<control type="wraplist" id="59">
+			<viewtype label="Big Pic">Wrap</viewtype>
+			<posx>70</posx>
+			<posy>95</posy>
+			<width>570</width>
+			<height>390</height>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>90</pagecontrol>
+			<focusposition>1</focusposition>
+			<onleft>2</onleft>
+			<onright>61</onright>
+			<onup>59</onup>
+			<ondown>59</ondown>
+			<itemlayout height="100">
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>559</width>
+					<height>90</height>
+					<colordiffuse>ff666666</colordiffuse>
+					<info>ListItem.Icon</info>
+				</control>
+				<!-- <control type="image">
+					<posx>230</posx>
+					<posy>-1</posy>
+					<width>103</width>
+					<height>104</height>
+					<texture>Case.png</texture>
+					<colordiffuse>ff999999</colordiffuse>
+				</control> -->
+			</itemlayout>
+			<focusedlayout height="160">
+				<!-- <control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>569</width>
+				<height>140</height>
+				<texture border="1,0,1,0">-</texture>
+				<visible>Control.HasFocus(59)</visible>
+			</control> -->
+				<control type="image">
+					<posx>20</posx>
+					<posy>13</posy>
+					<width>530</width>
+					<height>121</height>
+					<info>ListItem.Icon</info>
+					<animation effect="zoom" start="80" end="240" center="280,60" acceleration="-1" time="180">Focus</animation>
+				</control>
+				<!-- <control type="image">
+					<posx>212</posx>
+					<posy>3</posy>
+					<width>127</width>
+					<height>128</height>
+					<texture>Case.png</texture>
+					<animation effect="zoom" start="80" end="263" center="275,48" acceleration="-1" time="180">Focus</animation>
+				</control> -->
+			</focusedlayout>
+		</control>
+		<include>WrapOverlayBigThumbs</include>
+	</include>
+</includes>

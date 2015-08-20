@@ -1,0 +1,826 @@
+<window>
+	<id>103</id>
+	<defaultcontrol>65</defaultcontrol>
+	<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+	<animation effect="slide" time="300" start="0,0" end="600,0" acceleration="1.1" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	<coordinates>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control>
+			<description>Window title</description>
+			<type>image</type>
+			<posx>-51</posx>
+			<posy>-20</posy>
+			<width>825</width>
+			<height>616</height>
+			<texture>bg_settings.png</texture>
+		</control>
+		<control>
+			<description>Heading Text</description>
+			<type>label</type>
+			<id>311</id>
+			<posx>0</posx>
+			<posy>2</posy>
+			<font>alwin22</font>
+			<width>720</width>
+			<height>30</height>
+			<textcolor>FF999999</textcolor>
+			<align>center</align>
+		</control>
+		<control>
+			<description>Edit Text</description>
+			<type>label</type>
+			<id>310</id>
+			<posx>0</posx>
+			<posy>425</posy>
+			<width>720</width>
+			<font>idua20</font>
+			<align>center</align>
+		</control>
+		<!--  Fila 1!-->
+		<control>
+			<description>'1' button</description>
+			<type>button</type>
+			<id>49</id>
+			<posx>75</posx>
+			<posy>150</posy>
+			<width>44</width>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>12</textoffsetx>
+			<textoffsety>3</textoffsety>
+			<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>8</onleft>
+			<onright>50</onright>
+			<onup>32</onup>
+			<ondown>303</ondown>
+		</control>
+		<control>
+			<description>'2' button</description>
+			<type>button</type>
+			<id>50</id>
+			<posx>125</posx>
+			<posy>150</posy>
+			<width>44</width>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>12</textoffsetx>
+			<textoffsety>3</textoffsety>    	<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<font>alwin22</font>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>49</onleft>
+			<onright>51</onright>
+			<onup>32</onup>
+			<ondown>65</ondown>
+		</control>
+		<control>
+			<description>'3' button</description>
+			<type>button</type>
+			<id>51</id>
+			<posx>175</posx>
+			<posy>150</posy>
+			<width>44</width>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>12</textoffsetx>
+			<textoffsety>3</textoffsety>    	<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>50</onleft>
+			<onright>52</onright>
+			<onup>32</onup>
+			<ondown>66</ondown>
+		</control>
+		<control>
+			<description>'4' button</description>
+			<type>button</type>
+			<id>52</id>
+			<posx>225</posx>
+			<posy>150</posy>
+			<width>44</width>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>12</textoffsetx>
+			<textoffsety>3</textoffsety>    	<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>51</onleft>
+			<onright>53</onright>
+			<onup>32</onup>
+			<ondown>67</ondown>
+		</control>
+		<control>
+			<description>'5' button</description>
+			<type>button</type>
+			<id>53</id>
+			<posx>275</posx>
+			<posy>150</posy>
+			<width>44</width>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>12</textoffsetx>
+			<textoffsety>3</textoffsety>    	<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>52</onleft>
+			<onright>54</onright>
+			<onup>32</onup>
+			<ondown>68</ondown>
+		</control>
+		<control>
+			<description>'6' button</description>
+			<type>button</type>
+			<id>54</id>
+			<posx>325</posx>
+			<posy>150</posy>
+			<width>44</width>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>12</textoffsetx>
+			<textoffsety>3</textoffsety>    	<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>53</onleft>
+			<onright>55</onright>
+			<onup>32</onup>
+			<ondown>69</ondown>
+		</control>
+		<control>
+			<description>'7' button</description>
+			<type>button</type>
+			<id>55</id>
+			<posx>375</posx>
+			<posy>150</posy>
+			<width>44</width>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>12</textoffsetx>
+			<textoffsety>3</textoffsety>    	<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>54</onleft>
+			<onright>56</onright>
+			<onup>32</onup>
+			<ondown>70</ondown>
+		</control>
+		<control>
+			<description>'8' button</description>
+			<type>button</type>
+			<id>56</id>
+			<posx>425</posx>
+			<posy>150</posy>
+			<width>44</width>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>12</textoffsetx>
+			<textoffsety>3</textoffsety>    	<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>55</onleft>
+			<onright>57</onright>
+			<onup>32</onup>
+			<ondown>71</ondown>
+		</control>
+		<control>
+			<description>'9' button</description>
+			<type>button</type>
+			<id>57</id>
+			<posx>475</posx>
+			<posy>150</posy>
+			<width>44</width>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>12</textoffsetx>
+			<textoffsety>3</textoffsety>    	<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>56</onleft>
+			<onright>48</onright>
+			<onup>32</onup>
+			<ondown>72</ondown>
+		</control>
+		<control>
+			<description>'0' button</description>
+			<type>button</type>
+			<id>48</id>
+			<posx>525</posx>
+			<posy>150</posy>
+			<width>44</width>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>12</textoffsetx>
+			<textoffsety>3</textoffsety>    	<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>57</onleft>
+			<onright>8</onright>
+			<onup>32</onup>
+			<ondown>73</ondown>
+		</control>
+		<control>
+			<description>BACKSPACE button</description>
+			<type>button</type>
+			<id>8</id>
+			<posx>575</posx>
+			<posy>150</posy>
+			<width>80</width>
+			<label>Back</label>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>8</textoffsetx>
+			<textoffsety>3</textoffsety>
+			<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<textcolor>FFcccccc</textcolor>
+			<texturenofocus>keyboard-CAPS-NF.png</texturenofocus>
+			<texturefocus>keyboard-CAPS-allFO.png</texturefocus>
+			<onleft>48</onleft>
+			<onright>49</onright>
+			<onup>32</onup>
+			<ondown>300</ondown>
+		</control>
+		<!--  Fila 2!-->
+		<control>
+			<description>CAPS LOCK button</description>
+			<type>togglebutton</type>
+			<id>303</id>
+			<posx>50</posx>
+			<posy>200</posy>
+			<width>90</width>
+			<height>40</height>
+			<label>CAPS</label>
+			<font>alwin22</font>
+			<textoffsetx>9</textoffsetx>
+			<textoffsety>4</textoffsety>
+			<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<textcolor>FFcccccc</textcolor>
+			<onleft>300</onleft>
+			<onright>65</onright>
+			<onup>49</onup>
+			<ondown>302</ondown>
+			<alttexturefocus>keyboard-CAPS-allFO.png</alttexturefocus>
+			<alttexturenofocus>keyboard-CAPS-NF.png</alttexturenofocus>
+			<texturenofocus>keyboard-CAPS-fo.png</texturenofocus>
+			<texturefocus>keyboard-CAPS-allFO.png</texturefocus>
+		</control>
+		<control>
+			<description>'A' button</description>
+			<type>button</type>
+			<id>65</id>
+			<posx>150</posx>
+			<posy>200</posy>
+			<width>44</width>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>12</textoffsetx>
+			<textoffsety>3</textoffsety>    	<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>303</onleft>
+			<onright>66</onright>
+			<onup>50</onup>
+			<ondown>74</ondown>
+		</control>
+		<control>
+			<description>'B' button</description>
+			<type>button</type>
+			<id>66</id>
+			<posx>200</posx>
+			<posy>200</posy>
+			<width>44</width>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>12</textoffsetx>
+			<textoffsety>3</textoffsety>    	<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>65</onleft>
+			<onright>67</onright>
+			<onup>51</onup>
+			<ondown>75</ondown>
+		</control>
+		<control>
+			<description>'C' button</description>
+			<type>button</type>
+			<id>67</id>
+			<posx>250</posx>
+			<posy>200</posy>
+			<width>44</width>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>12</textoffsetx>
+			<textoffsety>3</textoffsety>    	<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>66</onleft>
+			<onright>68</onright>
+			<onup>52</onup>
+			<ondown>76</ondown>
+		</control>
+		<control>
+			<description>'D' button</description>
+			<type>button</type>
+			<id>68</id>
+			<posx>300</posx>
+			<posy>200</posy>
+			<width>44</width>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>12</textoffsetx>
+			<textoffsety>3</textoffsety>    	<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>67</onleft>
+			<onright>69</onright>
+			<onup>53</onup>
+			<ondown>77</ondown>
+		</control>
+		<control>
+			<description>'E' button</description>
+			<type>button</type>
+			<id>69</id>
+			<posx>350</posx>
+			<posy>200</posy>
+			<width>44</width>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>12</textoffsetx>
+			<textoffsety>3</textoffsety>    	<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>68</onleft>
+			<onright>70</onright>
+			<onup>54</onup>
+			<ondown>78</ondown>
+		</control>
+		<control>
+			<description>'F' button</description>
+			<type>button</type>
+			<id>70</id>
+			<posx>400</posx>
+			<posy>200</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>12</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>69</onleft>
+			<onright>71</onright>
+			<onup>55</onup>
+			<ondown>79</ondown>
+		</control>
+		<control>
+			<description>'G' button</description>
+			<type>button</type>
+			<id>71</id>
+			<posx>450</posx>
+			<posy>200</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>12</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>70</onleft>
+			<onright>72</onright>
+			<onup>56</onup>
+			<ondown>80</ondown>
+		</control>
+		<control>
+			<description>'H' button</description>
+			<type>button</type>
+			<id>72</id>
+			<posx>500</posx>
+			<posy>200</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>12</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>71</onleft>
+			<onright>73</onright>
+			<onup>57</onup>
+			<ondown>81</ondown>
+		</control>
+		<control>
+			<description>'I' button</description>
+			<type>button</type>
+			<id>73</id>
+			<posx>550</posx>
+			<posy>200</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>14</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>72</onleft>
+			<onright>300</onright>
+			<onup>48</onup>
+			<ondown>81</ondown>
+		</control>
+		<control>
+			<description>ENTER button</description>
+			<type>button</type>
+			<id>300</id>
+			<posx>595</posx>
+			<posy>225</posy>
+			<label>OK</label>
+			<width>84</width>
+			<height>98</height>
+			<font>alwin22</font>
+			<textoffsetx>23</textoffsetx>
+			<textoffsety>31</textoffsety>
+			<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<textcolor>FFcccccc</textcolor>
+			<texturenofocus>keyboard-OK-NF.png</texturenofocus>
+			<texturefocus>keyboard-OK-FO.png</texturefocus>
+			<onleft>73</onleft>
+			<onright>302</onright>
+			<onup>8</onup>
+			<ondown>90</ondown>
+		</control>
+		<!--  Fila 3!-->
+		<control>
+			<description>SHIFT button</description>
+			<type>togglebutton</type>
+			<id>302</id>
+			<posx>50</posx>
+			<posy>250</posy>
+			<width>100</width>
+			<height>40</height>
+			<label>SHIFT</label>
+			<font>alwin22</font>
+			<textoffsetx>8</textoffsetx>
+			<textoffsety>4</textoffsety>
+			<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<textcolor>FFcccccc</textcolor>
+			<onleft>300</onleft>
+			<onright>74</onright>
+			<onup>303</onup>
+			<ondown>304</ondown>
+			<alttexturefocus>keyboard-CAPS-allFO.png</alttexturefocus>
+			<alttexturenofocus>keyboard-CAPS-NF.png</alttexturenofocus>
+			<texturenofocus>keyboard-CAPS-fo.png</texturenofocus>
+			<texturefocus>keyboard-CAPS-allFO.png</texturefocus>
+		</control>
+		<control>
+			<description>'J' button</description>
+			<type>button</type>
+			<id>74</id>
+			<posx>175</posx>
+			<posy>250</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>14</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>302</onleft>
+			<onright>75</onright>
+			<onup>65</onup>
+			<ondown>83</ondown>
+		</control>
+		<control>
+			<description>'K' button</description>
+			<type>button</type>
+			<id>75</id>
+			<posx>225</posx>
+			<posy>250</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>11</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>74</onleft>
+			<onright>76</onright>
+			<onup>66</onup>
+			<ondown>84</ondown>
+		</control>
+		<control>
+			<description>'L' button</description>
+			<type>button</type>
+			<id>76</id>
+			<posx>275</posx>
+			<posy>250</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>12</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>75</onleft>
+			<onright>77</onright>
+			<onup>67</onup>
+			<ondown>85</ondown>
+		</control>
+		<control>
+			<description>'M' button</description>
+			<type>button</type>
+			<id>77</id>
+			<posx>325</posx>
+			<posy>250</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>11</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>76</onleft>
+			<onright>78</onright>
+			<onup>68</onup>
+			<ondown>86</ondown>
+		</control>
+		<control>
+			<description>'N' button</description>
+			<type>button</type>
+			<id>78</id>
+			<posx>375</posx>
+			<posy>250</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>11</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>77</onleft>
+			<onright>79</onright>
+			<onup>69</onup>
+			<ondown>87</ondown>
+		</control>
+		<control>
+			<description>'O' button</description>
+			<type>button</type>
+			<id>79</id>
+			<posx>425</posx>
+			<posy>250</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>11</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>78</onleft>
+			<onright>80</onright>
+			<onup>70</onup>
+			<ondown>88</ondown>
+		</control>
+		<control>
+			<description>'P' button</description>
+			<type>button</type>
+			<id>80</id>
+			<posx>475</posx>
+			<posy>250</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>12</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>79</onleft>
+			<onright>81</onright>
+			<onup>71</onup>
+			<ondown>89</ondown>
+		</control>
+		<control>
+			<description>'Q' button</description>
+			<type>button</type>
+			<id>81</id>
+			<posx>525</posx>
+			<posy>250</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>11</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>80</onleft>
+			<onright>300</onright>
+			<onup>72</onup>
+			<ondown>90</ondown>
+		</control>
+		<!--  Fila 4!-->
+		<control>
+			<description>SYMBOLS button</description>
+			<type>togglebutton</type>
+			<id>304</id>
+			<posx>50</posx>
+			<posy>300</posy>
+			<width>90</width>
+			<height>40</height>
+			<label>@</label>
+			<font>alwin22</font>
+			<textoffsetx>33</textoffsetx>
+			<textoffsety>2</textoffsety>
+			<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<textcolor>FFcccccc</textcolor>
+			<onleft>90</onleft>
+			<onright>82</onright>
+			<onup>302</onup>
+			<ondown>307</ondown>
+			<alttexturefocus>keyboard-CAPS-allFO.png</alttexturefocus>
+			<alttexturenofocus>keyboard-CAPS-NF.png</alttexturenofocus>
+			<texturenofocus>keyboard-CAPS-fo.png</texturenofocus>
+			<texturefocus>keyboard-CAPS-allFO.png</texturefocus>
+		</control>
+		<control>
+			<description>'R' button</description>
+			<type>button</type>
+			<id>82</id>
+			<posx>150</posx>
+			<posy>300</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>12</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>304</onleft>
+			<onright>83</onright>
+			<onup>74</onup>
+			<ondown>32</ondown>
+		</control>
+		<control>
+			<description>'S' button</description>
+			<type>button</type>
+			<id>83</id>
+			<posx>200</posx>
+			<posy>300</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>12</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>82</onleft>
+			<onright>84</onright>
+			<onup>74</onup>
+			<ondown>32</ondown>
+		</control>
+		<control>
+			<description>'T' button</description>
+			<type>button</type>
+			<id>84</id>
+			<posx>250</posx>
+			<posy>300</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>12</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>83</onleft>
+			<onright>85</onright>
+			<onup>75</onup>
+			<ondown>32</ondown>
+		</control>
+		<control>
+			<description>'U' button</description>
+			<type>button</type>
+			<id>85</id>
+			<posx>300</posx>
+			<posy>300</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>12</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>84</onleft>
+			<onright>86</onright>
+			<onup>76</onup>
+			<ondown>32</ondown>
+		</control>
+		<control>
+			<description>'V' button</description>
+			<type>button</type>
+			<id>86</id>
+			<posx>350</posx>
+			<posy>300</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>11</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>85</onleft>
+			<onright>87</onright>
+			<onup>77</onup>
+			<ondown>32</ondown>
+		</control>
+		<control>
+			<description>'W' button</description>
+			<type>button</type>
+			<id>87</id>
+			<posx>400</posx>
+			<posy>300</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>8</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>86</onleft>
+			<onright>88</onright>
+			<onup>78</onup>
+			<ondown>32</ondown>
+		</control>
+		<control>
+			<description>'X' button</description>
+			<type>button</type>
+			<id>88</id>
+			<posx>450</posx>
+			<posy>300</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>12</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>87</onleft>
+			<onright>89</onright>
+			<onup>79</onup>
+			<ondown>32</ondown>
+		</control>
+		<control>
+			<description>'Y' button</description>
+			<type>button</type>
+			<id>89</id>
+			<posx>500</posx>
+			<posy>300</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>12</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>88</onleft>
+			<onright>90</onright>
+			<onup>80</onup>
+			<ondown>305</ondown>
+		</control>
+		<control>
+			<description>'Z' button</description>
+			<type>button</type>
+			<id>90</id>
+			<posx>550</posx>
+			<posy>300</posy>
+			<width>44</width>      <height>40</height>      <font>alwin22</font>      <textoffsetx>12</textoffsetx>      <textoffsety>3</textoffsety>    	<alignx>left</alignx>       <aligny>bottom</aligny>
+			<texturenofocus>keyboard-zahl-fo.png</texturenofocus>
+			<texturefocus>keyboard-zahl-NF.png</texturefocus>
+			<onleft>89</onleft>
+			<onright>304</onright>
+			<onup>81</onup>
+			<ondown>305</ondown>
+		</control>
+		<!--  Fila 5!-->
+		<control>
+			<description>IP Input button</description>
+			<type>button</type>
+			<id>307</id>
+			<posx>75</posx>
+			<posy>350</posy>
+			<width>90</width>
+			<height>40</height>
+			<label>IP</label>
+			<font>alwin22</font>
+			<textoffsetx>33</textoffsetx>
+			<textoffsety>2</textoffsety>
+			<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<textcolor>FFcccccc</textcolor>
+			<texturenofocus>keyboard-CAPS-NF.png</texturenofocus>
+			<texturefocus>keyboard-CAPS-allFO.png</texturefocus>
+			<onleft>306</onleft>
+			<onright>32</onright>
+			<onup>304</onup>
+			<ondown>65</ondown>
+		</control>
+		<control>
+			<description>SPACE button</description>
+			<type>button</type>
+			<id>32</id>
+			<posx>190</posx>
+			<posy>350</posy>
+			<width>250</width>
+			<height>40</height>
+			<texturenofocus>keyboard-SPACE-NF.png</texturenofocus>
+			<texturefocus>keyboard-SPACE-FO.png</texturefocus>
+			<onleft>307</onleft>
+			<onright>305</onright>
+			<onup>85</onup>
+			<ondown>65</ondown>
+		</control>
+		<control>
+			<description>Left button</description>
+			<type>button</type>
+			<id>305</id>
+			<posx>465</posx>
+			<posy>350</posy>
+			<width>86</width>
+			<label>Left</label>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>16</textoffsetx>
+			<textoffsety>2</textoffsety>
+			<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<textcolor>FFcccccc</textcolor>
+			<texturenofocus>keyboard-CAPS-NF.png</texturenofocus>
+			<texturefocus>keyboard-CAPS-allFO.png</texturefocus>
+			<onleft>32</onleft>
+			<onright>306</onright>
+			<onup>90</onup>
+			<ondown>65</ondown>
+		</control>
+		<control>
+			<description>Right button</description>
+			<type>button</type>
+			<id>306</id>
+			<posx>560</posx>
+			<posy>350</posy>
+			<width>92</width>
+			<label>Right</label>
+			<height>40</height>
+			<font>alwin22</font>
+			<textoffsetx>11</textoffsetx>
+			<textoffsety>2</textoffsety>
+			<alignx>left</alignx>
+			<aligny>bottom</aligny>
+			<textcolor>FFcccccc</textcolor>
+			<texturenofocus>keyboard-CAPS-NF.png</texturenofocus>
+			<texturefocus>keyboard-CAPS-allFO.png</texturefocus>
+			<onleft>305</onleft>
+			<onright>307</onright>
+			<onup>300</onup>
+			<ondown>65</ondown>
+		</control>
+	</controls>
+</window>

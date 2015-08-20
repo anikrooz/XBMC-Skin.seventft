@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+
+	<!-- Home -->	
+	<string id="31001">Emulators</string>
+	<string id="31002">Browse Your</string>
+	<string id="31003">Clips</string>
+	<string id="31004">Welcome</string>
+	<string id="31005">Thank you for selecting Insidious [COLOR DialogFocusText]-[/COLOR] Public Alpha 1.0</string>
+	<string id="31006">XBMC rev12746 or later is required.</string>
+	<string id="31007">Currently 720p is supported.</string>
+	<string id="31008">Enjoy!</string>
+	
+	<!-- Player -->
+	<string id="31014">Paused</string>
+	<string id="31015">View:</string>
+	<string id="31016">Wrap</string>
+	<string id="31017">Photos</string>
+	
+	<!-- Weather -->
+	<string id="31020">Last</string>
+	<string id="31021">Current</string>
+
+	<!-- Settings -->
+	<string id="31500">Hintergrund für Videos wählen</string>
+	<string id="31501">Hintergrund für Musik wählen</string>
+	<string id="31502">Hintergrund für Bilder wählen</string>
+	<string id="31503">Hintergrund für Programme/Skripte wählen</string>
+	<string id="31504">Hintergrund für den "Rest" wählen</string>
+	<string id="31505">Weitere</string>
+	<string id="31506">Shortcut</string>
+	<string id="31507">Selection Images</string>
+	<string id="31508">Enable Overlay Icons</string>
+	<string id="31204">Dies wird alle 7TFT Skin Einstellungen und alle Hintergründe zurück setzten![CR][CR]Wollen sie vortfahren?[CR][CR][CR]</string>
+
+	<string id="31510">General, Library, Player, Subtitles</string>
+	<string id="31511">General, Player, Files, Last.FM, CD Ripping, Karaoke</string>
+	<string id="31512">General, SlideShow</string>
+	<string id="31513">General, Files, XLink Kai</string>
+	<string id="31514">General</string>
+	<string id="31515">Network, Servers, Autodetection, SMB Client, UPnP Settings</string>
+	<string id="31516">Hardware, LCD, Autorun, Harddisk, Cache, Audio Hardware, Video Hardware, Master Lock</string>
+	<string id="31517">Look and Feel, Region, Screen, View Options, Screensaver</string>
+	<string id="31518">Enable Login Screen</string>
+	<string id="31519">General, Storage, Hard Disk, DVD-ROM, Network, Video, Hardware, About XBMC</string>
+	<string id="31520">Home, Backgrounds, Extras</string>
+
+	<string id="31530">Enable Background Animation</string>
+	<string id="31531">Enable Scroll Bars</string>
+	<string id="31532">Enable Weather Radar</string>
+	<string id="31533">Weather Script Path</string>
+	<string id="31534">Set Day Background [COLOR WindowFocusText]05:00,17:00[/COLOR]</string>
+	<string id="31535">Set Night Background [COLOR WindowFocusText]17:00,05:00[/COLOR]</string>
+	<string id="31536">3rd</string>
+	<string id="31537">2nd</string>
+</strings>

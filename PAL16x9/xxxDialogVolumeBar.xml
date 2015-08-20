@@ -1,0 +1,96 @@
+<window>
+	<id>104</id>
+	<defaultcontrol>1</defaultcontrol>
+	<animation effect="zoom" start="1" center="360,280" time="300" acceleration="-1" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+	<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="300" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<!-- Normal GUI -->
+		<control>
+			<description>Popup Volume Dialog Background</description>
+			<type>image</type>
+			<posx>0</posx>
+			<posy>2</posy>
+			<width>350</width>
+			<height>60</height>
+			<texture>SlideBar.png</texture>
+		</control>
+		<control>
+			<description>Progressbar</description>
+			<type>progress</type>
+			<posx>142</posx>
+			<posy>64</posy>
+			<width>436</width>
+			<height>9</height>
+			<info>Player.Volume</info>
+			<texturebg>progress-info-music-bg.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>progress_mid-info-music.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>progress-info-music-mid.png</overlaytexture>
+			<!-- <overlaytexture>progress_over.png</overlaytexture> -->
+		</control>
+
+		<control>
+			<description>Volume Slider</description>
+			<type>slider</type>
+			<posx>120</posx>
+			<posy>57</posy>
+			<width>200</width>
+			<height>9</height>
+			<texturesliderbar>seekslider.png</texturesliderbar>
+			<textureslidernib>-</textureslidernib>
+			<textureslidernibFocus>slider_nibFO.png</textureslidernibFocus>
+			<info>Player.Volume</info>
+		</control>
+<control>
+			<description>Popup Volume Dialog Background</description>
+			<type>image</type>
+			<posx>337</posx>
+			<posy>114</posy>
+			<width>222</width>
+			<height>124</height>
+			<texture>volume_bagground_leiste_oben.png</texture>
+			<aspectratio>keep</aspectratio>
+		</control>	
+		<control>
+			<description>Volume dB Label</description>
+			<type>label</type>
+			<posx>528</posx>
+			<posy>143</posy>
+			<width>170</width>
+			<height>130</height>
+			<font>idua40aspect</font>
+			<textcolor>ffece9e9</textcolor>
+			<info>Player.Volume</info>
+			<align>right</align>
+		</control>
+			
+	</controls>
+</window>
+
+<!-- <control>
+			<description>Progressbar</description>
+			<type>progress</type>
+			<posx>120</posx>
+			<posy>28</posy>
+			<width>420</width>
+			<height>11</height>
+			<info>Player.Volume</info>
+			<texturebg>progress_back.png</texturebg>
+			<lefttexture>progress_left.png</lefttexture>
+			<midtexture>progress_mid-green.png</midtexture>
+			<righttexture>progress_right.png</righttexture>
+			<overlaytexture>progress-info-music-mid.png</overlaytexture>
+		 <overlaytexture>progress_over.png</overlaytexture> 
+		</control> -->
+
+<!-- <coordinates>
+		<system>1</system>
+		<posx>28</posx>
+		<posy>36</posy>
+	</coordinates> -->

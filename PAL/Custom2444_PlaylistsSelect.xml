@@ -1,0 +1,141 @@
+
+<window type="dialog" id="2444">
+	<defaultcontrol always="true">1109</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<previouswindow>0</previouswindow>
+	<coordinates>
+		<system>1</system>
+		<posx>220</posx>
+		<posy>70</posy>
+	</coordinates>
+	<animation effect="rotate" end="360" center="220,70" time="400">WindowOpen</animation>
+	<controls>
+		<!-- <control>
+   <description>background image</description>
+   <type>image</type>
+   <id>1</id>
+   <posx>-220</posx>
+   <posy>-70</posy>
+   <width>720</width>
+   <height>576</height>
+   <texture>bg.png</texture>
+  </control> -->
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posx>-30</posx>
+			<posy>230</posy>
+			<width>234</width>
+			<height>192</height>
+			<texture>subpanel_playlists.png</texture>
+		</control>
+		<control type="label">
+			<description>heading label</description>
+			<posx>-30</posx>
+			<posy>244</posy>
+			<width>234</width>
+			<align>center</align>
+			<font>eth20</font>
+			<label>136</label>
+			<textcolor>ffF73300</textcolor>
+		</control>
+		<!-- Video Button -->
+		<control>
+			<description>video button</description>
+			<visible>yes</visible>
+			<type>button</type>
+			<onclick>ActivateWindow(MyVideoLibrary,Playlists)</onclick>
+			<onclick>dialog.close(2444,true)</onclick>
+			<id>1110</id>
+			<label>-</label>
+			<posx>-7</posx>
+			<posy>288</posy>
+			<width>190</width>
+			<height>62</height>
+			<font>alwin22</font>
+			<textcolor>ffF73300</textcolor>
+			<onleft>1109</onleft>
+			<onright>1109</onright>
+			<onup>1109</onup>
+			<ondown>1109</ondown>
+			<alignx>center</alignx>
+			<aligny>top</aligny>
+			<textoffsetx>30</textoffsetx>
+			<textoffsety>14</textoffsety>			
+			<texturefocus>TV-series-button-focus3.png</texturefocus> 		
+			<texturenofocus>TV-series-button-nofocus2.png</texturenofocus>			
+			<animation effect="zoom" start="100" end="106" center="auto" time="80">focus</animation>
+			<animation effect="zoom" start="106" end="100" center="auto" time="80">unfocus</animation>
+		</control>
+		<control type="label">
+			<description>video label</description>
+			<label>3</label>
+			<posx>-30</posx>
+			<posy>302</posy>
+			<width>234</width>
+			<font>alwin22</font>
+			<align>center</align>
+			<textcolor>ff696969</textcolor>
+		</control>
+		<control type="label">
+			<description>video label</description>
+			<label>3</label>
+			<posx>-30</posx>
+			<posy>302</posy>
+			<width>234</width>
+			<font>alwin22</font>
+			<align>center</align>
+			<textcolor>993399FF</textcolor>
+			<visible>Control.HasFocus(1110)</visible>
+		</control>
+		<!-- music Button --> 
+		<control>
+			<description>music button</description>
+			<visible>yes</visible>
+			<type>button</type>
+			<onclick>ActivateWindow(MyMusicLibrary,Playlists)</onclick>
+			<onclick>dialog.close(2444,true)</onclick>
+			<id>1109</id>
+			<label>-</label>
+			<posx>-7</posx>
+			<posy>350</posy>
+			<width>190</width>
+			<height>62</height>
+			<font>alwin22</font>
+			<textcolor>ffF73300</textcolor>
+			<onleft>1110</onleft>
+			<onright>1110</onright>
+			<onup>1110</onup>
+			<ondown>1110</ondown>
+			<alignx>center</alignx>
+			<aligny>top</aligny>
+			<textoffsetx>33</textoffsetx>
+			<textoffsety>14</textoffsety>
+			<texturefocus>TV-series-button-focus2.png</texturefocus>
+			<texturenofocus>TV-series-button-nofocus2.png</texturenofocus>
+			<animation effect="zoom" start="100" end="106" center="auto" time="80">focus</animation>
+			<animation effect="zoom" start="106" end="100" center="auto" time="80">unfocus</animation>
+		</control>
+		<control type="label">
+			<description>music label</description>
+			<label>2</label>
+			<posx>-30</posx>
+			<posy>364</posy>
+			<width>234</width>
+			<font>alwin22</font>
+			<align>center</align>
+			<textcolor>ff696969</textcolor>
+		</control>
+		<control type="label">
+			<description>music label</description>
+			<label>2</label>
+			<posx>-30</posx>
+			<posy>364</posy>
+			<width>234</width>
+			<font>alwin22</font>
+			<align>center</align>
+			<textcolor>987cfc00</textcolor>
+			<visible>Control.HasFocus(1109)</visible>
+		</control>
+	</controls>
+</window>

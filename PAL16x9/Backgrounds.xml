@@ -1,0 +1,77 @@
+<includes>
+	<!-- custom  Video background -->
+	<include name="VideoBackground">
+		<control type="image" id="0">
+			<description>contentpanel slice video background Video</description>
+			<posx>40</posx>
+			<posy>55</posy>
+			<width>640</width>
+			<height>466</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="Content_Panel_Diffuse.png" />
+			<info>Skin.String(VideoBackground)</info>
+			<visible>Skin.HasSetting(VideoBackground)</visible>
+			<visible>![!IsEmpty(Fanart.Image) + Skin.HasSetting(ShowFanart)]</visible>
+		</control>
+	</include>
+	<!-- custom  Music background  -->
+	<include name="MusicBackground">
+		<control type="image" id="0">
+			<description>contentpanel slice music background Music</description>
+			<posx>40</posx>
+			<posy>55</posy>
+			<width>640</width>
+			<height>466</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="Content_Panel_Diffuse.png" />
+			<info>Skin.String(MusicBackground)</info>
+			<visible>Skin.HasSetting(MusicBackground)</visible>
+			<visible>![!IsEmpty(Fanart.Image) + Skin.HasSetting(ShowFanart)]</visible>
+		</control>
+	</include>
+	<!-- custom  Picture background  -->
+	<include name="PictureBackground">
+		<control type="image" id="0">
+			<description>contentpanel slice picture background Music</description>
+			<posx>40</posx>
+			<posy>55</posy>
+			<width>640</width>
+			<height>466</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="Content_Panel_Diffuse.png" />
+			<info>Skin.String(PictureBackground)</info>
+			<visible>Skin.HasSetting(PictureBackground)</visible>
+			<visible>![!IsEmpty(Fanart.Image) + Skin.HasSetting(ShowFanart)]</visible>
+		</control>
+	</include>
+	<!-- custom  Programs background  -->
+	<include name="ProgramsBackground">
+		<control type="image" id="0">
+			<description>contentpanel slice programs background Music</description>
+			<posx>40</posx>
+			<posy>55</posy>
+			<width>640</width>
+			<height>466</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="Content_Panel_Diffuse.png" />
+			<info>Skin.String(ProgramsBackground)</info>
+			<visible>Skin.HasSetting(ProgramsBackground)</visible>
+			<visible>![!IsEmpty(Fanart.Image) + Skin.HasSetting(ShowFanart)]</visible>
+		</control>
+	</include>
+	<!-- custom background -->
+	<include name="custombg">
+		<control type="image" id="0">
+			<description>contentpanel slice Custom background</description>
+			<posx>40</posx>
+			<posy>55</posy>
+			<width>640</width>
+			<height>466</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="Content_Panel_Diffuse.png" />
+			<info>Skin.String(Custom_Background)</info>
+			<visible>Skin.HasSetting(Use_Custom_Background)</visible>
+			<visible>![!IsEmpty(Fanart.Image) + Skin.HasSetting(ShowFanart)]</visible>
+		</control>
+	</include>
+</includes>

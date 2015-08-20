@@ -1,0 +1,361 @@
+<window>
+	<id>115</id>
+	<defaultcontrol>1</defaultcontrol>
+	<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-1" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+	<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="300" delay="1200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+	<visible>Player.Seeking | Player.DisplayAfterSeek | [Player.ShowInfo + Window.IsActive(FullScreenVideo)] | Window.IsActive(VideoOSD) | Window.IsActive(MusicOSD) | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
+	<coordinates>
+		<posx>-1</posx>
+		<posy>-97</posy>
+	</coordinates>
+	<controls>
+		<!-- playstate images -->
+		<control>
+			<description>Media Info Background Image</description>
+			<type>image</type>
+			<id>1</id>
+			<posx>-3</posx>
+			<posy>558</posy>
+			<width>730</width>
+			<height>120</height>
+			<texture>overlay-panel-bg-music.png</texture>
+			<visible>Player.HasVideo + [Player.Paused]</visible>
+			<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-1" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="300" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+		</control>
+		<control>
+			<description>Media Info Background Image</description>
+			<type>image</type>
+			<id>1</id>
+			<posx>200</posx>
+			<posy>239</posy>
+			<width>300</width>
+			<height>300</height>
+			<texture>play_pause.png</texture>
+			<include>seekbar</include>
+			<aspectratio>keep</aspectratio>
+			<visible>Player.HasVideo + [Player.Paused]</visible>
+			<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-1" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="300" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+		</control>
+		<control>
+			<description>Media Info Background Image</description>
+			<type>image</type>
+			<id>1</id>
+			<posx>200</posx>
+			<posy>239</posy>
+			<width>300</width>
+			<height>300</height>
+			<texture>play_pause.png</texture>
+			<include>seekbar</include>
+			<aspectratio>keep</aspectratio>
+			<visible>Player.HasVideo + [Player.Paused]</visible>
+			<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-1" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="300" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+		</control>
+		<control>
+			<description>Cover Image</description>
+			<type>image</type>
+			<id>1</id>
+			<posx>18</posx>
+			<posy>102</posy>
+			<width>140</width>
+			<height>140</height>
+			<info>VideoPlayer.Cover</info>
+			<aspectratio>keep</aspectratio>
+			<include>seekbar</include>
+			<visible>Player.HasVideo + [Player.Paused]</visible>
+			<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-1" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="300" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+		</control>
+		<!-- 2x weil verstetz - schattenefect -->
+		<control>
+			<description>Title Label</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<width>634</width>
+			<posx>31</posx>
+			<posy>576</posy>
+			<info>VideoPlayer.Title</info>
+			<align>left</align>
+			<font>alwin24</font>
+			<textcolor>ff111111</textcolor>
+			<include>seekbar</include>
+			<visible>Player.HasVideo + [Player.Paused]</visible>
+			<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-1" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="300" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+		</control>
+		<control>
+			<description>Title Label</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<width>634</width>
+			<posx>30</posx>
+			<posy>576</posy>
+			<info>VideoPlayer.Title</info>
+			<align>left</align>
+			<font>alwin24</font>
+			<include>seekbar</include>
+			<visible>Player.HasVideo + [Player.Paused]</visible>
+			<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-1" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="300" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+		</control>
+		<control>
+			<description>Uhrzeit label</description>
+			<type>label</type>
+			<id>1</id>
+			<width>300</width>
+			<posx>666</posx>
+			<posy>628</posy>
+			<align>right</align>
+			<font>alwin20</font>
+			<label>$INFO[System.Time]</label>
+			<include>seekbar</include>
+			<visible>Player.HasVideo + [Player.Paused]</visible>
+			<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-1" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="300" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+		</control>
+		<control>
+			<description>CPU temp</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<width>400</width>
+			<posx>30</posx>
+			<posy>628</posy>
+			<align>left</align>
+			<font>idua20</font>
+			<label>$INFO[System.CPUTemperature]</label>
+			<include>seekbar</include>
+			<visible>Player.HasVideo + [Player.Paused]</visible>
+			<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-1" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="300" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+		</control>
+		<!-- Musik -->
+		<!-- normal seek dialog -->
+		<control>
+			<description>pause image</description>
+			<type>image</type>
+			<id>0</id>
+			<align>right</align>
+			<posx>568</posx>
+			<posy>200</posy>
+			<height>50</height>
+			<width>118</width>
+			<visible>Player.Paused</visible>
+			<texture>pause.png</texture>
+			<colorkey>0</colorkey>
+		</control>
+		<control>
+			<description>2x image</description>
+			<type>image</type>
+			<id>0</id>
+			<align>right</align>
+			<posx>568</posx>
+			<posy>200</posy>
+			<height>50</height>
+			<width>118</width>
+			<visible>Player.Forwarding2x</visible>
+			<texture>2v.png</texture>
+			<colorkey>0</colorkey>
+		</control>
+		<control>
+			<description>4x image</description>
+			<type>image</type>
+			<id>0</id>
+			<align>right</align>
+			<posx>568</posx>
+			<posy>200</posy>
+			<height>50</height>
+			<width>118</width>
+			<visible>Player.Forwarding4x</visible>
+			<texture>4v.png</texture>
+			<colorkey>0</colorkey>
+		</control>
+		<control>
+			<description>8x image</description>
+			<type>image</type>
+			<id>0</id>
+			<align>right</align>
+			<posx>568</posx>
+			<posy>200</posy>
+			<height>50</height>
+			<width>118</width>
+			<visible>Player.Forwarding8x</visible>
+			<texture>8v.png</texture>
+			<colorkey>0</colorkey>
+		</control>
+		<control>
+			<description>16x image</description>
+			<type>image</type>
+			<id>0</id>
+			<align>right</align>
+			<posx>568</posx>
+			<posy>200</posy>
+			<height>50</height>
+			<width>118</width>
+			<visible>Player.Forwarding16x</visible>
+			<texture>16v.png</texture>
+			<colorkey>0</colorkey>
+		</control>
+		<control>
+			<description>32x image</description>
+			<type>image</type>
+			<id>0</id>
+			<align>right</align>
+			<posx>568</posx>
+			<posy>200</posy>
+			<height>50</height>
+			<width>118</width>
+			<visible>Player.Forwarding32x</visible>
+			<texture>32v.png</texture>
+			<colorkey>0</colorkey>
+		</control>
+		<control>
+			<description>-2x image</description>
+			<type>image</type>
+			<id>0</id>
+			<align>right</align>
+			<posx>568</posx>
+			<posy>200</posy>
+			<height>50</height>
+			<width>118</width>
+			<visible>Player.Rewinding2x</visible>
+			<texture>2z.png</texture>
+			<colorkey>0</colorkey>
+		</control>
+		<control>
+			<description>-4x image</description>
+			<type>image</type>
+			<id>0</id>
+			<align>right</align>
+			<posx>568</posx>
+			<posy>200</posy>
+			<height>50</height>
+			<width>118</width>
+			<visible>Player.Rewinding4x</visible>
+			<texture>4z.png</texture>
+			<colorkey>0</colorkey>
+		</control>
+		<control>
+			<description>-8x image</description>
+			<type>image</type>
+			<id>0</id>
+			<align>right</align>
+			<posx>568</posx>
+			<posy>200</posy>
+			<height>50</height>
+			<width>118</width>
+			<visible>Player.Rewinding8x</visible>
+			<texture>8z.png</texture>
+			<colorkey>0</colorkey>
+		</control>
+		<control>
+			<description>-16x image</description>
+			<type>image</type>
+			<id>0</id>
+			<align>right</align>
+			<posx>568</posx>
+			<posy>200</posy>
+			<height>50</height>
+			<width>118</width>
+			<visible>Player.Rewinding16x</visible>
+			<texture>16z.png</texture>
+			<colorkey>0</colorkey>
+		</control>
+		<control>
+			<description>-32x image</description>
+			<type>image</type>
+			<id>0</id>
+			<align>right</align>
+			<posx>568</posx>
+			<posy>200</posy>
+			<height>50</height>
+			<width>118</width>
+			<visible>Player.Rewinding32x</visible>
+			<texture>32z.png</texture>
+			<colorkey>0</colorkey>
+		</control>
+		<!-- progressbar dialog -->
+		<control>
+			<description>seek label Background</description>
+			<type>image</type>
+			<id>0</id>
+			<posx>438</posx>
+			<posy>112</posy>
+			<width>250</width>
+			<height>98</height>
+			<texture>voulume-panel-bg.png</texture>
+		</control>
+		<control>
+			<description>Elapsed Time Label</description>
+			<type>label</type>
+			<id>22</id>
+			<posx>551</posx>
+			<posy>126</posy>
+			<font>idua24</font>
+			<align>right</align>
+			<info>Player.Time</info>
+			<width>150</width>
+			<height>16</height>
+			<visible>!Player.Seeking</visible>
+		</control>
+		<control>
+			<description>Seek Time Label</description>
+			<type>label</type>
+			<id>22</id>
+			<posx>551</posx>
+			<posy>126</posy>
+			<font>idua24</font>
+			<align>right</align>
+			<info>Player.SeekTime</info>
+			<width>150</width>
+			<height>16</height>
+			<visible>Player.Seeking</visible>
+		</control>
+		<control>
+			<description>Duration Label</description>
+			<type>label</type>
+			<id>0</id>
+			<posx>560</posx>
+			<posy>126</posy>
+			<label>$INFO[Player.Duration,  /  ]</label>
+			<font>idua24</font>
+			<align>left</align>
+			<width>150</width>
+			<height>16</height>
+		</control>
+		<control>
+			<description>Progressbar</description>
+			<type>progress</type>
+			<id>23</id>
+			<posx>470</posx>
+			<posy>164</posy>
+			<width>204</width>
+			<height>8</height>
+			<info>Player.Progress</info>
+			<texturebg>progress_back_fcb.png</texturebg>
+			<lefttexture>progress_left_fcb.png</lefttexture>
+			<midtexture>progress_mid2-fcb.png</midtexture>
+			<righttexture>progress_right_fcb.png</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<visible>true</visible>
+		</control>
+		<control>
+			<description>Seek Slider</description>
+			<type>slider</type>
+			<id>401</id>
+			<posx>472</posx>
+			<posy>173</posy>
+			<width>205</width>
+			<height>9</height>
+			<texturesliderbar>seekslider.png</texturesliderbar>
+			<textureslidernib>slider_nibFO_fcb.png</textureslidernib>
+			<textureslidernibfocus>slider_nibFO_fcb.png</textureslidernibfocus>
+			<visible>true</visible>
+			<onup>1</onup>
+			<ondown>1</ondown>
+			<onleft>1</onleft>
+			<onright>1</onright>
+		</control>
+	</controls>
+</window>

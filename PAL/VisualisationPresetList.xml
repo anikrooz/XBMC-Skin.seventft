@@ -1,0 +1,77 @@
+<window>
+
+ <id>122</id>
+ <defaultcontrol>2</defaultcontrol>
+ 
+  <animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+	<animation effect="slide" time="300" start="0,0" end="600,0" acceleration="1.1" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+ 
+<coordinates>
+  <system>1</system>
+  <posx>150</posx>
+  <posy>110</posy>
+ </coordinates>
+
+
+ <controls>
+  <control>
+   <description>background image</description>
+   <type>image</type>
+   <id>1</id>
+   <posx>-150</posx>
+   <posy>-110</posy>
+   <width>720</width>
+   <height>576</height>
+   <texture>background-plain.jpg</texture>
+       </control>
+
+  
+
+  <control>
+   <description>Presets Label</description>
+   <type>label</type>
+   <id>3</id>
+   <posx>0</posx>
+   <posy>2</posy>
+   <width>420</width>
+   <align>left</align>
+   <font>special13</font>
+   <textcolor>DDced8da</textcolor>
+  </control>
+
+  <control>
+   <description>No Presets Label</description>
+   <type>label</type>
+   <id>4</id>
+   <posx>0</posx>
+   <posy>170</posy>
+   <width>408</width>
+   <align>center</align>
+   <label>13389</label>
+   <font>font12</font>
+  </control>
+
+  <control>
+   <description>Preset List</description>
+   <type>listcontrol</type>
+   <id>2</id>
+   <posx>-1</posx>
+   <posy>40</posy>
+   <width>407</width>
+   <height>340</height>
+   <spinposx>371</spinposx>
+   <spinposy>-30</spinposy>
+   <selectedcolor>FFD2FF00</selectedcolor>
+   <font>font12</font>
+   <textoffsetx>-15</textoffsetx>
+   <textureheight>29</textureheight>
+   <onleft>2</onleft>
+   <onright>2</onright>
+   <onup>2</onup>
+   <ondown>2</ondown>
+  </control>
+
+ </controls>
+
+</window>
+

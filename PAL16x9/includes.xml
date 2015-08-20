@@ -1,0 +1,1760 @@
+<includes>
+   
+	<!--<include file="defaults.xml" />-->
+	<include file="3D_CoverView.xml" />
+	<include file="3D_CoverWheel.xml" />
+    <include file="CommonViewTypes_MegaBigThumb_MUSIK.xml" />	
+	<include file="CommonViewTypes_MegaBigThumb_PICTURE.xml" />
+	<!--<include file="CommonViewTypes_MegaBigThumb_VIDEO.xml" />-->
+	<include file="CommonViewTypes_MegaBigThumb_PROGRAMS.xml" />
+	<!--<include file="CommonViewTypes_MegaBigThumb_SCRIPTS.xml" />-->
+	<!--<include file="CommonViewTypes_Library.xml" />-->
+	<include file="CommonViewTypes_Dialogs.xml" />
+	<!--<include file="Backgrounds.xml" />-->
+	<include file="Custom8156_POPUP.xml" />	
+	<include file="DialogResolution.xml" />
+	   
+		<include name="textcolorwhite">
+    <textcolor>ffffffff</textcolor>
+  </include>
+  
+	<include name="textcolorgrey">
+		<textcolor>60ffffff</textcolor>
+	</include>
+	<include name="textcolorlightgrey">
+		<textcolor>d0ffffff</textcolor>
+	</include>
+	<include name="textcolorligreenfocus">
+		<selectedcolor>ff7cfc00</selectedcolor>
+		<style>bold</style>
+	</include>
+	<include name="textcolorligelbfocus">
+		<selectedcolor>ffCDCD00</selectedcolor>
+		<style>bold</style>
+	</include>
+	<include name="textcolorlililafocus">
+		<selectedcolor>ffCDCD00</selectedcolor>
+		<style>bold</style>
+	</include>
+	<include name="textcolorlibluefocus">
+		<selectedcolor>ff3399FF</selectedcolor>
+		<style>bold</style>
+	</include>
+	<include name="textcolorligreennofocus">
+		<textcolor>ff3cb371</textcolor>
+	</include>
+	<include name="controldefaults">
+		<include>textcolorwhite</include>
+		<colordiffuse>ffffffff</colordiffuse>
+	</include>
+	<include name="listselectedcolor">
+		<selectedcolor>FFe2ff43</selectedcolor>
+	</include>
+	<include name="infolabel_original">
+		<align>left</align>
+		<font>font13</font>
+		<textcolor>ffd3d3d3</textcolor>
+		<shadowcolor>01dbdbdb</shadowcolor>
+	</include>
+	<include name="infolabel">
+		<align>left</align>
+		<font>idua20</font>
+		<textcolor>ff888888</textcolor>
+	</include>
+	<include name="infolabel_2">
+		<align>left</align>
+		<font>alwin24</font>
+		<textcolor>ffffffff</textcolor>
+	</include>
+	<include name="infolabel_3">
+		<align>left</align>
+		<font>alwin24</font>
+		<textcolor>ff999999</textcolor>
+	</include>
+	<include name="OverlayWindowClose">
+		<posx>40</posx>
+		<width>160</width>
+		<animation effect="slide" time="200" start="-724,0" end="0,0" acceleration="-0.8" condition="Skin.HasSetting(animated)">WindowOpen</animation>
+		<animation effect="slide" time="200" start="0,0" end="-624,0" acceleration="1.1" condition="Skin.HasSetting(animated)">WindowClose</animation>
+		<animation effect="slide" time="200" start="-724,0" end="0,0" acceleration="-0.9" condition="!Skin.HasSetting(animated)">visiblechange</animation>
+	</include>
+	<include name="playerPlayinguntenLi">
+		<control type="image">
+			<posx>20</posx>
+			<posy>473</posy>
+			<width>18</width>
+			<height>30</height>
+			<!-- <aspectratio>keep</aspectratio> -->
+			<texture>play_wrap2.png</texture>
+			<visible>Player.Playing</visible>
+		</control>
+		<!-- <control type="image">
+		<posx>656</posx>
+		<posy>65</posy>
+		<width>56</width>
+		<height>58</height>
+		<texture>pause_wrap.png</texture>
+		<aspectratio>keep</aspectratio>
+                <visible>Player.Paused</visible>
+	</control>
+   <control type="image">
+		<posx>656</posx>
+		<posy>65</posy>
+		<width>56</width>
+		<height>58</height>
+		<texture>pauseFF_wrap.png</texture>
+		<aspectratio>keep</aspectratio>
+                <visible>Player.Forwarding</visible>
+	</control>
+   <control type="image">
+		<posx>656</posx>
+		<posy>65</posy>
+		<width>56</width>
+		<height>58</height>
+		<texture>pauseRR_wrap.png</texture>
+		<aspectratio>keep</aspectratio>
+                <visible>Player.Rewinding</visible>
+   </control> -->
+	</include>
+	
+	<!-- overlay switch audio-->
+	<include name="overlayswitch">
+		<control>
+			<description>musicoverlay Background</description>
+			<type>image</type>
+			<posx>-40</posx>
+			<posy>468</posy>
+			<width>805</width>
+			<height>130</height>
+			<texture>overlay-panel-bg-music.png</texture>
+			<visible>Player.HasAudio + [Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>OverlayWindowCloseTime.png</description>
+			<type>image</type>
+			<posx>4</posx>
+			<posy>424</posy>
+			<width>110</width>
+			<height>44</height>
+			<texture>OverlayWindowCloseTime.png</texture>
+			<!-- <aspectratio align="center">keep</aspectratio> -->
+			<visible>Player.HasAudio + [Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Elapsed Time Label</description>
+			<type>label</type>
+			<posx>-22</posx>
+			<posy>433</posy>
+			<align>center</align>
+			<include>infolabel</include>
+			<label>$INFO[MusicPlayer.Time]</label>
+			<visible>Player.HasAudio + !Player.Seeking + [Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Seek Time Label</description>
+			<type>label</type>
+			<posx>-22</posx>
+			<posy>433</posy>
+			<align>center</align>
+			<include>infolabel</include>
+			<label>$INFO[MusicPlayer.SeekTime]</label>
+			<visible>Player.HasAudio + Player.Seeking + [Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>OverlayWindowCloseTime.png</description>
+			<type>image</type>
+			<posx>606</posx>
+			<posy>424</posy>
+			<width>110</width>
+			<height>44</height>
+			<texture>OverlayWindowCloseTime.png</texture>
+			<!-- <aspectratio align="center">keep</aspectratio> -->
+			<visible>Player.HasAudio + [Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>duration Time Label</description>
+			<type>label</type>
+			<posx>580</posx>
+			<posy>433</posy>
+			<align>center</align>
+			<include>infolabel</include>
+			<label>$INFO[player.Duration]</label>
+			<visible>Player.HasAudio + !Player.Seeking + [Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Progressbar</description>
+			<type>progress</type>
+			<posx>22</posx>
+			<posy>560</posy>
+			<width>540</width>
+			<height>6</height>
+			<info>Player.Progress</info>
+			<texturebg>progress_back_wrap.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>progress_mid-music.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<visible>Player.HasMedia + [Control.HasFocus(54)]</visible>
+			<!-- <include>OverlayWindowClose</include> -->
+		</control>
+		<control>
+			<description>Artist label</description>
+			<type>label</type>
+			<posx>22</posx>
+			<posy>522</posy>
+			<width>590</width>
+			<info>MusicPlayer.Artist</info>
+			<include>infolabel_3</include>
+			<visible>Player.HasAudio + [Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Title label</description>
+			<id>1</id>
+			<type>fadelabel</type>
+			<posx>22</posx>
+			<posy>489</posy>
+			<width>590</width>
+			<info>MusicPlayer.Title</info>
+			<include>infolabel_2</include>
+			<visible>Player.HasAudio + [Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>music cover</description>
+			<type>image</type>
+			<posx>626</posx>
+			<posy>479</posy>
+			<width>95</width>
+			<height>93</height>
+			<info>MusicPlayer.Cover</info>
+			<aspectratio align="center">keep</aspectratio>
+			<visible>Player.HasAudio + [Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<!-- <control type="image">
+		<posx>4</posx>
+		<posy>400</posy>
+		<width>56</width>
+		<height>58</height>
+		<texture>play_wrap.png</texture>
+                <visible>Player.Playing + [Control.HasFocus(54)]</visible>
+	</control>
+   <control type="image">
+		<posx>4</posx>
+		<posy>400</posy>
+		<width>56</width>
+		<height>58</height>
+		<texture>pause_wrap.png</texture>
+                <visible>Player.Paused + [Control.HasFocus(54)]</visible>
+	</control>
+   <control type="image">
+		<posx>4</posx>
+		<posy>400</posy>
+		<width>56</width>
+		<height>58</height>
+		<texture>pauseFF_wrap.png</texture>
+                <visible>Player.Forwarding + [Control.HasFocus(54)]</visible>
+	</control>
+   <control type="image">
+		<posx>4</posx>
+		<posy>400</posy>
+		<width>56</width>
+		<height>58</height>
+		<texture>pauseRR_wrap.png</texture>
+                <visible>Player.Rewinding + [Control.HasFocus(54)]</visible>
+	</control> -->
+		<control>
+			<description>musicoverlay Background</description>  <!-- bg oben -->
+			<type>image</type>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>760</width>
+			<height>57</height>
+			<texture>overlay-panel-bg-music2.png</texture>
+			<visible>Player.HasMedia + [Control.HasFocus(54)]</visible>
+		</control>
+		<control type="label">
+			<posx>22</posx>
+			<posy>13</posy>
+			<width>680</width>
+			<height>30</height>
+			<font>alwin24</font>
+			<textcolor>ffffffff</textcolor>
+			<align>center</align>
+			<info>ListItem.Label</info>
+			<include>selectedcolor</include>
+			<visible>Player.HasMedia + [Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control type="image">
+			<posx>124</posx>
+			<posy>432</posy>
+			<width>18</width>
+			<height>30</height>
+			<texture>play_wrap2.png</texture>
+			<visible>Player.Playing + [Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Uhr label</description>
+			<type>label</type>
+			<posx>20</posx>
+			<posy>68</posy>
+			<label>time</label>
+			<info>System.Time</info>
+			<align>left</align>
+			<font>home_red</font>
+			<textcolor>30ffffff</textcolor>
+			<visible>Player.Playing + [Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>PartyMode Enabled</description>
+			<type>button</type>
+			<id>1</id>
+			<posx>664</posx>
+			<posy>70</posy>
+			<width>32</width>
+			<height>32</height>
+			<label>-</label>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>partymodus.gif</texturenofocus>
+			<visible>MusicPartyMode.Enabled + [Control.HasFocus(54)]</visible>
+		</control>
+		<!-- wenn keine musik od. video spielt -->
+		<control type="label">
+			<posx>22</posx>
+			<posy>466</posy>
+			<width>680</width>
+			<height>30</height>
+			<font>alwin24</font>
+			<textcolor>ffffffff</textcolor>
+			<align>center</align>
+			<info>ListItem.Label</info>
+			<include>selectedcolor</include>
+			<visible>!Player.HasMedia + [Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<!-- overlay switch music  ENDE -->
+		<!-- overlay switch video -->
+		<control>
+			<description>musicoverlay Background</description>
+			<type>image</type>
+			<posx>-30</posx>
+			<posy>468</posy>
+			<width>780</width>
+			<height>130</height>
+			<texture>overlay-panel-bg-music.png</texture>
+			<visible>Player.HasVideo + [Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>video preview window</description>
+			<type>videowindow</type>
+			<id>1</id>
+			<posx>11</posx>
+			<posy>385</posy>
+			<width>130</width>
+			<height>107</height>
+			<visible>Player.HasVideo + [Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+			<animation effect="fade" time="1" delay="300">WindowOpen</animation>
+			<animation effect="fade" time="1" delay="0">VisibleChange</animation>
+		</control>
+		<control>
+			<description>video rectangle</description>
+			<type>image</type>
+			<id>0</id>
+			<posx>6</posx>
+			<posy>380</posy>
+			<width>140</width>
+			<height>118</height>
+			<texture>rahmen2.png</texture>
+			<visible>Player.HasVideo + [Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>play time label</description>
+			<type>label</type>
+			<id>0</id>
+			<posx>600</posx>
+			<posy>482</posy>
+			<label>-</label>
+			<info>VideoPlayer.Time</info>
+			<align>left</align>
+			<font>idua20</font>
+			<textcolor>ff888888</textcolor>
+			<visible>Player.HasVideo + [Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control type="label" id="1">
+			<description>Title value</description>
+			<posx>0</posx>
+			<posy>510</posy>
+			<width>720</width>
+			<label>$INFO[VideoPlayer.Title]</label>
+			<font>alwin34</font>
+			<textcolor>ff999999</textcolor>
+			<visible>Player.HasVideo + [Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+			<align>center</align>
+		</control>
+		<!-- overlay switch end -->
+		<!-- equlizer -->
+	</include>
+	<include name="pseudoEqualizer">
+		<control type="multiimage">
+			<description>equalizer </description>
+			<posx>300</posx>
+			<posy>8</posy>
+			<width>120</width>
+			<height>44</height>
+			<imagepath>EQ</imagepath>
+			<timeperimage>50</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>1</fadetime>
+			<colordiffuse>95FFFFFFF</colordiffuse>
+			<animation effect="fade" time="100">VisibleChange</animation>
+			<visible>Player.HasAudio + !Player.Seeking + !Player.Paused + !Player.Forwarding + !Player.Rewinding</visible>
+		</control>
+	</include>
+	<!-- equlizer END -->
+	<include name="UHR">
+		<control>
+			<description>Uhr label</description>
+			<type>label</type>
+			<id>0</id>
+			<posx>320</posx>
+			<posy>18</posy>
+			<label>time</label>
+			<info>System.Time</info>
+			<align>left</align>
+			<font>alwin30</font>
+			<textcolor>FFB8B8B8</textcolor>
+			<!--<visible>!Player.Playing</visible>-->
+		</control>
+	</include>
+	<include name="homebuttonanimation">
+		<visible allowhiddenfocus="true">![Player.HasAudio + System.IdleTime(60)]</visible>
+		<animation effect="fade" time="1000" delay="400">VisibleChange</animation>
+		<animation effect="rotate" time="500" start="-120" end="0" center="-20,-60" acceleration="-1.1" delay="0" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+		<animation effect="rotate" time="500" start="0" end="-120" center="-20,-60" acceleration="1.3" delay="0" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	</include>
+	<include name="zoom">
+		<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+		<animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	</include>
+	<include name="zoom2">
+		<animation effect="zoom" start="1" center="360,280" time="380" acceleration="-1" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+		<animation effect="slide" end="720,0" acceleration="1.1" time="250">WindowClose</animation>
+	</include>
+	<include name="seekbar">
+		<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding + System.IdleTime(5)</visible>
+		<animation effect="slide" start="720,0" acceleration="-1.1" time="250">WindowOpen</animation>
+		<animation effect="slide" end="720,0" acceleration="1.1" time="250">WindowClose</animation>
+	</include>
+	<include name="contentpanelslide">
+		<animation effect="slide" time="500" start="600,0" end="0,0" acceleration="-1" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+		<animation effect="slide" time="300" start="0,0" end="600,0" acceleration="1.1" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	</include>
+	<include name="buttonpanelslide">
+		<animation effect="slide" time="500" start="-250,0" end="0,0" acceleration="-1.1" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+		<animation effect="slide" time="300" start="0,0" end="-250,0" acceleration="1.1" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	</include>
+	<include name="windowswitchtransition">
+		<texture>background-plain.jpg</texture>
+		<visible>!Skin.HasSetting(animated) + !Window.Previous(9999)</visible>
+		<animation effect="fade" start="0" end="0" time="1">VisibleChange</animation>
+		<animation effect="fade" start="100" end="0" time="500" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+		<animation effect="fade" start="0" end="100" time="300" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	</include>
+	<include name="homemediainfo">
+		<visible>!Skin.HasSetting(homepageMusicinfo)</visible>
+		<visible>Player.HasAudio + ![Control.HasFocus(9) + !Skin.HasSetting(homepageSysteminfo)] + ![Control.HasFocus(6) + !Skin.HasSetting(homepageDriveinfo1)] + ![Control.HasFocus(6) + Skin.HasSetting(homepageDriveinfo2)] + ![Control.HasFocus(7) + system.hasnetwork + !Skin.HasSetting(homepageWeatherinfo)] + !System.IdleTime(10)</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+		<animation effect="slide" time="500" start="800,0" end="0,0" acceleration="-1.1" delay="0" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+		<animation effect="slide" time="500" start="0,0" end="800,0" acceleration="-1.3" delay="0" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	</include>
+	<include name="homestatsinfo">
+		<visible>![Player.HasAudio + System.IdleTime(10)]</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+		<animation effect="slide" time="500" start="600,0" end="0,0" acceleration="-1.1" delay="0" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+		<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="-1.3" delay="0" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	</include>
+	<include name="homemisc">
+		<animation effect="fade" time="1000">VisibleChange</animation>
+		<animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+		<animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	</include>
+	<include name="homevideoinfo">
+		<visible>!Skin.HasSetting(homepageVideoinfo)</visible>
+		<visible>Player.HasVideo + ![Control.HasFocus(9) + !Skin.HasSetting(homepageSysteminfo)] + ![Control.HasFocus(6) + !Skin.HasSetting(homepageDriveinfo1)] + ![Control.HasFocus(6) + Skin.HasSetting(homepageDriveinfo2)] + ![Control.HasFocus(7) + system.hasnetwork + !Skin.HasSetting(homepageWeatherinfo)]</visible>
+		<animation effect="fade" time="200">VisibleChange</animation>
+		<animation effect="slide" time="500" start="800,0" end="0,0" acceleration="-1.1" delay="0" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+		<animation effect="slide" time="500" start="0,0" end="800,0" acceleration="-1.3" delay="0" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	</include>
+	<include name="mediaoverlay">
+		<visible>!Window.Next(Home)</visible>
+		<animation effect="fade" time="650">WindowOpen</animation>
+		<animation effect="fade" time="300">VisibleChange</animation>
+	</include>
+	<include name="dialogeffect">
+		<animation effect="fade" time="200">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+	</include>
+	<include name="shutdownmenu">
+		<animation effect="zoom" start="1" center="360,280" time="300" acceleration="-1" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+		<animation effect="slide" end="750,0" acceleration="1.1" time="250">WindowClose</animation>
+	</include>
+	<include name="contentpanel">
+		<control>
+			<description>contentpanel slice</description>
+			<type>image</type>
+			<id>0</id>
+			<posx>160</posx>
+			<posy>108</posy>
+			<width>64</width>
+			<height>468</height>
+			<texture>contentpanel_left.png</texture>
+			<include>contentpanelslide</include>
+		</control>
+		<control>
+			<description>contentpanel slice</description>
+			<type>image</type>
+			<id>0</id>
+			<posx>224</posx>
+			<posy>108</posy>
+			<width>500</width>
+			<height>468</height>
+			<texture>contentpanel.png</texture>
+			<include>contentpanelslide</include>
+		</control>
+	</include>
+	<include name="logosplay">
+		<control type="image" id="1">
+			<description>Play logo</description>
+			<posx>10</posx>
+			<posy>412</posy>
+			<width>114</width>
+			<height>138</height>
+			<texture>logo_play.png</texture>
+			<visible>Player.Playing</visible>
+		</control>
+		<control type="image" id="1">
+			<description>Pause logo</description>
+			<posx>10</posx>
+			<posy>412</posy>
+			<width>114</width>
+			<height>138</height>
+			<texture>logo_pause.png</texture>
+			<visible>Player.Paused</visible>
+		</control>
+		<control type="image" id="1">
+			<description>Rewind logo</description>
+			<posx>10</posx>
+			<posy>412</posy>
+			<width>114</width>
+			<height>138</height>
+			<texture>logo_rewind.png</texture>
+			<visible>Player.Rewinding</visible>
+		</control>
+		<control type="image" id="1">
+			<description>Forward logo</description>
+			<posx>10</posx>
+			<posy>412</posy>
+			<width>114</width>
+			<height>138</height>
+			<texture>logo_forward.png</texture>
+			<visible>Player.Forwarding</visible>
+		</control>
+		<control type="image" id="1">
+			<description>Record logo</description>
+			<posx>10</posx>
+			<posy>412</posy>
+			<width>114</width>
+			<height>138</height>
+			<texture>logo_rec.png</texture>
+			<visible>Player.Recording</visible>
+		</control>
+	</include>
+	<include name="backgroundinfo">
+		<control type="image" id="1">
+			<description>Background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background_info.png</texture>
+		</control>
+		<control type="image" id="1">
+			<description>Panel top</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>100</height>
+			<texture>panel_home_top.png</texture>
+		</control>
+		<control type="label" id="1">
+			<description>System time</description>
+			<posx>670</posx>
+			<posy>45</posy>
+			<info>System.Time</info>
+			<align>right</align>
+		</control>
+	</include>
+	<include name="OSD button music">
+		<animation effect="slide" time="150" start="-6,0" end="0,0" acceleration="-1.0" delay="0" condition="!Skin.HasSetting(animation)">Focus</animation>
+	</include>
+	<include name="OSD button music to right">
+		<animation effect="slide" time="150" start="6,0" end="0,0" acceleration="-1.0" delay="0" condition="!Skin.HasSetting(animation)">Focus</animation>
+	</include>
+	<!-- include Big WrapInfo -->
+	<include name="BigWrapInfo">
+		<control type="label">
+			<description>Music Info</description>
+			<posx>164</posx>
+			<posy>468</posy>
+			<width>580</width>
+			<height>18</height>
+			<font>idua18</font>
+			<textcolor>7000CC00</textcolor>
+			<align>left</align>
+			<scroll>true</scroll>
+			<label>$INFO[listitem.size]  /  $INFO[listitem.duration]</label>
+			<include>selectedcolor</include>
+			<visible>!Skin.HasSetting(WrapListInfo)</visible>
+			<visible>Control.IsVisible(56) + [Window.IsActive(mymusicfiles) | Window.IsActive(mymusiclibrary) | Window.IsActive(mymusicplaylist)]</visible>
+		</control>
+		<control type="label">
+			<description>Video Info</description>
+			<posx>163</posx>
+			<posy>466</posy>
+			<width>580</width>
+			<height>16</height>
+			<font>idua18</font>
+			<textcolor>953366FF</textcolor>
+			<align>left</align>
+			<scroll>true</scroll>
+			<label>$INFO[listitem.duration] | $INFO[listitem.year] |</label>
+			<include>selectedcolor</include>
+			<visible>!Skin.HasSetting(WrapListInfo)</visible>
+			<visible>Control.IsVisible(56) + [Window.IsActive(myvideofiles) | Window.IsActive(myvideolibrary) | Window.IsActive(myvideoplaylist)]</visible>
+		</control>
+		<control type="label">
+			<description>Pictures Info</description>
+			<posx>164</posx>
+			<posy>468</posy>
+			<width>580</width>
+			<height>16</height>
+			<font>idua18</font>
+			<textcolor>60FFCC33</textcolor>
+			<align>left</align>
+			<scroll>true</scroll>
+			<label>Date: $INFO[listitem.date] | Size: $INFO[listitem.size]</label>
+			<include>selectedcolor</include>
+			<visible>!Skin.HasSetting(WrapListInfo)</visible>
+			<visible>Control.IsVisible(56) + [Window.IsActive(mypictures)]</visible>
+		</control>
+		<control type="label">
+			<description>MyPrograms Info</description>
+			<posx>164</posx>
+			<posy>468</posy>
+			<width>580</width>
+			<height>16</height>
+			<font>idua18</font>
+			<textcolor>70ffBA55D3</textcolor>
+			<align>left</align>
+			<scroll>true</scroll>
+			<label>Run Count: $INFO[listitem.programcount] | $INFO[listitem.date] |  $INFO[listitem.size]</label>
+			<include>selectedcolor</include>
+			<visible>!Skin.HasSetting(WrapListInfo)</visible>
+			<visible>Control.IsVisible(56) + [Window.IsActive(myprograms)]</visible>
+		</control>
+		<control type="label">
+			<description>MyScript Info</description>
+			<posx>164</posx>
+			<posy>468</posy>
+			<width>580</width>
+			<height>18</height>
+			<font>idua18</font>
+			<textcolor>80CC3382</textcolor>
+			<align>left</align>
+			<scroll>true</scroll>
+			<label>Date: $INFO[listitem.date]</label>
+			<include>selectedcolor</include>
+			<visible>!Skin.HasSetting(WrapListInfo)</visible>
+			<visible>Control.IsVisible(56) + [Window.IsActive(20)]</visible>
+		</control>
+		<control>
+			<description>description label</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>148</posx>
+			<posy>84</posy>
+			<align>left</align>
+			<label>Music</label>
+			<font>eth26</font>
+			<textcolor>907cfc00</textcolor>
+			<visible>Control.IsVisible(57) + [Window.IsActive(mymusicfiles)]</visible>
+		</control>
+		<control>
+			<description>description label</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>148</posx>
+			<posy>84</posy>
+			<align>left</align>
+			<label>Database</label>
+			<font>eth26</font>
+			<textcolor>907cfc00</textcolor>
+			<visible>Control.IsVisible(57) + [Window.IsActive(mymusiclibrary)]</visible>
+		</control>
+		<control>
+			<description>description label</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>148</posx>
+			<posy>84</posy>
+			<align>left</align>
+			<label>Playlist</label>
+			<font>eth26</font>
+			<textcolor>907cfc00</textcolor>
+			<visible>Control.IsVisible(57) + [Window.IsActive(mymusicplaylist)]</visible>
+		</control>
+		<control>
+			<description>description label</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>148</posx>
+			<posy>84</posy>
+			<align>left</align>
+			<label>3</label>
+			<font>eth26</font>
+			<textcolor>963399FF</textcolor>
+			<visible>Control.IsVisible(57) + [Window.IsActive(myvideofiles)]</visible>
+		</control>
+		<control>
+			<description>description label</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>148</posx>
+			<posy>84</posy>
+			<align>left</align>
+			<label>Database</label>
+			<font>eth26</font>
+			<textcolor>963399FF</textcolor>
+			<visible>Control.IsVisible(57) + [Window.IsActive(myvideolibrary)]</visible>
+		</control>
+		<control>
+			<description>description label</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>148</posx>
+			<posy>84</posy>
+			<align>left</align>
+			<label>Playlist</label>
+			<font>eth26</font>
+			<textcolor>963399FF</textcolor>
+			<visible>Control.IsVisible(57) + [Window.IsActive(myvideoplaylist)]</visible>
+		</control>
+	</include>
+	<!-- Big WrapList			56 -->
+	<include name="BigWrapList">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>overlay-big-pictures.png</texture>
+			<colordiffuse>ffffffff</colordiffuse>
+			<visible>Control.HasFocus(56)</visible>
+		</control>
+		<control type="label">
+			<posx>10</posx>
+			<posy>529</posy>
+			<width>700</width>
+			<height>30</height>
+			<align>center</align>
+			<font>alwin22</font>
+			<textcolor>90FFFFFF</textcolor>
+			<info>ListItem.Label</info>
+			<visible>Control.HasFocus(56)</visible>
+		</control>
+		<control type="wraplist" id="56">
+			<viewtype label="Wrap1">bigwrap</viewtype>
+			<posx>30</posx>
+			<posy>90</posy>
+			<width>660</width>
+			<height>404</height>
+			<onleft>56</onleft>
+			<onright>56</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<orientation>horizontal</orientation>
+			<include>weather fade</include>
+			<itemlayout height="220" width="220">
+				<control type="image">
+					<posx>30</posx>
+					<posy>110</posy>
+					<width>160</width>
+					<height>160</height>
+					<info>ListItem.Icon</info>
+					<colordiffuse>ffbbbbbb</colordiffuse>
+					<aspectratio aligny="bottom">keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>30</posx>
+					<posy>270</posy>
+					<width>160</width>
+					<height>160</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="top">keep</aspectratio>
+					<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+					<visible>!Skin.HasSetting(reflect)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout height="220" width="220">
+				<control type="image">
+					<posx>30</posx>
+					<posy>110</posy>
+					<width>160</width>
+					<height>160</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<animation effect="zoom" end="5,85,210,210" time="250">Focus</animation>
+				</control>
+				<control type="image">
+					<posx>30</posx>
+					<posy>270</posy>
+					<width>160</width>
+					<height>160</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="top">keep</aspectratio>
+					<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+					<animation effect="zoom" end="5,295,210,210" time="250">Focus</animation>
+					<visible>!Skin.HasSetting(reflect)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="label">
+			<posx>30</posx>
+			<posy>460</posy>
+			<width>660</width>
+			<height>16</height>
+			<font>special14</font>
+			<textcolor>FFffffff</textcolor>
+			<align>center</align>
+			<info>ListItem.Label</info>
+			<include>selectedcolor</include>
+			<visible>Control.IsVisible(56) + Skin.HasSetting(wrapname)</visible>
+			<include>weather fade</include>
+		</control>
+		<!-- <control type="image">
+		<posx>8</posx>
+		<posy>450</posy>
+		<width>44</width>
+		<height>58</height>
+		<texture>play_wrap.png</texture>
+                <visible>Player.Playing + [Control.HasFocus(56)]</visible>
+	</control>
+   <control type="image">
+		<posx>8</posx>
+		<posy>450</posy>
+		<width>44</width>
+		<height>58</height>
+		<texture>pause_wrap.png</texture>
+                <visible>Player.Paused + [Control.HasFocus(56)]</visible>
+	</control>
+   <control type="image">
+		<posx>8</posx>
+		<posy>450</posy>
+		<width>44</width>
+		<height>58</height>
+		<texture>pauseFF_wrap.png</texture>
+                <visible>Player.Forwarding + [Control.HasFocus(56)]</visible>
+	</control>
+   <control type="image">
+		<posx>8</posx>
+		<posy>450</posy>
+		<width>44</width>
+		<height>58</height>
+		<texture>pauseRR_wrap.png</texture>
+                <visible>Player.Rewinding + [Control.HasFocus(56)]</visible>
+	</control> -->
+		<include>playerPlayinguntenLi</include>
+		<include>BigWrapInfo</include>
+	</include>
+	<!-- Big WrapList 2 		57 -->
+	<include name="BigWrapList2">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>wrap overlay.png</texture>
+			<visible>Control.HasFocus(57)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>overlay-big-pictures.png</texture>
+			<colordiffuse>ffffffff</colordiffuse>
+			<visible>Control.HasFocus(57)</visible>
+		</control>
+		<control type="label">
+			<posx>10</posx>
+			<posy>529</posy>
+			<width>700</width>
+			<height>30</height>
+			<align>center</align>
+			<font>alwin22</font>
+			<textcolor>90FFFFFF</textcolor>
+			<info>ListItem.Label</info>
+			<visible>Control.HasFocus(57)</visible>
+		</control>
+		<control type="wraplist" id="57">
+			<viewtype label="Wrap2">bigwrap</viewtype>
+			<posx>30</posx>
+			<posy>90</posy>
+			<width>660</width>
+			<height>404</height>
+			<onleft>56</onleft>
+			<onright>56</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<focusposition>1</focusposition>
+			<orientation>horizontal</orientation>
+			<include>weather fade</include>
+			<itemlayout height="220" width="220">
+				<control type="image">
+					<posx>30</posx>
+					<posy>110</posy>
+					<width>160</width>
+					<height>160</height>
+					<info>ListItem.Icon</info>
+					<colordiffuse>ffbbbbbb</colordiffuse>
+					<aspectratio aligny="bottom">keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>30</posx>
+					<posy>270</posy>
+					<width>160</width>
+					<height>160</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="top">keep</aspectratio>
+					<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+					<visible>!Skin.HasSetting(reflect)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout height="220" width="220">
+				<control type="image">
+					<posx>30</posx>
+					<posy>110</posy>
+					<width>160</width>
+					<height>160</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<animation effect="zoom" end="5,85,210,210" time="250">Focus</animation>
+				</control>
+				<control type="image">
+					<posx>30</posx>
+					<posy>270</posy>
+					<width>160</width>
+					<height>160</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="top">keep</aspectratio>
+					<texture flipy="true" diffuse="Thumb_Mask.png">-</texture>
+					<animation effect="zoom" end="5,295,210,210" time="250">Focus</animation>
+					<visible>!Skin.HasSetting(reflect)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="label">
+			<posx>30</posx>
+			<posy>460</posy>
+			<width>660</width>
+			<height>16</height>
+			<font>special14</font>
+			<textcolor>FFffffff</textcolor>
+			<align>center</align>
+			<info>ListItem.Label</info>
+			<include>selectedcolor</include>
+			<visible>Control.IsVisible(57) + Skin.HasSetting(wrapname)</visible>
+			<include>weather fade</include>
+		</control>
+		<control>
+			<description>Progressbar</description>
+			<type>progress</type>
+			<posx>90</posx>
+			<posy>491</posy>
+			<width>140</width>
+			<height>9</height>
+			<info>Player.Progress</info>
+			<texturebg>progress_back_wrap.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>progress_mid-music.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<visible>Player.HasMedia + [Control.HasFocus(57)]</visible>
+		</control>
+		<include>playerPlayinguntenLi</include>
+		<control type="label">
+			<posx>90</posx>
+			<posy>454</posy>
+			<width>500</width>
+			<height>58</height>
+			<align>left</align>
+			<font>alwin23</font>
+			<textcolor>99FFFFFF</textcolor>
+			<info>MusicPlayer.Title</info>
+			<visible>Player.HasAudio + [Control.HasFocus(57)]</visible>
+		</control>
+		<control type="label">
+			<posx>90</posx>
+			<posy>454</posy>
+			<width>500</width>
+			<height>58</height>
+			<align>left</align>
+			<font>alwin23</font>
+			<textcolor>99FFFFFF</textcolor>
+			<info>VideoPlayer.Title</info>
+			<visible>Player.HasVideo + [Control.HasFocus(57)]</visible>
+		</control>
+		<include>BigWrapInfo</include>
+	</include>
+	<!-- Big Wide video		58 -->
+	<include name="BigWideVideo">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>wide icon overlay.png</texture>
+			<visible>Control.HasFocus(58)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>overlay-big-pictures.png</texture>
+			<colordiffuse>ffffffff</colordiffuse>
+			<visible>Control.HasFocus(58)</visible>
+		</control>
+		<control type="label">
+			<posx>10</posx>
+			<posy>529</posy>
+			<width>700</width>
+			<height>30</height>
+			<align>center</align>
+			<font>alwin22</font>
+			<textcolor>90FFFFFF</textcolor>
+			<info>ListItem.Label</info>
+			<visible>Control.HasFocus(58)</visible>
+		</control>
+		<control type="wraplist" id="58">
+			<viewtype label="540">bigwide</viewtype>
+			<posx>70</posx>
+			<posy>125</posy>
+			<width>570</width>
+			<height>360</height>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>90</pagecontrol>
+			<focusposition>1</focusposition>
+			<onleft>2</onleft>
+			<onright>99</onright>
+			<onup>58</onup>
+			<ondown>58</ondown>
+			<itemlayout height="100">
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>559</width>
+					<height>90</height>
+					<colordiffuse>ff555555</colordiffuse>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>470</posx>
+					<posy>65</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Overlay</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="160">
+				<!-- <control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>569</width>
+				<height>140</height>
+				<texture border="1,0,1,0">-</texture>
+				<visible>Control.HasFocus(58)</visible>
+			</control> -->
+				<control type="image">
+					<posx>5</posx>
+					<posy>8</posy>
+					<width>559</width>
+					<height>120</height>
+					<info>ListItem.Icon</info>
+					<animation effect="zoom" start="80" end="100" center="280,60" acceleration="-1" time="300">Focus</animation>
+				</control>
+				<control type="image">
+					<posx>530</posx>
+					<posy>100</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Overlay</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<!-- <control type="image">
+		<posx>100</posx>
+		<posy>480</posy>
+		<width>28</width>
+		<height>26</height>
+		<texture>play_wrap.png</texture>
+                <visible>Player.HasAudio + [Control.IsVisible(58)]</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>-</texture>
+		<colordiffuse>FFffffff</colordiffuse>
+		<include>common-fade</include>
+		<visible>Control.IsVisible(58)</visible>
+	</control> -->
+		<control type="image">
+			<posx>8</posx>
+			<posy>450</posy>
+			<width>44</width>
+			<height>58</height>
+			<texture>play_wrap.png</texture>
+			<visible>Player.Playing + [Control.HasFocus(58)]</visible>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>450</posy>
+			<width>44</width>
+			<height>58</height>
+			<texture>pause_wrap.png</texture>
+			<visible>Player.Paused + [Control.HasFocus(58)]</visible>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>450</posy>
+			<width>44</width>
+			<height>58</height>
+			<texture>pauseFF_wrap.png</texture>
+			<visible>Player.Forwarding + [Control.HasFocus(58)]</visible>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>450</posy>
+			<width>44</width>
+			<height>58</height>
+			<texture>pauseRR_wrap.png</texture>
+			<visible>Player.Rewinding + [Control.HasFocus(58)]</visible>
+		</control>
+	</include>
+	<!-- Mega Big DVD Covers 		59 -->
+	<include name="MegaBig">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>wide icon overlay.png</texture>
+			<visible>Control.HasFocus(59)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>overlay-big-pictures.png</texture>
+			<colordiffuse>ffffffff</colordiffuse>
+			<visible>Control.HasFocus(59)</visible>
+		</control>
+		<control type="label">
+			<posx>10</posx>
+			<posy>529</posy>
+			<width>700</width>
+			<height>30</height>
+			<align>center</align>
+			<font>alwin22</font>
+			<textcolor>90FFFFFF</textcolor>
+			<info>ListItem.Label</info>
+			<visible>Control.HasFocus(59)</visible>
+		</control>
+		<control type="wraplist" id="59">
+			<viewtype label="Big DVD">Mega Big</viewtype>
+			<posx>76</posx>
+			<posy>95</posy>
+			<width>570</width>
+			<height>390</height>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>90</pagecontrol>
+			<focusposition>1</focusposition>
+			<onleft>2</onleft>
+			<onright>99</onright>
+			<onup>59</onup>
+			<ondown>59</ondown>
+			<itemlayout height="100">
+				<!-- <control type="image">
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>559</width>
+				<height>90</height>
+				<colordiffuse>ff555555</colordiffuse>
+				<info>ListItem.Icon</info>
+			</control> -->
+				<control type="image">
+					<posx>470</posx>
+					<posy>65</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Overlay</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="160">
+				<!-- <control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>569</width>
+				<height>140</height>
+				<texture border="1,0,1,0">-</texture>
+				<visible>Control.HasFocus(59)</visible>
+			</control>
+			<control type="image">
+				<posx>19</posx>
+				<posy>6</posy>
+				<width>528</width>
+				<height>121</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>233</posx>
+				<posy>-15</posy>
+				<width>86</width>
+				<height>155</height>
+				<texture>Case-DVD-DVDansicht-big.png</texture>
+				<aspectratio aligny="top">keep</aspectratio>
+                                <animation effect="zoom" start="80" end="253" center="275,48" acceleration="-1" time="180">Focus</animation>
+			</control> -->
+				<control type="image">
+					<posx>530</posx>
+					<posy>100</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Overlay</info>
+					<aspectratio aligny="top">keep</aspectratio>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="image">
+			<posx>276</posx>
+			<posy>120</posy>
+			<width>165</width>
+			<height>339</height>
+			<info>ListItem.Icon</info>
+			<visible>Control.IsVisible(59)</visible>
+			<include>zoom</include>
+		</control>
+		<control type="image">
+			<posx>245</posx>
+			<posy>99</posy>
+			<width>208</width>
+			<height>391</height>
+			<texture>Case-DVD-DVDansicht-big.png</texture>
+			<visible>Control.IsVisible(59)</visible>
+			<include>zoom</include>
+		</control>
+		<control type="image">
+			<posx>105</posx>
+			<posy>234</posy>
+			<width>42</width>
+			<height>68</height>
+			<texture>pfeilraufrunter.png</texture>
+			<visible>Control.IsVisible(59)</visible>
+			<include>zoom</include>
+		</control>
+		<control>
+			<description>description label</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>148</posx>
+			<posy>84</posy>
+			<align>left</align>
+			<label>Playlist</label>
+			<font>eth26</font>
+			<textcolor>963399FF</textcolor>
+			<visible>Control.IsVisible(59) + [Window.IsActive(Videoplaylist)]</visible>
+		</control>
+		<control>
+			<description>description label</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>148</posx>
+			<posy>84</posy>
+			<align>left</align>
+			<label>Database59</label>
+			<font>eth26</font>
+			<textcolor>963399FF</textcolor>
+			<visible>Control.IsVisible(59) + [Window.IsActive(Videolibrary)]</visible>
+		</control>
+		<control>
+			<description>description label</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>148</posx>
+			<posy>84</posy>
+			<align>left</align>
+			<label>3</label>
+			<font>eth26</font>
+			<textcolor>963399FF</textcolor>
+			<visible>Control.IsVisible(59) + [Window.IsActive(Videofiles)]</visible>
+		</control>
+		<!-- <control type="image">
+		<posx>100</posx>
+		<posy>480</posy>
+		<width>28</width>
+		<height>26</height>
+		<texture>play_wrap.png</texture>
+                <visible>Player.HasAudio + [Control.IsVisible(59)]</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>400</posy>
+		<width>720</width>
+		<height>101</height>
+		<texture>-</texture>
+		<colordiffuse>FFffffff</colordiffuse>
+		<include>common-fade</include>
+		<visible>Control.IsVisible(59)</visible>
+	</control> -->
+		<control type="image">
+			<posx>8</posx>
+			<posy>450</posy>
+			<width>44</width>
+			<height>58</height>
+			<texture>play_wrap.png</texture>
+			<visible>Player.Playing + [Control.HasFocus(59)]</visible>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>450</posy>
+			<width>44</width>
+			<height>58</height>
+			<texture>pause_wrap.png</texture>
+			<visible>Player.Paused + [Control.HasFocus(59)]</visible>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>450</posy>
+			<width>44</width>
+			<height>58</height>
+			<texture>pauseFF_wrap.png</texture>
+			<visible>Player.Forwarding + [Control.HasFocus(59)]</visible>
+		</control>
+		<control type="image">
+			<posx>8</posx>
+			<posy>450</posy>
+			<width>44</width>
+			<height>58</height>
+			<texture>pauseRR_wrap.png</texture>
+			<visible>Player.Rewinding + [Control.HasFocus(59)]</visible>
+		</control>
+	</include>
+	
+	<!-- CommonViewTypes_MegaBigThumb_MUSIK PICTURE VIDEO PROGRAMS SCRIPTS nur 59iger Ansicht START-->
+<include name="WrapOverlayBigThumbs">
+<control>
+			<description>musicoverlay Background</description>
+			<type>image</type>
+			<posx>-40</posx>
+			<posy>468</posy>
+			<width>805</width>
+			<height>130</height>
+			<texture>overlay-panel-bg-music.png</texture>
+			<visible>Player.HasAudio + [Control.HasFocus(59)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>OverlayWindowCloseTime.png</description>
+			<type>image</type>
+			<posx>4</posx>
+			<posy>424</posy>
+			<width>110</width>
+			<height>44</height>
+			<texture>OverlayWindowCloseTime.png</texture>
+			<!-- <aspectratio align="center">keep</aspectratio> -->
+			<visible>Player.HasAudio + [Control.HasFocus(59)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Elapsed Time Label</description>
+			<type>label</type>
+			<posx>-22</posx>
+			<posy>433</posy>
+			<align>center</align>
+			<include>infolabel</include>
+			<label>$INFO[MusicPlayer.Time]</label>
+			<visible>Player.HasAudio + [Control.HasFocus(59)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Seek Time Label</description>
+			<type>label</type>
+			<posx>-22</posx>
+			<posy>433</posy>
+			<align>center</align>
+			<include>infolabel</include>
+			<label>$INFO[MusicPlayer.SeekTime]</label>
+			<visible>Player.HasAudio + [Control.HasFocus(59)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>OverlayWindowCloseTime.png</description>
+			<type>image</type>
+			<posx>606</posx>
+			<posy>424</posy>
+			<width>110</width>
+			<height>44</height>
+			<texture>OverlayWindowCloseTime.png</texture>
+			<!-- <aspectratio align="center">keep</aspectratio> -->
+			<visible>Player.HasAudio + [Control.HasFocus(59)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>duration Time Label</description>
+			<type>label</type>
+			<posx>580</posx>
+			<posy>433</posy>
+			<align>center</align>
+			<include>infolabel</include>
+			<label>$INFO[player.Duration]</label>
+			<visible>Player.HasAudio + [Control.HasFocus(59)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Artist label</description>
+			<type>label</type>
+			<posx>22</posx>
+			<posy>522</posy>
+			<width>590</width>
+			<info>MusicPlayer.Artist</info>
+			<include>infolabel_3</include>
+			<visible>Player.HasAudio + [Control.HasFocus(59)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Title label</description>
+			<id>1</id>
+			<type>fadelabel</type>
+			<posx>22</posx>
+			<posy>489</posy>
+			<width>590</width>
+			<info>MusicPlayer.Title</info>
+			<include>infolabel_2</include>
+			<visible>Player.HasAudio + [Control.HasFocus(59)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>music cover</description>
+			<type>image</type>
+			<posx>626</posx>
+			<posy>479</posy>
+			<width>95</width>
+			<height>93</height>
+			<info>MusicPlayer.Cover</info>
+			<aspectratio align="center">keep</aspectratio>
+			<visible>Player.HasAudio + [Control.HasFocus(59)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<!-- bg oben -->
+			<description>musicoverlay Background</description>
+			<type>image</type>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>760</width>
+			<height>57</height>
+			<texture>overlay-panel-bg-music2.png</texture>
+			<visible>Player.HasMedia + [Control.HasFocus(59)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control type="label">
+			<posx>22</posx>
+			<posy>13</posy>
+			<width>680</width>
+			<height>30</height>
+			<font>alwin24</font>
+			<textcolor>ffffffff</textcolor>
+			<align>center</align>
+			<info>ListItem.Label</info>
+			<include>selectedcolor</include>
+			<visible>Player.HasMedia + [Control.HasFocus(59)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control type="image">
+			<posx>124</posx>
+			<posy>432</posy>
+			<width>18</width>
+			<height>30</height>
+			<texture>play_wrap2.png</texture>
+			<visible>Player.Playing + [Control.HasFocus(59)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Uhr label</description>
+			<type>label</type>
+			<posx>2</posx>
+			<posy>68</posy>
+			<label>time</label>
+			<info>System.Time</info>
+			<align>left</align>
+			<font>home_red</font>
+			<textcolor>30ffffff</textcolor>
+			<visible>Player.Playing + [Control.HasFocus(59)]</visible>			
+		</control>
+</include>
+<!-- CommonViewTypes_MegaBigThumb_MUSIK PICTURE VIDEO PROGRAMS SCRIPTS nur 59iger Ansicht END-->
+	
+	<!-- WrapOverlay   Music,  Video,  Picture,  Programms,   Gamesaves and Scripts---------------56--57---------------- S T A R T ------------------- -->
+	<include name="WrapOverlayMusic">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_overlay music.png</texture>
+			<visible>Control.IsVisible(56) + [Window.IsActive(mymusicfiles) | Window.IsActive(mymusiclibrary) | Window.IsActive(mymusicplaylist)]</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_overlay music.png</texture>
+			<visible>!Control.HasFocus(57)</visible>
+			<visible>Control.IsVisible(57) + [Window.IsActive(musicfiles) | Window.IsActive(musiclibrary) | Window.IsActive(musicplaylist)]</visible>
+		</control>
+	</include>
+	<include name="WrapOverlayVideo">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_overlay video.png</texture>
+			<visible>Control.IsVisible(56) + [Window.IsActive(videofiles) | Window.IsActive(videolibrary) | Window.IsActive(videoplaylist)]</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_overlay video.png</texture>
+			<visible>!Control.HasFocus(57)</visible>
+			<visible>Control.IsVisible(57) + [Window.IsActive(videofiles) | Window.IsActive(videolibrary) | Window.IsActive(videoplaylist)]</visible>
+		</control>
+	</include>
+	<include name="WrapOverlayPictures">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_overlay picture.png</texture>
+			<visible>Control.IsVisible(56) + [Window.IsActive(pictures)]</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_overlay picture.png</texture>
+			<visible>!Control.HasFocus(57)</visible>
+			<visible>Control.IsVisible(57) + [Window.IsActive(pictures)]</visible>
+		</control>
+	</include>
+	<include name="WrapOverlayPrograms">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_overlay programs.png</texture>
+			<visible>Control.IsVisible(56) + [Window.IsActive(programs)]</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_overlay programs.png</texture>
+			<visible>!Control.HasFocus(57)</visible>
+			<visible>Control.IsVisible(57) + [Window.IsActive(programs)]</visible>
+		</control>
+	</include>
+	<include name="WrapOverlayScripts">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_overlay scripts.png</texture>
+			<visible>Control.IsVisible(56) + [Window.IsActive(scripts)]</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_overlay scripts.png</texture>
+			<visible>!Control.HasFocus(57)</visible>
+			<visible>Control.IsVisible(57) + [Window.IsActive(scripts)]</visible>
+		</control>
+	</include>
+	<include name="WrapOverlayGameSaves">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_overlay programs.png</texture>
+			<visible>Control.IsVisible(56) + [Window.IsActive(gamesaves)]</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_overlay programs.png</texture>
+			<visible>!Control.HasFocus(57)</visible>
+			<visible>Control.IsVisible(57) + [Window.IsActive(gamesaves)]</visible>
+		</control>
+	</include>
+	<!-- WrapOverlay   Music,  Video,  Picture,  Programms,   Gamesaves and Scripts 			E N D -->
+	<include name="numberOfFiles">
+		<control>
+			<description>number of files text label</description>
+			<type>label</type>
+			<id>12</id>
+			<posx>500</posx>
+			<posy>468</posy>
+			<align>right</align>
+			<label>-</label>
+			<font>idua20</font>
+			<textcolor>98aaaaaa</textcolor>
+			<include>contentpanelslide</include>
+		</control>
+	</include>
+	<include name="weather fade">
+		<animation effect="fade" delay="200" start="0" end="100" time="200" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="150" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	</include>
+	<include name="selectedcolor">
+		<selectedcolor>FF0000FF</selectedcolor>
+	</include>
+	<include name="autoscrollslow">
+		<align>justify</align>
+		<autoscroll time="3000" delay="3000">Skin.HasSetting(AutoScroll)</autoscroll>
+	</include>
+	<include name="autoscrollmedium">
+		<align>justify</align>
+		<autoscroll time="2000" delay="3000">Skin.HasSetting(AutoScroll)</autoscroll>
+	</include>
+	<include name="autoscrollfast">
+		<align>justify</align>
+		<autoscroll time="1000" delay="3000">Skin.HasSetting(AutoScroll)</autoscroll>
+	</include>
+	
+	
+	<!-- <include name="AllViewCommonPageControls">
+		<control type="button">
+			<posx>680</posx>
+			<posy>100</posy>
+			<include>scrollbar_width</include>
+			<height>20</height>
+			<onclick>PageUp(60)</onclick>
+			<texturefocus border="4">scrollbar_arrow_up_focus.png</texturefocus>
+			<texturenofocus border="4">scrollbar_arrow_up.png</texturenofocus>
+			<include>contentpanelslide</include>
+			<visible>Control.IsVisible(60)</visible>
+			<animation effect="slide" start="0,0" end="-205,0" time="0" condition="Container.Content(Seasons) + Control.IsVisible(58)">conditional</animation>
+		</control>
+		<control type="button">
+			<posx>680</posx>
+			<posy>500</posy>
+			<include>scrollbar_width</include>
+			<height>20</height>
+			<onclick>PageDown(60)</onclick>
+			<texturefocus border="4">scrollbar_arrow_down_focus.png</texturefocus>
+			<texturenofocus border="4">scrollbar_arrow_down.png</texturenofocus>
+			<include>contentpanelslide</include>
+			<visible>Control.IsVisible(60)</visible>
+			<animation effect="slide" start="0,0" end="-205,0" time="0" condition="Container.Content(Seasons) + Control.IsVisible(58)">conditional</animation>
+		</control>
+		<control type="scrollbar" id="60">
+			<posx>680</posx>
+			<posy>120</posy>
+			<include>scrollbar_width</include>
+			<height>380</height>
+			<texturesliderbackground border="4">scrollbar_background.png</texturesliderbackground>
+			<texturesliderbar border="4">scrollbar_bar.png</texturesliderbar>
+			<texturesliderbarfocus border="4">scrollbar_bar_focus.png</texturesliderbarfocus>
+			<textureslidernib>-</textureslidernib>
+			<textureslidernibfocus>-</textureslidernibfocus>
+			<onleft>50</onleft>
+			<onright>9000</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<include>contentpanelslide</include>
+			<visible>!Control.IsVisible(56)</visible>
+			<visible>![Window.IsActive(myvideolibrary) + Control.IsVisible(51)]</visible>
+			<visible>![Window.IsActive(mymusicfiles) + Control.IsVisible(57)]</visible>
+			<visible>![Window.IsActive(mymusiclibrary) + Control.IsVisible(57)]</visible>
+			<visible>![Window.IsActive(mymusiclibrary) + Control.IsVisible(51)]</visible>
+			<visible>![Window.IsActive(mymusicplaylist) + Control.IsVisible(57)]</visible>
+			<animation effect="slide" start="0,0" end="-205,0" time="0" condition="Container.Content(Seasons) + Control.IsVisible(58)">conditional</animation>
+		</control>
+	</include> -->
+	<include name="scrollbar_width">
+		<width>16</width>
+	</include>
+	<include name="LastFMLOGO">
+	<control type="image">
+			<posx>652</posx>
+			<posy>450</posy>
+			<width>50</width>
+			<height>66</height>
+			<texture>lastfm.png</texture>
+			<aspectratio align="left">keep</aspectratio>			
+			<visible>Player.HasAudio + LastFM.RadioPlaying</visible>
+		</control>
+		<!-- <control type="image">
+			<posx>652</posx>
+			<posy>450</posy>
+			<width>50</width>
+			<height>66</height>
+			<texture>lastfmnotplaying.png</texture>
+			<aspectratio align="left">keep</aspectratio>			
+			<visible>!LastFM.RadioPlaying</visible>
+		</control> -->
+		</include>
+</includes>

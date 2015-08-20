@@ -1,0 +1,468 @@
+<window>
+	<id>2003</id>
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+	<animation effect="slide" time="300" start="0,0" end="760,0" acceleration="1.1" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	<coordinates>
+		<posx>-85</posx>
+		<posy>-36</posy>
+	</coordinates>
+	<controls>
+		<control>
+			<description>background image</description>
+			<type>image</type>
+			<id>1</id>
+			<posx>55</posx>
+			<posy>26</posy>
+			<width>780</width>
+			<height>608</height>
+			<texture>bg_Weather.png</texture>
+		</control>
+		<control type="image">
+			<description>folder image</description>
+			<posx>274</posx>
+			<posy>37</posy>
+			<width>790</width>
+			<height>68</height>
+			<aspectratio align="left">keep</aspectratio>
+			<texture diffuse="Wide_Icon_Diffuse.png" />
+			<info>container.folderthumb</info>
+			<visible>container.content(episodes)</visible>
+		</control>
+		<control type="image" id="3">
+			<description>Cover image</description>
+			<posx>216</posx>
+			<posy>155</posy>
+			<width>128</width>
+			<height>140</height>
+			<texture>-</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>container.content(episodes)</visible>
+		</control>
+		<!-- <control>
+   <description>description label</description>
+   <type>label</type>
+   <id>1</id>
+   <posx>331</posx>
+   <posy>49</posy>
+   <width>430</width>
+   <label>FILM-INFO</label>
+   <font>eth24</font>
+   <textcolor>98FF7F24</textcolor>
+   <visible>IsEmpty(ListItem.folderthumb)</visible>
+</control> -->
+		<control>
+			<description>Movie Title value</description>
+			<type>fadelabel</type>
+			<id>20</id>
+			<posx>365</posx>
+			<posy>116</posy>
+			<width>290</width>
+			<label>-</label>
+			<font>idua20</font>
+			<textcolor>98ffffff</textcolor>
+		</control>
+		<control>
+			<description>Director txt</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>365</posx>
+			<posy>153</posy>
+			<width>90</width>
+			<label>199</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>Writing Credits txt</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>365</posx>
+			<posy>173</posy>
+			<width>90</width>
+			<label>200</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>Genre txt</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>365</posx>
+			<posy>193</posy>
+			<width>90</width>
+			<label>174</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>Year</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>365</posx>
+			<posy>213</posy>
+			<width>90</width>
+			<label>201</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>TagLine txt</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>365</posx>
+			<posy>233</posy>
+			<width>90</width>
+			<label>202</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>PlotOutline txt</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>365</posx>
+			<posy>253</posy>
+			<width>90</width>
+			<label>203</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>Rating txt</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>365</posx>
+			<posy>273</posy>
+			<width>90</width>
+			<label>204</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>Runtime txt</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>365</posx>
+			<posy>293</posy>
+			<width>90</width>
+			<label>2050</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>MPPA Rating txt</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>365</posx>
+			<posy>313</posy>
+			<width>90</width>
+			<label>20074</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>Director value</description>
+			<type>fadelabel</type>
+			<id>21</id>
+			<posx>465</posx>
+			<posy>153</posy>
+			<width>250</width>
+			<label>-</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>Writing Credits value</description>
+			<type>fadelabel</type>
+			<id>22</id>
+			<posx>465</posx>
+			<posy>173</posy>
+			<width>250</width>
+			<label>-</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>Genre value</description>
+			<type>fadelabel</type>
+			<id>23</id>
+			<posx>465</posx>
+			<posy>193</posy>
+			<width>250</width>
+			<label>-</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>Year value</description>
+			<type>fadelabel</type>
+			<id>24</id>
+			<posx>465</posx>
+			<posy>213</posy>
+			<width>250</width>
+			<label>-</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>TagLine value</description>
+			<type>fadelabel</type>
+			<id>25</id>
+			<posx>465</posx>
+			<posy>233</posy>
+			<width>250</width>
+			<label>-</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>PlotOutline value</description>
+			<type>fadelabel</type>
+			<id>26</id>
+			<posx>465</posx>
+			<posy>253</posy>
+			<width>250</width>
+			<label>-</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>Rating and votes value</description>
+			<type>fadelabel</type>
+			<id>30</id>
+			<posx>465</posx>
+			<posy>273</posy>
+			<width>250</width>
+			<label>-</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>Runtime value</description>
+			<type>fadelabel</type>
+			<id>31</id>
+			<posx>465</posx>
+			<posy>293</posy>
+			<width>250</width>
+			<label>-</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>MPPA Rating value</description>
+			<type>fadelabel</type>
+			<id>32</id>
+			<posx>465</posx>
+			<posy>313</posy>
+			<width>250</width>
+			<label>-</label>
+			<font>font12</font>
+		</control>
+		<control>
+			<description>Cover image</description>
+			<type>image</type>
+			<id>3</id>
+			<posx>206</posx>
+			<posy>120</posy>
+			<width>143</width>
+			<height>213</height>
+			<texture>-</texture>
+			<aspectratio>keep</aspectratio>
+		</control>
+		<control>
+			<description>separator</description>
+			<type>image</type>
+			<id>1</id>
+			<posx>198</posx>
+			<posy>344</posy>
+			<width>490</width>
+			<height>5</height>
+			<texture>separator.png</texture>
+		</control>
+		<control>
+			<description>Play</description>
+			<type>button</type>
+			<id>8</id>
+			<posx>333</posx>
+			<posy>567</posy>
+			<width>54</width>
+			<height>47</height>
+			<texturefocus>home-play-FO.png</texturefocus>
+			<texturenofocus>home-dvd-r-NF-mmi.png</texturenofocus>
+			<label>-</label>
+			<onleft>6</onleft>
+			<onright>9</onright>
+			<onup>50</onup>
+			<ondown>5</ondown>
+		</control>
+		<control>
+			<description>Resume</description>
+			<type>button</type>
+			<id>9</id>
+			<posx>403</posx>
+			<posy>567</posy>
+			<width>83</width>
+			<height>47</height>
+			<texturefocus>home-play-fortsetzen-FO.png</texturefocus>
+			<texturenofocus>home-play-fortsetzen-NF.png</texturenofocus>
+			<label>-</label>
+			<onleft>8</onleft>
+			<onright>10</onright>
+			<onup>4</onup>
+			<ondown>5</ondown>
+		</control>
+		<control>
+			<description>Tracks/Review</description>
+			<type>button</type>
+			<id>5</id>
+			<posx>66</posx>
+			<posy>23</posy>
+			<width>106</width>
+			<height>161</height>
+			<label>184</label>
+			<font>alwin22</font>
+			<textcolor>ffFF7F24</textcolor>
+			<texturefocus>button-lioben-weather-fo.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textoffsetx>44</textoffsetx>
+			<textoffsety>20</textoffsety>
+			<align>left</align>
+			<aligny>bottom</aligny>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>10</onup>
+			<ondown>6</ondown>
+			<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control>
+			<description>Refresh</description>
+			<type>button</type>
+			<id>6</id>
+			<posx>76</posx>
+			<posy>474</posy>
+			<width>106</width>
+			<height>161</height>
+			<label>184</label>
+			<font>alwin22</font>
+			<textcolor>ffFF7F24</textcolor>
+			<texturefocus>button-liunten-weather-fo.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textoffsetx>40</textoffsetx>
+			<textoffsety>102</textoffsety>
+			<align>left</align>
+			<aligny>bottom</aligny>
+			<onleft>12</onleft>
+			<onright>8</onright>
+			<onup>5</onup>
+			<ondown>12</ondown>
+			<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control>
+			<description>Get Thumb</description>
+			<type>button</type>
+			<id>10</id>
+			<posx>706</posx>
+			<posy>474</posy>
+			<width>106</width>
+			<height>161</height>
+			<label>13405</label>
+			<font>alwin22</font>
+			<textcolor>ffFF7F24</textcolor>
+			<texturefocus>button-reunten-weather-fo.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textoffsetx>40</textoffsetx>
+			<textoffsety>102</textoffsety>
+			<align>right</align>
+			<aligny>bottom</aligny>
+			<onleft>9</onleft>
+			<onright>4</onright>
+			<onup>12</onup>
+			<ondown>5</ondown>
+			<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control type="button" id ="12">
+			<description>Get Fanart</description>
+			<posx>716</posx>
+			<posy>25</posy>
+			<width>106</width>
+			<height>161</height>
+			<label>20413</label>
+			<font>alwin22</font>
+			<textoffsetx>46</textoffsetx>
+			<textoffsety>20</textoffsety>
+			<align>right</align>
+			<aligny>bottom</aligny>
+			<textcolor>ffFF7F24</textcolor>
+			<texturefocus>button-reoben-weather-fo.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>6</onup>
+			<ondown>10</ondown>
+			<!-- <visible>Container.Content(TVShows)</visible> -->
+			<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control>
+			<description>bg listcontrol and textarea fuer zoom funktion</description>
+			<type>image</type>
+			<id>1111</id>
+			<posx>217</posx>
+			<posy>348</posy>
+			<width>453</width>
+			<height>206</height>
+			<texture>blackblack3.png</texture>
+			<visible>Control.HasFocus(4)</visible>
+			<animation effect="zoom" start="100" end="150" center="auto" time="50">visiblechange</animation>
+			<animation effect="zoom" start="150" end="100" center="auto" time="50">visiblechange</animation>
+		</control>
+		<control>
+			<description>textarea</description>
+			<type>textbox</type>
+			<id>4</id>
+			<posx>226</posx>
+			<posy>348</posy>
+			<width>440</width>
+			<height>175</height>
+			<font>idua20</font>
+			<textcolor>98ffffff</textcolor>
+			<onleft>5</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<spinposx>390</spinposx>
+			<spinposy>180</spinposy>
+			<animation effect="zoom" start="100" end="150" center="auto" time="50">focus</animation>
+			<animation effect="zoom" start="150" end="100" center="auto" time="50">unfocus</animation>
+		</control>
+		<control>
+			<description>cast listcontrol/ Schauspieler</description>
+			<type>listcontrol</type>
+			<id>50</id>
+			<posx>220</posx>
+			<posy>350</posy>
+			<width>440</width>
+			<height>175</height>
+			<font>idua20</font>
+			<textcolor>99ffffff</textcolor>
+			<texturefocus>list-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onleft>5</onleft>
+			<onright>4</onright>
+			<onup>5</onup>
+			<ondown>8</ondown>
+			<spinposx>390</spinposx>
+			<spinposy>180</spinposy>
+		</control>
+		<!-- <control>
+   <description>disc:</description>
+   <type>label</type>
+   <id>1</id>
+   <posx>106</posx>
+   <posy>495</posy>
+   <label>427</label>
+   <font>font12</font>
+  </control>
+  <control>
+   <description>disc select</description>
+   <type>spincontrol</type>
+   <id>7</id>
+   <posx>105</posx>
+   <posy>535</posy>
+   <reverse>yes</reverse>
+   <onup>6</onup>
+   <ondown>5</ondown>
+   <onleft>4</onleft>
+   <onright>4</onright>
+  </control> -->
+	</controls>
+	<!-- TRAILER BUTTON  neeed !!! -->
+</window>

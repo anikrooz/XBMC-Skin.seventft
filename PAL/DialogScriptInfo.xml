@@ -1,0 +1,44 @@
+<window>
+	<id>2004</id>
+	<defaultcontrol>5</defaultcontrol>
+	<controls>
+		<control>
+			<description>background image</description>
+			<type>image</type>
+			<id>1</id>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_info.png</texture>
+		</control>
+		<include>custombg</include>
+		<include>UHR</include>
+		<include>pseudoEqualizer</include>
+		<control>
+			<description>description label</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>32</posx>
+			<posy>523</posy>
+			<align>left</align>
+			<label>262</label>
+			<font>eth26</font>
+			<textcolor>98FF945C</textcolor>
+			<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control>
+			<description>textarea</description>
+			<type>textbox</type>
+			<id>5</id>
+			<posx>220</posx>
+			<posy>120</posy>
+			<width>445</width>
+			<height>425</height>
+			<font>alwin14</font>
+			<spinposx>410</spinposx>
+			<spinposy>405</spinposy>
+		</control>
+	</controls>
+</window>

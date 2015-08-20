@@ -1,0 +1,280 @@
+<window id="2000">
+	<defaultcontrol>3</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>110</posx>
+		<posy>110</posy>
+	</coordinates>
+	<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+	<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="500" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+	<!-- <include>dialogeffect</include> -->
+	<!-- <include>overlayswitch</include> -->
+	<controls>
+		<control type="image" id="0">
+			<description>background image</description>
+			<posx>-110</posx>
+			<posy>-110</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-plain.jpg</texture>
+		</control>
+		<control type="image" id="0">
+			<description>contentpanel slice Custom background</description>
+			<posx>-70</posx>
+			<posy>-55</posy>
+			<width>640</width>
+			<height>466</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="Content_Panel_Diffuse.png" />
+			<info>Skin.String(Custom_Background)</info>
+			<visible>Skin.HasSetting(Use_Custom_Background)</visible>
+			<visible>![!IsEmpty(Fanart.Image) + Skin.HasSetting(ShowFanart)]</visible>
+		</control>
+		<control type="label" id="1">
+			<description>heading label</description>
+			<posx>580</posx>
+			<posy>-86</posy>
+			<width>480</width>
+			<align>right</align>
+			<label>1023</label>
+			<font>eth20</font>
+			<textcolor>ff778899</textcolor>
+			<scroll>true</scroll>
+		</control>
+		<control type="list" id="3">
+			<posx>12</posx>
+			<posy>12</posy>
+			<width>480</width>
+			<height>309</height>
+			<onleft>5</onleft>
+			<onright>60</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="31">
+				<!-- <control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>453</width>
+					<height>29</height>
+					<texture>input-nofocus.png</texture>
+				</control> -->
+				<control type="label">
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>443</width>
+					<height>29</height>
+					<font>idua18</font>
+					<aligny>center</aligny>
+					<selectedcolor>green</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="31">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>453</width>
+					<height>29</height>
+					<texture>input-nofocus-lightsteelblue_1.png</texture>
+					<visible>!Control.hasfocus(3)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>453</width>
+					<height>29</height>
+					<texture>input-nofocus-lightsteelblue.png</texture>
+					<visible>Control.hasfocus(3)</visible>
+				</control>
+				<control type="label">
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>443</width>
+					<height>29</height>
+					<font>idua18</font>
+					<aligny>center</aligny>
+					<selectedcolor>green</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="button">
+			<posx>480</posx>
+			<posy>45</posy>
+			<include>scrollbar_width</include>
+			<height>20</height>
+			<width>20</width>
+			<colordiffuse>99FFFFFF</colordiffuse>
+			<onclick>PageUp(60)</onclick>
+			<texturefocus border="4">scrollbar_arrow_up_focus.png</texturefocus>
+			<texturenofocus border="4">scrollbar_arrow_up.png</texturenofocus>
+			<visible>Control.IsVisible(6000)</visible>
+		</control>
+		<control type="button">
+			<posx>480</posx>
+			<posy>265</posy>
+			<include>scrollbar_width</include>
+			<height>20</height>
+			<width>20</width>
+			<colordiffuse>99FFFFFF</colordiffuse>
+			<onclick>PageDown(60)</onclick>
+			<texturefocus border="4">scrollbar_arrow_down_focus.png</texturefocus>
+			<texturenofocus border="4">scrollbar_arrow_down.png</texturenofocus>
+			<visible>Control.IsVisible(6000)</visible>
+		</control>
+		<control type="scrollbar" id="60">
+			<posx>480</posx>
+			<posy>65</posy>
+			<include>scrollbar_width</include>
+			<height>200</height>
+			<width>24</width>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+			<texturesliderbackground border="4">scrollbar_background.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>ScrollBarNib_NF.png</textureslidernib>
+			<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+			<onleft>3</onleft>
+			<onright>5</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+		</control>
+		<control type="label" id="2">
+			<description>number of files text label</description>
+			<posx>438</posx>
+			<posy>356</posy>
+			<align>right</align>
+			<label>-</label>
+			<font>idua18</font>
+			<textcolor>98aaaaaa</textcolor>
+		</control>
+		<control type="button" id="5">
+			<description>manual button</description>
+			<posx>-110</posx>
+			<posy>-115</posy>
+			<width>106</width>
+			<height>161</height>
+			<label>368</label>
+			<font>alwin22</font>
+			<textcolor>ff888888</textcolor>
+			<texturefocus>button-lioben-grau-fo.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textoffsetx>18</textoffsetx>
+			<textoffsety>20</textoffsety>
+			<align>left</align>
+			<aligny>bottom</aligny>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+		</control>
+		<!-- overlay switch audio-->
+		<control>
+			<description>musicoverlay Background</description>
+			<type>image</type>
+			<posx>-110</posx>
+			<posy>400</posy>
+			<width>805</width>
+			<height>130</height>
+			<texture>overlay-panel-bg-music.png</texture>
+			<visible>Player.HasAudio</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>OverlayWindowCloseTime.png</description>
+			<type>image</type>
+			<posx>-100</posx>
+			<posy>354</posy>
+			<width>110</width>
+			<height>44</height>
+			<texture>OverlayWindowCloseTime.png</texture>
+			<visible>Player.HasAudio</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Elapsed Time Label</description>
+			<type>label</type>
+			<posx>-125</posx>
+			<posy>361</posy>
+			<align>center</align>
+			<font>idua24</font>
+			<textcolor>ff778899</textcolor>
+			<label>$INFO[MusicPlayer.Time]</label>
+			<visible>Player.HasAudio</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Seek Time Label</description>
+			<type>label</type>
+			<posx>-125</posx>
+			<posy>361</posy>
+			<align>center</align>
+			<font>idua24</font>
+			<textcolor>ff778899</textcolor>
+			<label>$INFO[MusicPlayer.SeekTime]</label>
+			<visible>Player.HasAudio</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>OverlayWindowCloseTime.png</description>
+			<type>image</type>
+			<posx>490</posx>
+			<posy>354</posy>
+			<width>110</width>
+			<height>44</height>
+			<texture>OverlayWindowCloseTime.png</texture>
+			<visible>Player.HasAudio</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>duration Time Label</description>
+			<type>label</type>
+			<posx>465</posx>
+			<posy>361</posy>
+			<align>center</align>
+			<font>idua24</font>
+			<textcolor>ff778899</textcolor>
+			<label>$INFO[player.Duration]</label>
+			<visible>Player.HasAudio</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Title label</description>
+			<type>label</type>
+			<posx>-80</posx>
+			<posy>408</posy>
+			<width>590</width>
+			<info>MusicPlayer.Title</info>
+			<visible>Player.HasAudio</visible>
+			<include>infolabel_2</include>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Artist label</description>
+			<type>label</type>
+			<posx>-80</posx>
+			<posy>435</posy>
+			<width>590</width>
+			<info>MusicPlayer.Artist</info>
+			<visible>Player.HasAudio</visible>
+			<include>infolabel_3</include>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>music cover</description>
+			<type>image</type>
+			<posx>544</posx>
+			<posy>408</posy>
+			<width>58</width>
+			<height>58</height>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<visible>Player.HasAudio</visible>
+			<info>MusicPlayer.Cover</info>
+			<include>OverlayWindowClose</include>
+		</control>
+	</controls>
+</window>

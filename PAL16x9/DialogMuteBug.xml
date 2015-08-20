@@ -1,0 +1,38 @@
+<window>
+	<id>113</id>
+	<defaultcontrol>901</defaultcontrol>
+	<controls>
+	    <control>
+			<description>Mute Image</description>
+			<type>image</type>
+			<id>901</id>
+			<posx>652</posx>
+			<posy>64</posy>
+			<width>66</width>
+			<height>60</height>
+			<texture>bgMute.png</texture>
+		</control>
+		<control>
+			<description>Mute Image</description>
+			<type>image</type>
+			<id>901</id>
+			<posx>658</posx>
+			<posy>64</posy>
+			<width>54</width>
+			<height>66</height>
+			<texture>mute.png</texture>
+		</control>
+		<!-- <control>
+			<description>mute label</description>
+			<type>label</type>
+			<id>0</id>
+			<posx>706</posx>
+			<posy>116</posy>
+			<width>60</width>
+			<height>73</height>
+			<label>MUTE</label>
+			<align>right</align>
+			<font>idua16</font>
+		</control> -->
+	</controls>
+</window>

@@ -1,0 +1,76 @@
+--------------------------
+
+~~~~~~~~ XBMC-TV ~~~~~~~~~
+++++Installation Notes++++
+
+--------------------------
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Prerequisites and minimum system requirements:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Television set
+- Modified XBOX (either softmod or modchip)
+- XBOX Media Center (XBMC) 2.0.1 or later installed on your XBOX
+- High Speed Internet access (1 Mbit+), XBOX attached to it
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+First Time Installation:
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. If you downloaded XBMC-TV from SVN, execute the BUILD.bat included in the XBMC-TV folder. If you have downloaded a snapshot pack from www.xbmc-tv.com or http://code.google.com/p/xbmc-strm-collection/, simply skip this step.
+
+2. Turn on your XBOX
+
+3. Transfer the folder "XBMC-TV" to your XBOX via FTP (or your prefered method of file transfer).  We suggest putting it in the root of the E drive, so the file path would look like "E:\XBMC-TV\."
+
+3. If you have not done so already, launch XBMC on your XBOX.
+
+4. In the main menu section of XBMC, navigate to "Videos" and press the green "A"-Button on your XBOX controller to open it.
+
+5. Inside the "Videos" section press the white button on your XBOX controller to open a context menu. From the context menu, select "Add source" and press the green "A"-Button on your XBOX controller to open the Add Source dialog.
+
+6. You are now in the dialog menu "Add Video Source".
+
+7. Navigate to the "Browse" button and press the green "A"-Button on your XBOX controller to activate it.
+
+8. Navigate to the XBMC-TV folder you FTPed onto your Xbox in step 3. If you followed the suggestion in step 3, this should be "E:\XBMC-TV\" (to be reached by selecting "E Drive" -> Highlight "XBMC-TV" -> Press "Add" button). Simply mark the top level directory of your XBMC-TV content and navigate to the "Add button" and press the green "A"-Button on your XBOX controller to activate it.
+
+9. In the field "Enter a name for this Media Source," enter any text you like.  We would recommend using "XBMC-TV," though ;)
+
+10. Navigate to the "OK" Button in the "Add Video Source" dialog menu and press the green "A"-Button on your XBOX controller to activate it.
+
+11. You should now be able to find a link to XBMC-TV in your "Videos" section of XBMC. Simply open it by pressing the green "A"-button on your XBOX controller.
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~
+Update installation:
+~~~~~~~~~~~~~~~~~~~~
+
+1. If you downloaded XBMC-TV from SVN, execute the included BUILD.bat. If you have downloaded a snapshot pack from www.xbmc-tv.com or http://code.google.com/p/xbmc-strm-collection/, simply skip this step.
+
+2. Turn on your XBOX
+
+3. FTP into your XBOX.
+
+4. Using your FTP client, navigate to the folder where you last stored the contents of XBMC-TV. 
+
+5. Delete the contents of that folder, leaving the folder itself untouched
+
+6. FTP the contents of the directory "XBMC-TV" on your PC to your XBOX. 
+
+7. Finally, if you wish to keep up to date with revised XBMC-TV icons, you must clear your XBMC video thumbnail cache.  You can do this by navigating, either via the File Manager or FTP, and deleting the folder "Video," located in XBMC\UserData\Thumbnails\Video.
+
+
+
+
+
+~~~~~~~~~~~~
+Final Notes:
+~~~~~~~~~~~~
+
+If for any reason you find something is not working with XBMC-TV as you think it should, please file an issue report on http://code.google.com/p/xbmc-strm-collection/issues/list. If you have any questions concerning the installation/update process, feel free to contact us via email at xbmctv@gmail.com .

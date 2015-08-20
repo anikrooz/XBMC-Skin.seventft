@@ -1,0 +1,750 @@
+<window>   
+
+ <id>2600</id>
+ <defaultcontrol>2</defaultcontrol>
+ <allowoverlay>yes</allowoverlay>
+
+
+<coordinates>
+    <posx>-85</posx>
+  <posy>-36</posy>
+ </coordinates>
+
+
+ <controls>
+
+  <control>
+   <description>background image</description>
+   <type>image</type>
+   <id>1</id>
+   <posx>55</posx>
+   <posy>26</posy>
+   <width>780</width>
+   <height>596</height>
+   <texture>bg_Weather.png</texture>
+  </control>
+
+<control type="image" id="0">
+			<description>contentpanel slice Custom background</description>
+			<posx>100</posx>
+			<posy>84</posy>
+			<width>690</width>
+			<height>480</height>
+			<aspectratio scalediffuse="false">scale</aspectratio> 
+			<texture diffuse="Content_Panel_Diffuse.png" /> 
+			<info>Skin.String(Custom_Background)</info>			
+			<visible>Skin.HasSetting(Use_Custom_Background)</visible>
+			<visible>![!IsEmpty(Fanart.Image) + Skin.HasSetting(ShowFanart)]</visible>
+		</control>
+
+  <control>
+      <description>Progressbar</description>
+      <type>progress</type>
+      <posx>210</posx>
+      <posy>92</posy>
+      <width>472</width>
+      <height>9</height>
+      <info>Player.Progress</info>
+      <texturebg>progress-info-music-bg.png</texturebg>
+      <lefttexture>-</lefttexture>
+      <midtexture>progress_mid-info-wetter.png</midtexture>
+      <righttexture>-</righttexture>
+      <overlaytexture>progress-info-music-mid.png</overlaytexture>
+      <visible>Player.HasMedia</visible>
+    </control>
+
+
+
+
+  <control>
+   <description>description label</description>
+   <type>label</type>
+   <id>1</id>
+   <posx>780</posx>
+   <posy>46</posy>
+   <align>right</align>
+   <label>10508</label>
+   <font>eth26</font>
+   <textcolor>98FF7F24</textcolor>
+</control>
+
+  <control>
+   <description>PartyMode Enabled</description>
+   <type>button</type>
+   <id>1</id>
+   <posx>760</posx>
+   <posy>98</posy>
+   <width>32</width>
+   <height>32</height>
+   <label>-</label>
+   <texturefocus>-</texturefocus>
+   <texturenofocus>partymodus.gif</texturenofocus>
+   <visible>MusicPartyMode.Enabled</visible>
+   </control>
+
+  <control>
+   <description>Refresh Button</description>
+   <type>button</type>
+   <id>2</id>
+   <posx>66</posx>
+    <posy>23</posy>
+    <width>106</width>
+    <height>161</height>
+    <label>184</label>
+    <font>alwin22</font>
+    <textcolor>ffFF7F24</textcolor>
+    <texturefocus>button-lioben-weather-fo.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <textoffsetx>44</textoffsetx>
+    <textoffsety>20</textoffsety>
+    <align>left</align>
+    <aligny>bottom</aligny>
+   <onleft>3</onleft>
+   <onright>3</onright>
+   <onup>4</onup>
+   <ondown>4</ondown>
+   <animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+ <animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+</control>
+
+
+
+  
+
+  <control>
+   <description>Settings Button</description>
+   <type>button</type>
+   <id>4</id>
+   <posx>74</posx>
+    <posy>460</posy>
+    <width>106</width>
+    <height>161</height>
+    <label>5</label>
+    <font>alwin22</font>
+    <textcolor>ffFF7F24</textcolor>
+    <texturefocus>button-liunten-weather-fo.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <textoffsetx>40</textoffsetx>
+    <textoffsety>110</textoffsety>
+    <align>left</align>
+    <aligny>bottom</aligny>
+   <onleft>3</onleft>
+   <onright>3</onright>
+   <onup>2</onup>
+   <ondown>2</ondown>
+   <onclick>ActivateWindow(MyWeatherSettings)</onclick>
+   <animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+ <animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+</control>
+  
+
+
+
+
+
+
+
+
+
+
+  <control>
+   <description>logo image</description>
+   <type>image</type>
+   <id>1</id>
+   <posx>211</posx>
+   <posy>120</posy>
+   <width>465</width>
+   <height>180</height>
+   <texture>blue_rectangle_weather.png</texture>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>logo image</description>
+   <type>button</type>
+   <id>1</id>
+   <posx>211</posx>
+   <posy>120</posy>
+   <width>464</width>
+   <texturenofocus>button-nofocus-weather_mmi.png</texturenofocus>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>logo image</description>
+   <type>image</type>
+   <id>1</id>
+   <posx>211</posx>
+   <posy>310</posy>
+   <width>111</width>
+   <height>198</height>
+   <texture>blue_rectangle_weather.png</texture>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>logo image</description>
+   <type>image</type>
+   <id>1</id>
+   <posx>329</posx>
+   <posy>310</posy>
+   <width>111</width>
+   <height>198</height>
+   <texture>blue_rectangle_weather.png</texture>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>logo image</description>
+   <type>image</type>
+   <id>1</id>
+   <posx>447</posx>
+   <posy>310</posy>
+   <width>111</width>
+   <height>198</height>
+   <texture>blue_rectangle_weather.png</texture>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>logo image</description>
+   <type>image</type>
+   <id>1</id>
+   <posx>565</posx>
+   <posy>310</posy>
+   <width>111</width>
+   <height>198</height>
+   <texture>blue_rectangle_weather.png</texture>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>weather location select spincontrol</description>
+   <type>spincontrol</type>
+   <align>left</align>
+   <width>17</width>
+   <height>17</height>
+   <id>3</id>
+   <posx>216</posx>
+   <posy>128</posy>
+   <font>-</font>
+   <reverse>yes</reverse>
+   <onup>2</onup>
+   <ondown>2</ondown>
+   <onleft>2</onleft>
+   <onright>2</onright>
+   <disabledcolor>ffffffff</disabledcolor>
+   <textoffsetx>0</textoffsetx>
+   <textoffsety>0</textoffsety>
+   <aligny>center</aligny>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>weather location select label</description>
+   <type>label</type>
+   <align>left</align>
+   <width>350</width>
+   <height>15</height>
+   <id>0</id>
+   <posx>256</posx>
+   <posy>127</posy>
+   <font>font13</font>
+   <reverse>yes</reverse>
+   <disabledcolor>ffffffff</disabledcolor>
+   <textoffsetx>0</textoffsetx>
+   <textoffsety>0</textoffsety>
+   <aligny>center</aligny>
+   <include>contentpanelslide</include>
+   <info>Weather.Location</info>
+  </control>
+
+  <control>
+   <description>update time label</description>
+   <type>label</type>
+   <id>11</id>
+   <align>right</align>
+   <posx>660</posx>
+   <posy>129</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>current temp static label</description>
+   <type>label</type>
+   <id>223</id>
+   <posx>221</posx>
+   <posy>168</posy>
+   <label>Temp</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>current feels like static label</description>
+   <type>label</type>
+   <id>224</id>
+   <posx>221</posx>
+   <posy>188</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>current UV Index static label</description>
+   <type>label</type>
+   <id>225</id>
+   <posx>221</posx>
+   <posy>248</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>current wind static label</description>
+   <type>label</type>
+   <id>226</id>
+   <posx>221</posx>
+   <posy>268</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>current dew static label</description>
+   <type>label</type>
+   <id>227</id>
+   <posx>221</posx>
+   <posy>208</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>current humidity static label</description>
+   <type>label</type>
+   <id>228</id>
+   <posx>221</posx>
+   <posy>228</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>current weather icon</description>
+   <type>image</type>
+   <id>21</id>
+   <posx>530</posx>
+   <posy>163</posy>
+   <height>128</height>
+   <width>128</width>
+   <texture>background-myweather.png</texture>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>current condition label</description>
+   <type>label</type>
+   <align>right</align>
+   <id>22</id>
+   <posx>520</posx>
+   <posy>178</posy>
+   <width>120</width>
+   <wrapmultiline>true</wrapmultiline>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>current temp label</description>
+   <type>label</type>
+   <id>23</id>
+   <posx>335</posx>
+   <posy>168</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>current feels like label</description>
+   <type>label</type>
+   <id>24</id>
+   <posx>335</posx>
+   <posy>188</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>current UV Index label</description>
+   <type>label</type>
+   <id>25</id>
+   <posx>335</posx>
+   <posy>248</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>current wind label</description>
+   <type>label</type>
+   <id>26</id>
+   <posx>335</posx>
+   <posy>268</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>current dew label</description>
+   <type>label</type>
+   <id>27</id>
+   <posx>335</posx>
+   <posy>208</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>current humidity label</description>
+   <type>label</type>
+   <id>28</id>
+   <posx>335</posx>
+   <posy>228</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 0 label</description>
+   <type>button</type>
+   <align>center</align>
+   <height>28</height>
+   <width>110</width>
+   <id>31</id>
+   <posx>211</posx>
+   <posy>310</posy>
+   <label>-</label>
+   <font>font10</font>
+   <texturenofocus>button-nofocus-weather_mmi.png</texturenofocus>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 0 Hi label</description>
+   <type>label</type>
+   <align>center</align>
+   <width>110</width>
+   <id>32</id>
+   <posx>211</posx>
+   <posy>348</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 0 low label</description>
+   <type>label</type>
+   <align>center</align>
+   <width>110</width>
+   <id>33</id>
+   <posx>211</posx>
+   <posy>370</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 0 general weather label</description>
+   <type>label</type>
+   <align>center</align>
+   <aligny>top</aligny>
+   <width>110</width>
+   <wrapmultiline>true</wrapmultiline>
+   <id>34</id>
+   <posx>211</posx>
+   <posy>465</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 0 icon</description>
+   <type>image</type>
+   <id>35</id>
+   <posx>231</posx>
+   <posy>395</posy>
+   <height>64</height>
+   <width>64</width>
+   <texture>background-myweather.png</texture>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 1 label</description>
+   <type>button</type>
+   <align>center</align>
+   <height>28</height>
+   <width>110</width>
+   <id>41</id>
+   <posx>329</posx>
+   <posy>310</posy>
+   <label>-</label>
+   <font>font10</font>
+   <texturenofocus>button-nofocus-weather_mmi.png</texturenofocus>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 1 Hi label</description>
+   <type>label</type>
+   <align>center</align>
+   <width>110</width>
+   <id>42</id>
+   <posx>329</posx>
+   <posy>348</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 1 low label</description>
+   <type>label</type>
+   <align>center</align>
+   <width>110</width>
+   <id>43</id>
+   <posx>329</posx>
+   <posy>370</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 1 general weather label</description>
+   <type>label</type>
+   <align>center</align>
+   <aligny>top</aligny>
+   <width>110</width>
+   <wrapmultiline>true</wrapmultiline>
+   <id>44</id>
+   <posx>329</posx>
+   <posy>465</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 1 icon</description>
+   <type>image</type>
+   <id>45</id>
+   <posx>349</posx>
+   <posy>395</posy>
+   <height>64</height>
+   <width>64</width>
+   <texture>background-myweather.png</texture>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 2 label</description>
+   <type>button</type>
+   <align>center</align>
+   <height>28</height>
+   <width>110</width>
+   <id>51</id>
+   <posx>447</posx>
+   <posy>310</posy>
+   <label>-</label>
+   <font>font10</font>
+   <texturenofocus>button-nofocus-weather_mmi.png</texturenofocus>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 2 Hi label</description>
+   <type>label</type>
+   <align>center</align>
+   <width>110</width>
+   <id>52</id>
+   <posx>447</posx>
+   <posy>348</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 2 low label</description>
+   <type>label</type>
+   <align>center</align>
+   <width>110</width>
+   <id>53</id>
+   <posx>447</posx>
+   <posy>370</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 2 general weather label</description>
+   <type>label</type>
+   <align>center</align>
+   <aligny>top</aligny>
+   <width>110</width>
+   <wrapmultiline>true</wrapmultiline>
+   <id>54</id>
+   <posx>447</posx>
+   <posy>465</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 2 icon</description>
+   <type>image</type>
+   <id>55</id>
+   <posx>467</posx>
+   <posy>395</posy>
+   <height>64</height>
+   <width>64</width>
+   <texture>background-myweather.png</texture>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 3 label</description>
+   <type>button</type>
+   <align>center</align>
+   <height>28</height>
+   <width>110</width>
+   <id>61</id>
+   <posx>565</posx>
+   <posy>310</posy>
+   <label>-</label>
+   <font>font10</font>
+   <texturenofocus>button-nofocus-weather_mmi.png</texturenofocus>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 3 Hi label</description>
+   <type>label</type>
+   <align>center</align>
+   <width>110</width>
+   <id>62</id>
+   <posx>565</posx>
+   <posy>348</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 3 low label</description>
+   <type>label</type>
+   <align>center</align>
+   <width>110</width>
+   <id>63</id>
+   <posx>565</posx>
+   <posy>370</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 3 general weather label</description>
+   <type>label</type>
+   <align>center</align>
+   <aligny>top</aligny>
+   <width>110</width>
+   <wrapmultiline>true</wrapmultiline>
+   <id>64</id>
+   <posx>565</posx>
+   <posy>465</posy>
+   <label>-</label>
+   <font>font10</font>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>day 3 icon</description>
+   <type>image</type>
+   <id>65</id>
+   <posx>585</posx>
+   <posy>395</posy>
+   <height>64</height>
+   <width>64</width>
+   <texture>background-myweather.png</texture>
+   <include>contentpanelslide</include>
+  </control>
+
+
+<!-- equlizer -->
+ 
+	<control type="multiimage">
+       <description>equalizer </description>
+		<posx>640</posx>
+    	<posy>568</posy>
+		<width>100</width>
+		<height>40</height>
+		<imagepath>EQ</imagepath>
+		<timeperimage>50</timeperimage>
+		<random>true</random>
+		<fadetime>1</fadetime>		
+        <colordiffuse>95FFFFFFF</colordiffuse> 		
+		<animation effect="fade" time="100">VisibleChange</animation>
+	<visible>Player.HasAudio + !Player.Seeking + !Player.Paused + !Player.Forwarding + !Player.Rewinding</visible>
+			</control>
+	
+		
+		<!-- equlizer -->
+		
+		
+		
+		<control>
+   <description>Uhr label</description>
+   <type>label</type>
+   <id>0</id>
+   <posx>776</posx>
+   <posy>572</posy>
+   <label>time</label>
+   <info>System.Time</info>
+   <align>right</align>
+    <font>home_red</font>
+   <textcolor>FFFF7F24</textcolor>
+   <visible>!Player.Playing</visible>
+  </control>
+   
+
+
+
+  
+	
+
+ </controls>
+
+</window>
+

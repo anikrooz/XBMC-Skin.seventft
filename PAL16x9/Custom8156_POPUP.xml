@@ -1,0 +1,112 @@
+<includes>
+	<include name="popupright">
+
+		<control type="group" id="2000">
+			<posx>460</posx>
+			<posy>148</posy>
+			<animation effect="slide" time="600" start="360,0" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="400" end="360,0" delay="2000" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+			<control type="image" id="0">
+				<description>PopUpRight Dialog Background</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>380</width>
+				<height>280</height>
+				<!-- <texture border="16,13,10,19">voulume-panel-bg.png</texture> -->
+				<texture border="40">voulume-panel-bg.png</texture>
+			</control>
+			<control>
+				<description>description label</description>
+				<type>label</type>
+				<id>1</id>
+				<posx>62</posx>
+				<posy>19</posy>
+				<align>left</align>
+				<label>Optionen</label>
+				<font>alwin22</font>
+				<textcolor>98FF945C</textcolor>
+			</control>
+			<control>
+				<type>button</type>
+				<id>406</id>
+				<posx>27</posx>
+				<posy>50</posy>
+				<width>34</width>
+				<height>34</height>
+				<label>-</label>
+				<texturefocus>Lyrics_FOCUS.png</texturefocus>
+				<texturenofocus>Lyrics_FOCUS.png</texturenofocus>
+				<onleft>407</onleft>
+				<onright>409</onright>
+				<onup>405</onup>
+				<ondown>405</ondown>
+				<onclick>q:\skin\7TFT\extras\XBMCLyrics\default.py</onclick>
+				<animation effect="zoom" start="100" end="130" center="auto" time="80">focus</animation>
+				<animation effect="zoom" start="130" end="100" center="auto" time="80">unfocus</animation>
+				<onclick>dialog.close(PlayerControls,true)</onclick>
+			</control>
+			<control>
+				<description>Last.FM Love button</description>
+				<type>button</type>
+				<id>407</id>
+				<posx>27</posx>
+				<posy>100</posy>
+				<width>34</width>
+				<height>34</height>
+				<label>-</label>
+				<texturefocus>Love-focus.png</texturefocus>
+				<texturenofocus>Love.png</texturenofocus>
+				<onclick>XBMC.LastFM.Love</onclick>
+				<onleft>408</onleft>
+				<onright>406</onright>
+				<onup>405</onup>
+				<ondown>405</ondown>
+				<visible>LastFM.RadioPlaying</visible>
+				<animation effect="zoom" start="100" end="130" center="auto" time="80">focus</animation>
+				<animation effect="zoom" start="130" end="100" center="auto" time="80">unfocus</animation>
+				<onclick>dialog.close(PlayerControls,true)</onclick>
+			</control>
+			<control>
+				<description>Last.FM ban button</description>
+				<type>button</type>
+				<id>408</id>
+				<posx>27</posx>
+				<posy>150</posy>
+				<width>34</width>
+				<height>34</height>
+				<label>-</label>
+				<texturefocus>Ban-focus.png</texturefocus>
+				<texturenofocus>Ban.png</texturenofocus>
+				<onclick>XBMC.LastFM.Ban</onclick>
+				<onleft>409</onleft>
+				<onright>407</onright>
+				<onup>405</onup>
+				<ondown>405</ondown>
+				<animation effect="zoom" start="100" end="130" center="auto" time="80">focus</animation>
+				<animation effect="zoom" start="130" end="100" center="auto" time="80">unfocus</animation>
+				<onclick>dialog.close(PlayerControls,true)</onclick>
+				<visible>LastFM.RadioPlaying</visible>
+			</control>
+			<control>
+				<description>Last.FM conditional button</description>
+				<type>button</type>
+				<id>409</id>
+				<posx>27</posx>
+				<posy>200</posy>
+				<width>34</width>
+				<height>34</height>
+				<label>-</label>
+				<texturefocus>lastfm-home-button.png</texturefocus>
+				<texturenofocus>lastfm-home-button-NF.png</texturenofocus>
+				<onclick>XBMC.ActivateWindow(MyMusicLibrary,lastfm://)</onclick>
+				<onleft>406</onleft>
+				<onright>408</onright>
+				<onup>405</onup>
+				<ondown>405</ondown>
+				<animation effect="zoom" start="100" end="130" center="auto" time="80">focus</animation>
+				<animation effect="zoom" start="130" end="100" center="auto" time="80">unfocus</animation>
+				<onclick>dialog.close(PlayerControls,true)</onclick>
+			</control>
+		</control>
+	</include>
+</includes>

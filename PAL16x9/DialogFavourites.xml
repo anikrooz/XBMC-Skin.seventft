@@ -1,0 +1,158 @@
+<window type="dialog" id="134">
+	<animation effect="zoom" start="1" center="360,280" time="550" acceleration="-2.6" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+	<animation effect="slide" end="750,0" acceleration="1.1" time="200">WindowClose</animation>
+	<defaultcontrol always="true">450</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="0">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>blackblack.png</texture>
+			<animation effect="fade" time="1600">WindowOpen</animation>
+		</control>
+		<control type="image" id="1">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>62</posy>
+			<width>720</width>
+			<height>452</height>
+			<texture>bg_favorite.jpg</texture>
+		</control>
+		<control type="label" id="1">
+			<description>favourite label</description>
+			<posx>260</posx>
+			<posy>72</posy>
+			<width>464</width>
+			<height>450</height>
+			<label>1036</label>
+			<font>eth24</font>
+			<textcolor>ffff8c00</textcolor>
+		</control>
+		<!-- LAST.FM -->
+		<control type="label">
+			<description>LastFM Label</description>
+			<posx>700</posx>
+			<posy>70</posy>
+			<width>280</width>
+			<height>33</height>
+			<align>right</align>
+			<font>idua24</font>
+			<label>15200</label>
+			<textcolor>ffff8c09</textcolor>
+			<visible>LastFM.RadioPlaying</visible>
+		</control>
+		<control type="button" id="20">
+			<description>Love button</description>
+			<posx>665</posx>
+			<posy>130</posy>
+			<height>36</height>
+			<width>36</width>
+			<font>font13</font>
+			<texturefocus>Love-focus.png</texturefocus>
+			<texturenofocus>Love.png</texturenofocus>
+			<onclick>XBMC.LastFM.Love</onclick>
+			<aspectratio align="right">keep</aspectratio>
+			<pulseonselect>false</pulseonselect>
+			<animation effect="zoom" start="100" end="130" center="auto" time="100">focus</animation>
+			<onleft>450</onleft>
+			<onright>450</onright>
+			<onup>21</onup>
+			<ondown>21</ondown>
+			<visible>LastFM.RadioPlaying</visible>
+		</control>
+		<control type="button" id="21">
+			<description>Hate button</description>
+			<posx>660</posx>
+			<posy>416</posy>
+			<height>36</height>
+			<width>36</width>
+			<texturefocus>Ban-focus.png</texturefocus>
+			<texturenofocus>Ban.png</texturenofocus>
+			<onclick>XBMC.LastFM.Ban</onclick>
+			<aspectratio align="right">keep</aspectratio>
+			<pulseonselect>false</pulseonselect>
+			<animation effect="zoom" start="100" end="130" center="auto" time="100">focus</animation>
+			<onleft>450</onleft>
+			<onright>450</onright>
+			<onup>20</onup>
+			<ondown>20</ondown>
+			<visible>LastFM.RadioPlaying</visible>
+		</control>
+		<!-- LAST.FM End -->
+		<control type="list" id="450">
+			<posx>86</posx>
+			<posy>140</posy>
+			<width>490</width>
+			<height>300</height>
+			<font>FCS21</font>
+			<onleft>20</onleft>
+			<onright>20</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<itemlayout height="30">
+				<control type="label">
+					<posx>98</posx>
+					<posy>3</posy>
+					<width>400</width>
+					<height>20</height>
+					<font>FCS21</font>
+					<aligny>center</aligny>
+					<align>left</align>
+					<include>listselectedcolor</include>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="image">
+					<posx>75</posx>
+					<posy>4</posy>
+					<width>20</width>
+					<height>20</height>
+					<aspectratio>keep</aspectratio>
+					<info>ListItem.Thumb</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="30">
+				<control type="image">
+					<posx>70</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<height>28</height>
+					<texture>list-focus.png</texture>
+					<visible>!Control.HasFocus(20) + !Control.HasFocus(21)</visible>
+				</control>
+				<control type="label">
+					<posx>98</posx>
+					<posy>3</posy>
+					<width>400</width>
+					<height>20</height>
+					<font>FCS21</font>
+					<aligny>center</aligny>
+					<align>left</align>
+					<include>listselectedcolor</include>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="image">
+					<posx>75</posx>
+					<posy>4</posy>
+					<width>20</width>
+					<height>20</height>
+					<aspectratio>keep</aspectratio>
+					<info>ListItem.Thumb</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>300</posy>
+					<width>60</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<info>SelectItem.Thumb</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</controls>
+</window>

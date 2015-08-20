@@ -1,0 +1,76 @@
+<window>
+
+ <id>2004</id>
+ <defaultcontrol>2</defaultcontrol>
+ <animation effect="fade" time="400">WindowOpen</animation>
+ <animation effect="fade" time="400">WindowClose</animation>
+
+ <controls>
+
+  
+
+  
+
+
+
+
+
+
+
+  <control>
+   <description>album/artist/genre etc info label</description>
+   <type>fadelabel</type>
+   <width>290</width>
+   <posx>48</posx>
+   <posy>528</posy>
+   <font>font10</font>
+   <id>0</id>
+   <label>-</label>
+   <include>mediaoverlay</include>
+  </control>
+
+ </controls>
+
+</window>
+
+
+<control>
+   <description>video preview window</description>
+   <type>videowindow</type>
+   <id>1</id>
+   <posx>53</posx>
+   <posy>385</posy>
+   <width>130</width>
+   <height>107</height>
+   <visible>!Window.Next(Home)</visible>
+   <animation effect="fade" time="1" delay="300">WindowOpen</animation>
+   <animation effect="fade" time="1" delay="0">VisibleChange</animation>
+  </control>
+
+<control>
+   <description>play time label</description>
+   <type>label</type>
+   <id>0</id>
+   <posx>53</posx>
+   <posy>500</posy>
+   <label>-</label>
+   <info>VideoPlayer.Time</info>
+   <align>left</align>
+   <font>font13</font>
+   <include>mediaoverlay</include>
+  </control>
+
+
+
+
+  <control>
+   <description>album/artist/genre etc info label</description>
+   <type>fadelabel</type>
+   <width>290</width>
+   <posx>48</posx>
+   <posy>528</posy>
+   <font>font10</font>
+   <id>0</id>
+   <label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, | ]$INFO[VideoPlayer.Director, | ]$INFO[VideoPlayer.Genre, | ]</label>
+   <include>mediaoverlay</include>
+  </control>

@@ -1,0 +1,551 @@
+<window>
+	<id>2006</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control>
+			<description>Geige</description>
+			<type>image</type>
+			<id>1</id>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>Geige.jpg</texture>
+			<colorkey>0</colorkey>
+			<colordiffuse>ffffffff</colordiffuse>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="slide" time="500" start="0,-590" end="0,0" acceleration="-1.1" delay="0" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="420" start="0,0" end="0,-590" acceleration="1.3" delay="0" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control>
+			<description>visualisation</description>
+			<type>visualisation</type>
+			<id>2</id>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+		</control>
+		<control type="image" id="19">
+			<description>cover image cd_case offset 3</description>
+			<posx>363</posx>
+			<posy>115</posy>
+			<width>50</width>
+			<height>69</height>
+			<info>MusicPlayer.offset(3).Cover</info>
+			<visible>Player.ShowInfo</visible>
+			<visible>!LastFM.RadioPlaying</visible>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<animation effect="slide" time="500" start="0,-300" end="0,0" acceleration="-1.1" delay="750" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="0,-300" acceleration="1.3" delay="400" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control type="image" id="20">
+			<description>cover image cd_case offset 3</description>
+			<type>image</type>
+			<posx>355</posx>
+			<posy>111</posy>
+			<width>61</width>
+			<height>78</height>
+			<texture>Case.png</texture>
+			<visible>Player.ShowInfo</visible>
+			<visible>!LastFM.RadioPlaying</visible>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<animation effect="slide" time="500" start="0,-300" end="0,0" acceleration="-1.1" delay="750" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="0,-300" acceleration="1.3" delay="400" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control type="image" id="21">
+			<description>cover image cd_case offset 2</description>
+			<posx>300</posx>
+			<posy>93</posy>
+			<width>69</width>
+			<height>98</height>
+			<info>MusicPlayer.offset(2).Cover</info>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<animation effect="slide" time="500" start="0,-300" end="0,0" acceleration="-1.1" delay="500" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="0,-300" acceleration="1.3" delay="300" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control type="image" id="22">
+			<description>cover image cd_case offset 2</description>
+			<type>image</type>
+			<posx>288</posx>
+			<posy>89</posy>
+			<width>86</width>
+			<height>110</height>
+			<texture>CaseVis.png</texture>
+			<visible>Player.ShowInfo</visible>
+			<visible>!LastFM.RadioPlaying</visible>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<animation effect="slide" time="500" start="0,-300" end="0,0" acceleration="-1.1" delay="500" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="0,-300" acceleration="1.3" delay="300" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control type="image" id="22">
+			<description>cover image cd_case offset 2 Last.Fm speziffic</description>
+			<type>image</type>
+			<posx>288</posx>
+			<posy>89</posy>
+			<width>86</width>
+			<height>110</height>
+			<texture>Case.png</texture>
+			<visible>Player.ShowInfo</visible>
+			<visible>LastFM.RadioPlaying</visible>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<animation effect="slide" time="500" start="0,-300" end="0,0" acceleration="-1.1" delay="500" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="0,-300" acceleration="1.3" delay="300" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control type="image" id="19">
+			<description>cover image cd_case offset 1</description>
+			<posx>202</posx>
+			<posy>59</posy>
+			<width>104</width>
+			<height>140</height>
+			<info>MusicPlayer.offset(1).Cover</info>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<animation effect="slide" time="500" start="0,-300" end="0,0" acceleration="-1.1" delay="250" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="0,-300" acceleration="1.3" delay="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control type="image" id="20">
+			<description>cover image cd_case offset 1</description>
+			<type>image</type>
+			<posx>184</posx>
+			<posy>52</posy>
+			<width>130</width>
+			<height>160</height>
+			<texture>CaseVis.png</texture>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<animation effect="slide" time="500" start="0,-300" end="0,0" acceleration="-1.1" delay="250" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="0,-300" acceleration="1.3" delay="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control>
+			<description>cover image front</description>
+			<type>image</type>
+			<id>1</id>
+			<posx>68</posx>
+			<posy>10</posy>
+			<width>156</width>
+			<height>206</height>
+			<info>MusicPlayer.Cover</info>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<animation effect="slide" time="500" start="0,-300" end="0,0" acceleration="-1.1" delay="50" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="0,-300" acceleration="1.3" delay="100" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control>
+			<description>cover image cd_case front</description>
+			<type>image</type>
+			<id>1</id>
+			<posx>40</posx>
+			<posy>1</posy>
+			<width>194</width>
+			<height>232</height>
+			<texture>CaseVis.png</texture>
+			<visible>Player.ShowInfo</visible>
+			<!-- <animation effect="fade" start="70" end="70" time="0">Conditional</animation> -->
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<animation effect="slide" time="500" start="0,-300" end="0,0" acceleration="-1.1" delay="50" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="0,-300" acceleration="1.3" delay="100" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control type="label" id="1">
+			<posx>706</posx>
+			<posy>20</posy>
+			<width>470</width>
+			<height>25</height>
+			<label>[B]$LOCALIZE[209] :[/B] $INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title]</label>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>idua20</font>
+			<textcolor>ffaaaaaa</textcolor>
+			<scroll>true</scroll>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="slide" time="500" start="900,0" end="0,0" acceleration="-1.1" delay="1200"    condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="150"    condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control type="label" id="1">
+			<posx>706</posx>
+			<posy>51</posy>
+			<width>388</width>
+			<height>25</height>
+			<label>[B]$LOCALIZE[31537] :[/B] $INFO[MusicPlayer.offset(2).Artist,, - ]$INFO[MusicPlayer.offset(2).Title]</label>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>idua16</font>
+			<textcolor>ffaaaaaa</textcolor>
+			<scroll>true</scroll>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="slide" time="500" start="900,0" end="0,0" acceleration="-1.1" delay="1350"    condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="100"    condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control type="label" id="1">
+			<posx>706</posx>
+			<posy>81</posy>
+			<width>330</width>
+			<height>25</height>
+			<label>[B]$LOCALIZE[31536] :[/B] $INFO[MusicPlayer.offset(3).Artist,, - ]$INFO[MusicPlayer.offset(3).Title]</label>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>idua12</font>
+			<textcolor>ffaaaaaa</textcolor>
+			<scroll>true</scroll>
+			<visible>Player.ShowInfo</visible>
+			<visible>!LastFM.RadioPlaying</visible>
+			<animation effect="slide" time="500" start="900,0" end="0,0" acceleration="-1.1" delay="1500"    condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="50"    condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<!-- codec & viz infos -->
+		<control type="group" id="0">
+			<visible>Player.ShowCodec + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+			<animation effect="fade" time="300">VisibleChange</animation>
+			<control type="image">
+				<description>media info background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>140</height>
+				<!-- <colordiffuse>CCFFFFFF</colordiffuse> -->
+				<texture border="40">osd_menu_bg.png</texture>
+			</control>
+			<control type="image" id="0">
+				<description>media info background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>140</height>
+				<texture border="40">black.png</texture>
+			</control>
+			<control type="label">
+				<description>row 1 label</description>
+				<posx>50</posx>
+				<posy>40</posy>
+				<label>-</label>
+				<align>left</align>
+				<label>$LOCALIZE[445] | $INFO[musicplayer.Codec,Codec: ,]$INFO[musicplayer.Bitrate, - Bitrate: ,kbps]$INFO[musicplayer.bitspersample, - Bits:,bit]$INFO[musicplayer.Samplerate, - Freq.: ,kHz]$INFO[musicplayer.Channels, - Channels: ]</label>
+				<font>idua18</font>
+			</control>
+			<control type="label">
+				<description>row 2 label</description>
+				<posx>50</posx>
+				<posy>70</posy>
+				<label>-</label>
+				<align>left</align>
+				<label>Visual | fps: $INFO[System.FPS] - $LOCALIZE[250] - $INFO[Visualisation.Name] - $LOCALIZE[20166]</label>
+				<font>idua18</font>
+				<visible>Visualisation.Locked</visible>
+			</control>
+			<control type="label">
+				<description>Unlocked row 2 label</description>
+				<posx>50</posx>
+				<posy>70</posy>
+				<label>-</label>
+				<align>left</align>
+				<label>Visual | fps: $INFO[System.FPS] - $LOCALIZE[250] - $INFO[Visualisation.Name]</label>
+				<font>idua18</font>
+				<visible>!Visualisation.Locked</visible>
+			</control>
+			<control type="label">
+				<description>row 3 label</description>
+				<posx>50</posx>
+				<posy>100</posy>
+				<label>-</label>
+				<align>left</align>
+				<label>$LOCALIZE[13388] | $INFO[Visualisation.Preset]</label>
+				<font>idua18</font>
+			</control>
+			<control type="image">
+				<description>Preset locked image</description>
+				<posx>260</posx>
+				<posy>165</posy>
+				<width>60</width>
+				<height>60</height>
+				<visible>Visualisation.Locked + Player.ShowCodec</visible>
+				<texture>locked_vis_fcb.png</texture>
+			</control>
+		</control>
+		<!-- media infos -->
+		<control>
+			<description>media info background image</description>
+			<type>image</type>
+			<id>1</id>
+			<posx>-10</posx>
+			<posy>244</posy>
+			<width>740</width>
+			<height>320</height>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="fade" time="1000">VisibleChange</animation>
+			<texture>osd_menu_bg.png</texture>
+		</control>
+		<control>
+			<description>Artist label</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<width>640</width>
+			<posx>50</posx>
+			<posy>249</posy>
+			<info>MusicPlayer.Artist</info>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="fade" time="1000">VisibleChange</animation>
+			<align>left</align>
+			<textcolor>ffcd5c5c</textcolor>
+			<shadow>ffaaaaaa</shadow>
+			<font>alwin36</font>
+		</control>
+		<control>
+			<description>Title label</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<width>640</width>
+			<posx>50</posx>
+			<posy>300</posy>
+			<info>MusicPlayer.Title</info>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="fade" time="1000">VisibleChange</animation>
+			<align>left</align>
+			<textcolor>ff1e90ff</textcolor>
+			<shadow>ffaaaaaa</shadow>
+			<font>alwin34</font>
+		</control>
+		<control>
+			<description>Album label</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<width>640</width>
+			<posx>50</posx>
+			<posy>350</posy>
+			<info>MusicPlayer.Album</info>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="fade" time="1000">VisibleChange</animation>
+			<align>left</align>
+			<textcolor>FF888888</textcolor>
+			<font>alwin28</font>
+		</control>
+		<control>
+			<description>time label</description>
+			<type>label</type>
+			<id>1</id>
+			<width>460</width>
+			<posx>50</posx>
+			<posy>400</posy>
+			<label>$INFO[musicplayer.Time]$INFO[musicplayer.Duration, / ]</label>
+			<visible>Player.ShowInfo</visible>
+			<animation effect="fade" time="1000">VisibleChange</animation>
+			<align>left</align>
+			<textcolor>FF888888</textcolor>
+			<font>alwin28</font>
+		</control>
+		<control>
+			<description>Playlist Pos No</description>
+			<type>label</type>
+			<id>1</id>
+			<width>300</width>
+			<posx>50</posx>
+			<posy>460</posy>
+			<label>$INFO[musicplayer.Playlistposition,$LOCALIZE[435] ]$INFO[musicplayer.Playlistlength, / ]</label>
+			<visible>Player.ShowInfo + !MusicPartyMode.Enabled</visible>
+			<animation effect="fade" time="1000">VisibleChange</animation>
+			<align>left</align>
+			<textcolor>FFaaaaaa</textcolor>
+			<font>alwin28</font>
+		</control>
+		<control>
+			<description>PartyMode Enabled</description>
+			<type>label</type>
+			<id>1</id>
+			<width>400</width>
+			<posx>28</posx>
+			<posy>464</posy>
+			<label>589</label>
+			<visible>Player.ShowInfo + MusicPartyMode.Enabled</visible>
+			<animation effect="fade" time="200000">VisibleChange</animation>
+			<include>zoom</include>
+			<align>left</align>
+			<font>partymodus</font>
+		</control>
+		<control>
+			<description>Volume Label</description>
+			<type>label</type>
+			<posx>650</posx>
+			<posy>474</posy>
+			<width>64</width>			
+			<align>right</align>
+			<font>idua14</font>
+			<textcolor>FF7cfc00</textcolor>
+			<shadow>ff111111</shadow>
+			<label>$INFO[Player.Volume]</label>
+			<include>zoom</include>
+			<visible>Player.ShowInfo</visible>
+			<visible>![Player.HasAudio + System.IdleTime(4)]</visible>
+			<animation effect="fade" time="800">VisibleChange</animation>
+			<animation effect="slide" time="500" start="600,0" end="0,0" acceleration="-1.1" delay="0" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="0" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control>
+			<description>Year label</description>
+			<type>label</type>
+			<id>0</id>
+			<posx>186</posx>
+			<posy>512</posy>
+			<label>$INFO[MusicPlayer.Year]</label>
+			<font>idua30bold</font>
+			<textcolor>FFdcd563</textcolor>
+			<align>left</align>
+			<visible>Player.ShowInfo</visible>
+			<include>zoom</include>
+			<animation effect="fade" time="1000">VisibleChange</animation>
+		</control>
+		<control>
+			<description>Uhr label</description>
+			<type>label</type>
+			<id>0</id>
+			<posx>658</posx>
+			<posy>513</posy>
+			<label>time</label>
+			<info>System.Time</info>
+			<font>alwin30</font>
+			<textcolor>ffff8c00</textcolor>
+			<align>right</align>
+			<include>zoom</include>
+			<animation effect="fade" time="1000">VisibleChange</animation>
+			<animation effect="slide" time="500" start="600,0" end="0,0" acceleration="-1.1" delay="0" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="0" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control>
+			<description>Uhr.png</description>
+			<type>image</type>
+			<posx>667</posx>
+			<posy>511</posy>
+			<height>38</height>
+			<width>28</width>
+			<include>zoom</include>
+			<texture>UHR.png</texture>
+			<animation effect="fade" time="1000">VisibleChange</animation>
+			<animation effect="slide" time="500" start="600,0" end="0,0" acceleration="-1.1" delay="0" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="0" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<description>Song Rating Image</description>
+			<height>32</height>
+			<width>146</width>
+			<posx>20</posx>
+			<posy>512</posy>
+			<include>zoom</include>
+			<visible>Player.ShowInfo</visible>
+			<info>musicplayer.rating</info>
+			<animation effect="fade" time="800">VisibleChange</animation>
+		</control>
+		<control>
+			<description>System.CPUTemperature</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>360</posx>
+			<posy>453</posy>
+			
+			<info>System.CPUTemperature</info>
+			<font>alwin24</font>
+			<textcolor>ffaaaaaa</textcolor>
+			<align>left</align>
+			<visible>![Player.HasAudio + System.IdleTime(10)]</visible>
+			<animation effect="fade" time="1000">VisibleChange</animation>
+			<animation effect="slide" time="500" start="900,0" end="0,0" acceleration="-1.1" delay="0"    condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="0"    condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control>
+			<description>System.GPUTemperature</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>360</posx>
+			<posy>484</posy>
+			<info>System.GPUTemperature</info>
+			
+			<font>alwin24</font>
+			<textcolor>ffaaaaaa</textcolor>
+			<align>left</align>
+			<visible>![Player.HasAudio + System.IdleTime(5)]</visible>
+			<animation effect="fade" time="1000">VisibleChange</animation>
+			<animation effect="slide" time="500" start="900,0" end="0,0" acceleration="-1.1" delay="0"    condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="0"    condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control>
+			<description>Progressbar</description>
+			<type>progress</type>
+			<posx>49</posx>
+			<posy>224</posy>
+			<width>584</width>
+			<height>18</height>
+			<info>Player.Progress</info>
+			<texturebg>progress_back.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>progress_mid-fcb.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>progress_over.png</overlaytexture>
+			<include>zoom</include>
+			<visible>Player.ShowInfo + Player.HasAudio</visible>
+		</control>
+		<control type="image">
+		<description>last.fm status on off</description>
+			<posx>190</posx>
+			<posy>510</posy>
+			<width>34</width>
+			<height>46</height>
+			<texture>lastfm.png</texture>
+			<aspectratio align="left">keep</aspectratio>			
+			<visible>Player.ShowInfo + LastFM.RadioPlaying</visible>
+			<include>zoom</include>
+			<animation effect="fade" time="800">VisibleChange</animation>
+		</control>
+		<!-- volume minibar -->
+		<control type="progress">
+			<description>progress control volume</description>
+			<posx>657</posx>
+			<posy>471</posy>
+			<width>44</width>
+			<height>28</height>
+			<info>Player.Volume</info>
+			<texturebg>volume_rahmen.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>volume_midddle3.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<visible>Player.ShowInfo + Player.HasAudio</visible>
+			<include>zoom</include>
+			<animation effect="fade" time="800">VisibleChange</animation>
+		</control>
+		<control type="progress">
+			<description>progress control memory</description>
+			<posx>432</posx>
+			<posy>522</posy>
+			<width>64</width>
+			<height>16</height>
+			<info>System.FreeMemory</info>
+			<texturebg>volume_rahmen.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>volume_midddle4.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<visible>Player.ShowInfo + Player.HasAudio</visible>
+			
+			<animation effect="fade" time="1000">VisibleChange</animation>
+			<animation effect="slide" time="500" start="900,0" end="0,0" acceleration="-1.1" delay="0"    condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="0"    condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control>
+			<description>memory label</description>
+			<type>label</type>
+			<id>0</id>
+			<posx>360</posx>
+			<posy>515</posy>
+			<label>$INFO[System.FreeMemory]</label>
+			<font>alwin24</font>
+			<textcolor>ffaaaaaa</textcolor>
+			<align>left</align>
+			<visible>Player.ShowInfo</visible>
+			
+			<animation effect="fade" time="1000">VisibleChange</animation>
+			<animation effect="slide" time="500" start="900,0" end="0,0" acceleration="-1.1" delay="0"    condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="1.3" delay="0"    condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+
+	</controls>
+</window>

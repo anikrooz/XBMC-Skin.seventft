@@ -1,0 +1,250 @@
+<window id="2333">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<visible>Player.HasAudio + Window.IsActive(2333)</visible>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<!--  Background!-->
+		<control type="image" id="1">
+			<description>background media info</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_dialog.png</texture>
+		</control>
+		<include>MusicBackground</include>
+		<control>
+			<description>description label</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>10</posx>
+			<posy>16</posy>
+			<align>left</align>
+			<label>Playing now...</label>
+			<font>eth24</font>
+			<textcolor>907cfc00</textcolor>
+			<!-- <include>contentpanelslide</include> -->
+		</control>
+		<!--  Music Informationen!-->
+		<control type="image" id="1">
+			<description>Album cover</description>
+			<posx>122</posx>
+			<posy>138</posy>
+			<width>153</width>
+			<height>177</height>
+			<info>MusicPlayer.Cover</info>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		<control type="image" id="1">
+			<description>Album no cover</description>
+			<posx>100</posx>
+			<posy>130</posy>
+			<width>185</width>
+			<height>200</height>
+			<texture>case.png</texture>
+		</control>
+		<control type="label" id="1">
+			<description>Random Status</description>
+			<posx>706</posx>
+			<posy>15</posy>
+			<label>Random - $INFO[Playlist.Random]</label>
+			<font>alwin22</font>
+			<align>right</align>
+			<textcolor>70ffffff</textcolor>
+		</control>
+		<control type="fadelabel" id="1">
+			<description>Artist value</description>
+			<posx>175</posx>
+			<posy>91</posy>
+			<label>$INFO[MusicPlayer.Artist]</label>
+			<width>400</width>
+			<height>56</height>
+			<font>alwin24</font>
+		</control>
+		<control type="fadelabel" id="1">
+			<description>Album value</description>
+			<posx>295</posx>
+			<posy>226</posy>
+			<label>$LOCALIZE[483]: $INFO[MusicPlayer.Album]</label>
+			<width>339</width>
+			<font>idua20</font>
+			<textcolor>80ffffff</textcolor>
+			<wrapmultiline>false</wrapmultiline>
+		</control>
+		<control type="fadelabel" id="1">
+			<description>Genre value</description>
+			<posx>295</posx>
+			<posy>251</posy>
+			<label>$LOCALIZE[515]: $INFO[MusicPlayer.Genre]</label>
+			<font>idua20</font>
+			<textcolor>80ffffff</textcolor>
+			<width>425</width>
+		</control>
+		<control type="label" id="1">
+			<description>Year value</description>
+			<posx>295</posx>
+			<posy>274</posy>
+			<label>$LOCALIZE[345]: $INFO[MusicPlayer.Year]</label>
+			<font>idua20</font>
+			<textcolor>80ffffff</textcolor>
+		</control>
+		<control type="label" id="1">
+			<description>Tracks value</description>
+			<posx>295</posx>
+			<posy>298</posy>
+			<label>$LOCALIZE[435]: $INFO[musicplayer.Playlistposition] / $INFO[musicplayer.Playlistlength]</label>
+			<font>idua20</font>
+			<textcolor>80ffffff</textcolor>
+			<width>425</width>
+			<visible>!MusicPartyMode.Enabled</visible>
+		</control>
+		<control type="label" id="1">
+			<description>Tracks value</description>
+			<posx>295</posx>
+			<posy>298</posy>
+			<label>$LOCALIZE[589]: $INFO[musicpartymode.songsplayed] / $INFO[musicpartymode.matchingsongs] / $INFO[musicpartymode.matchingsongsleft]  / $INFO[musicpartymode.randomsongspicked]</label>
+			<textcolor>80ffffff</textcolor>
+			<width>425</width>
+			<font>idua20</font>
+			<visible>MusicPartyMode.Enabled</visible>
+		</control>
+		<control type="image" id="1">
+			<description>Separator image</description>
+			<posx>80</posx>
+			<posy>338</posy>
+			<width>560</width>
+			<height>5</height>
+			<texture>separator.png</texture>
+		</control>
+		<!--  Status Info!-->
+		<control type="label" id="1">
+			<description>Title value</description>
+			<posx>138</posx>
+			<posy>365</posy>
+			<label>$INFO[MusicPlayer.Playlistposition].</label>
+			<font>home_red</font>
+			<textcolor>807cfc00</textcolor>
+			<align>right</align>
+			<width>55</width>
+			<visible>!MusicPartyMode.Enabled</visible>
+		</control>
+		<control type="label" id="1">
+			<description>Title value</description>
+			<posx>138</posx>
+			<posy>365</posy>
+			<label>$INFO[musicpartymode.songsplayed].</label>
+			<font>home_red</font>
+			<textcolor>807cfc00</textcolor>
+			<align>right</align>
+			<width>55</width>
+			<visible>MusicPartyMode.Enabled</visible>
+		</control>
+		<control type="fadelabel" id="1">
+			<description>Title value</description>
+			<posx>151</posx>
+			<posy>365</posy>
+			<label>$INFO[MusicPlayer.Title]</label>
+			<font>alwin24</font>
+			<width>470</width>
+		</control>
+		<control type="label" id="1">
+			<description>Play time</description>
+			<posx>152</posx>
+			<posy>440</posy>
+			<font>home_red</font>
+			<textcolor>807cfc00</textcolor>
+			<label>$INFO[MusicPlayer.TimeSpeed]</label>
+			<align>left</align>
+		</control>
+		<control>
+			<description>Progressbar</description>
+			<type>progress</type>
+			<posx>142</posx>
+			<posy>64</posy>
+			<width>436</width>
+			<height>9</height>
+			<info>Player.Progress</info>
+			<texturebg>progress-info-music-bg.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>progress_mid-info-music.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>progress-info-music-mid.png</overlaytexture>
+		</control>
+		<control type="label" id="1">
+			<description>Duration time</description>
+			<posx>568</posx>
+			<posy>440</posy>
+			<font>home_red</font>
+			<textcolor>807cfc00</textcolor>
+			<label>$INFO[MusicPlayer.Duration]</label>
+			<align>right</align>
+		</control>
+		<!-- Music Codec & Vis infos -->
+		<control type="image" id="1">
+			<description>Separator image</description>
+			<posx>115</posx>
+			<posy>420</posy>
+			<width>490</width>
+			<height>5</height>
+			<texture>separator.png</texture>
+		</control>
+		<control type="label" id="1">
+			<description>Codec info</description>
+			<posx>34</posx>
+			<posy>530</posy>
+			<width>700</width>
+			<font>alwin16normal</font>
+			<textcolor>ff999999</textcolor>
+			<label>Audio Codec: $INFO[MusicPlayer.Codec] | Bitrate: $INFO[MusicPlayer.Bitrate]kbps | Bits: $INFO[MusicPlayer.bitspersample]bit | Freq.: $INFO[MusicPlayer.Samplerate]kHz | Ch: $INFO[MusicPlayer.Channels]</label>
+		</control>
+		<!--  Logos play!-->
+		<include>UHR</include>
+		<include>pseudoEqualizer</include>
+		<control>
+			<description>PartyMode Enabled</description>
+			<type>button</type>
+			<id>1</id>
+			<posx>662</posx>
+			<posy>78</posy>
+			<width>32</width>
+			<height>32</height>
+			<label>-</label>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>partymodus.gif</texturenofocus>
+			<visible>MusicPartyMode.Enabled</visible>
+		</control>
+		<control type="image">
+			<posx>334</posx>
+			<posy>428</posy>
+			<width>48</width>
+			<height>56</height>
+			<texture>lastfm.png</texture>
+			<aspectratio align="left">keep</aspectratio>			
+			<visible>Player.HasAudio + LastFM.RadioPlaying</visible>
+		</control>
+		<control type="image">
+			<posx>334</posx>
+			<posy>428</posy>
+			<width>48</width>
+			<height>56</height>
+			<texture>lastfmnotplaying.png</texture>
+			<aspectratio align="left">keep</aspectratio>			
+			<visible>!LastFM.RadioPlaying</visible>
+		</control>
+		<!-- <control>
+			<description>bg preview</description>
+			<type>image</type>
+			<id>0</id>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<include>windowswitchtransition</include>
+		</control> -->
+	</controls>
+</window>

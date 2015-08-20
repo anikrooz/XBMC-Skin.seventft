@@ -1,0 +1,94 @@
+<window>
+
+ <id>2004</id>
+ <defaultcontrol>2</defaultcontrol>
+ <animation effect="fade" time="1000">WindowOpen</animation>
+ <animation effect="fade" time="1000">WindowClose</animation>
+
+ <controls>
+
+ 
+
+  <control>
+   <description>music bg overlay 2</description>
+   <type>image</type>
+   <id>0</id>
+   <posx>120</posx>
+   <posy>458</posy>
+   <width>1</width>
+   <height>1</height>
+   <texture>-</texture>
+   <include>mediaoverlay</include>
+  </control>
+
+ </controls>
+
+</window>
+
+
+
+
+
+
+
+
+
+
+ <control>
+   <description>music logo</description>
+   <type>image</type>
+   <id>0</id>
+   <posx>25</posx>
+   <posy>387</posy>
+   <width>80</width>
+   <height>86</height>
+   <texture>defaultAlbumCover.png</texture>
+   <info>MusicPlayer.Cover</info>
+   <colordiffuse>96ffffff</colordiffuse>
+   <include>mediaoverlay</include>
+  </control>
+
+
+
+
+
+
+<control>
+   <description>play time label</description>
+   <type>label</type>
+   <id>0</id>
+   <posx>25</posx>
+   <posy>480</posy>
+   <label>-</label>
+   <info>MusicPlayer.Time</info>
+   <align>left</align>
+   <font>idua18</font>
+   <textcolor>80ffffff</textcolor>
+   <include>mediaoverlay</include>
+  </control>
+
+  <control>
+   <description>album/artist/genre etc info label</description>
+   <type>fadelabel</type>
+   <width>476</width>
+   <posx>126</posx>
+   <posy>462</posy>
+   <font>alwin20</font>
+   <label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Title, | ]$INFO[MusicPlayer.Album, | ]$INFO[MusicPlayer.Year, | ]</label>
+   <textcolor>ff000000</textcolor>
+   <include>mediaoverlay</include>
+   <id>0</id>
+  </control>
+
+
+  <control>
+   <description>music bg overlay 2</description>
+   <type>image</type>
+   <id>0</id>
+   <posx>120</posx>
+   <posy>458</posy>
+   <width>500</width>
+   <height>38</height>
+   <texture>overlay2-bg.png</texture>
+   <include>mediaoverlay</include>
+  </control>

@@ -1,0 +1,543 @@
+<window>
+
+ <id>2</id>
+ <defaultcontrol>50</defaultcontrol>
+ <allowoverlay>yes</allowoverlay>
+
+ <controls>
+
+  <control>
+   <description>background image</description>
+   <type>image</type>
+   <id>1</id>
+   <posx>0</posx>
+   <posy>0</posy>
+   <width>720</width>
+   <height>576</height>
+   <texture>bg_Picture.png</texture>
+  </control>
+
+
+<include>PictureBackground</include>
+
+<control>
+   <description>Uhr label</description>
+   <type>label</type>
+   <id>0</id>
+   <posx>340</posx>
+   <posy>532</posy>
+   <label>time</label>
+   <info>System.Time</info>
+   <align>left</align>
+    <font>home_red</font>
+   <textcolor>ff444444</textcolor>
+     </control>
+ 
+<control>
+   <description>description label</description>
+   <type>label</type>
+   <id>1</id>
+   <posx>148</posx>
+   <posy>84</posy>
+   <align>left</align>
+   <label>1</label>
+   <font>eth26</font>
+   <textcolor>99CDCD00</textcolor>
+<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+ <animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+</control>
+
+<control>
+   <description>PartyMode Enabled</description>
+   <type>button</type>
+   <id>1</id>
+   <posx>662</posx>
+   <posy>78</posy>
+   <width>32</width>
+   <height>32</height>
+   <label>-</label>
+   <texturefocus>-</texturefocus>
+   <texturenofocus>partymodus.gif</texturenofocus>
+   <visible>MusicPartyMode.Enabled</visible>
+   </control>
+  
+<control>
+   <description>number of files text label</description>
+   <type>label</type>
+   <id>12</id>
+   <posx>550</posx>
+   <posy>468</posy>
+   <align>right</align>
+   <label>-</label>
+   <font>idua18</font>
+   <textcolor>60aaaaaa</textcolor> 
+      <include>contentpanelslide</include>
+  </control>
+
+  <controlgroup>
+
+
+
+  <control>
+   <description>separator image</description>
+   <type>button</type>
+   <id>333</id>
+   <posx>421</posx>
+   <posy>462</posy>
+   <width>143</width>
+   <height>5</height>
+   <texturefocus>separator.png</texturefocus>
+   <texturenofocus>separator.png</texturenofocus>
+   <colordiffuse>50CDCD00</colordiffuse>
+   <animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+ <animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+</control>
+
+
+   <control>
+    <description>View As Icons button</description>
+    <type>button</type>
+    <id>2</id>
+    <posx>0</posx>
+    <posy>-4</posy>
+    <width>106</width>
+    <height>161</height>
+    <label>100</label>
+    <font>alwin22</font>
+    <textcolor>ffCDCD00</textcolor>
+    <texturefocus>button-lioben-pic-fo.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <textoffsetx>30</textoffsetx>
+    <textoffsety>20</textoffsety>
+    <align>left</align>
+    <aligny>bottom</aligny>
+    <onleft>50</onleft>
+    <onright>6</onright>
+    <onup>3</onup>
+    <ondown>3</ondown>
+        <animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+ <animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+</control>
+
+
+  <control>
+    <description>Sort by button</description>
+    <type>button</type>
+    <id>3</id>
+    <posx>10</posx>
+    <posy>418</posy>
+    <width>106</width>
+    <height>161</height>
+    <label>103</label>
+    <font>alwin22</font>
+    <textcolor>ffCDCD00</textcolor>
+    <texturefocus>button-liunten-pic-fo.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <textoffsetx>20</textoffsetx>
+    <textoffsety>110</textoffsety>
+    <align>left</align>
+    <aligny>bottom</aligny>
+    <onleft>50</onleft>
+    <onright>4</onright>
+    <onup>2</onup>
+    <ondown>7</ondown>
+    <animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+ <animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+</control>
+
+   <control>
+    <description>Sort asc</description>
+    <type>togglebutton</type>
+    <id>4</id>
+    <posx>250</posx>
+    <posy>532</posy>
+    <width>20</width>
+    <height>20</height>
+    <label>-</label>
+    <onleft>3</onleft>
+    <onright>31</onright>
+    <onup>4</onup>
+    <ondown>4</ondown>
+    <include>buttonpanelslide</include>
+   </control>
+
+   <control>
+    <description>SlideShow button</description>
+    <type>button</type>
+    <id>6</id>
+    <posx>230</posx>
+    <posy>16</posy>
+    <width>259</width>
+    <height>120</height>
+    <label>108</label>
+    <font>alwin22</font>
+    <textcolor>ffCDCD00</textcolor>
+    <texturefocus></texturefocus>  
+    <texturenofocus>-</texturenofocus>
+    <textoffsetx>20</textoffsetx>
+    <textoffsety></textoffsety>
+    <align>center</align>
+    <aligny>top</aligny>
+    <onleft>2</onleft>
+    <onright>7</onright>
+    <onup>50</onup>
+    <ondown>9</ondown>
+     <animation effect="zoom" start="1" center="360,280" time="200" acceleration="-0.8" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+ <animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation> 
+</control>
+<control type="image">
+				<description>Slidshow button rotate label</description>
+				<posx>236</posx>
+				<posy>-5</posy>
+				<width>259</width>
+				<height>120</height>
+				<!---<aspectratio>keep</aspectratio> -->
+				<texture>button-obenmitte-pic-fo.png</texture>
+				<visible>Control.HasFocus(6)</visible>
+				<animation effect="rotate" start="90" end="180" center="auto" time="300">Visible</animation>
+			</control>
+
+
+   <control>
+    <description>recursive diaschow</description>
+    <type>button</type>
+    <id>7</id>
+    <posx>611</posx>
+    <posy>-4</posy>
+    <width>106</width>
+    <height>161</height>
+    <label>R. Diashow</label>
+    <font>alwin22</font>
+    <texturefocus>button-reoben-pic-fo.png</texturefocus>
+    <textcolor>ffCDCD00</textcolor>
+    <textoffsetx>30</textoffsetx>
+    <textoffsety>20</textoffsety>
+    <align>right</align>
+    <aligny>bottom</aligny>
+    <texturenofocus>-</texturenofocus>
+    <onleft>6</onleft>
+    <onright>50</onright>
+    <onup>9</onup>
+    <ondown>9</ondown>
+    <animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+ <animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+</control>
+
+
+
+
+
+  <control>
+    <description>Randomize button</description>
+    <type>radiobutton</type>
+    <id>9</id>
+    <posx>600</posx>
+<posy>418</posy>
+ <width>106</width>
+    <height>161</height>
+<label>13319</label>
+<font>alwin22</font>
+<textcolor>ffCDCD00</textcolor>
+<textureradiofocus>radiobutton-aktiv3.png</textureradiofocus>
+    <textureradionofocus>-</textureradionofocus>
+    <texturefocus>button-reunten-pic-fo.png</texturefocus>
+     <texturenofocus>-</texturenofocus>
+    <textoffsetx>20</textoffsetx>
+    <textoffsety>110</textoffsety>
+    <align>right</align>
+    <aligny>bottom</aligny>
+    <onleft>3</onleft>
+    <onright>50</onright>
+    <onup>7</onup>
+    <ondown>31</ondown>
+    <include>zoom</include>
+   </control>
+
+
+   <control>
+    <description>Bookmark button 1</description>
+    <type>button</type>
+    <id>31</id>
+    <posx>300</posx>
+    <posy>532</posy>
+    <width>26</width>
+    <height>24</height>
+    <label>$INFO[Skin.String(Picturesbookmark1)]</label>
+   <font>font10</font>
+    <textcolor>017cfc00</textcolor>
+    <texturefocus>playlistlogo-gelb-focus.png</texturefocus>
+    <texturenofocus>playlistlogo-nofocus.png</texturenofocus>
+    <onclick>ActivateWindow(MyPictures,$INFO[Skin.String(Picturesbookmark1)])</onclick>
+    <onleft>3</onleft>
+    <onright>32</onright>
+    <onup>50</onup>
+    <ondown>2</ondown>
+    <visible>!Skin.HasSetting(bookmarkbuttons) + Skin.HasSetting(PicturesBM1)</visible>
+    <animation effect="zoom" start="100" end="140" center="auto" time="80">focus</animation>
+		<animation effect="zoom" start="140" end="100" center="auto" time="80">unfocus</animation>
+   </control>
+
+   <control>
+    <description>Pictures Bookmark 1 String NOT SET label</description>
+    <type>button</type>
+    <id>0</id>
+    <posx>50</posx>
+    <posy>305</posy>
+    <width>150</width>
+    <label>20078</label>
+    <texturefocus>-</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <visible>[!Skin.HasSetting(bookmarkbuttons) + !Skin.String(PicturesBookmark1)] + Skin.HasSetting(PicturesBM1)</visible>
+    <include>buttonpanelslide</include>
+    <include>textcolorgrey</include>
+   </control>
+
+   <control>
+    <description>Bookmark button 2</description>
+    <type>button</type>
+    <id>32</id>
+    <posx>326</posx>
+    <posy>532</posy>
+    <width>26</width>
+    <height>24</height>
+    <label>$INFO[Skin.String(Picturesbookmark2)]</label>
+     <font>font10</font>
+    <textcolor>017cfc00</textcolor>
+    <texturefocus>playlistlogo2-gelb-focus.png</texturefocus>
+    <texturenofocus>playlistlogo2-nofocus.png</texturenofocus>
+    <onclick>ActivateWindow(MyPictures,$INFO[Skin.String(Picturesbookmark2)])</onclick>
+    <onleft>31</onleft>
+    <onright>9</onright>
+    <onup>50</onup>
+    <ondown>2</ondown>
+    <visible>!Skin.HasSetting(bookmarkbuttons) + Skin.HasSetting(PicturesBM2)</visible>
+    <animation effect="zoom" start="100" end="140" center="auto" time="80">focus</animation>
+		<animation effect="zoom" start="140" end="100" center="auto" time="80">unfocus</animation>
+   </control>
+
+   <control>
+    <description>Pictures Bookmark 2 String NOT SET label</description>
+    <type>button</type>
+    <id>0</id>
+    <posx>50</posx>
+    <posy>342</posy>
+    <width>150</width>
+    <label>20078</label>
+    <texturefocus>-</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <visible>[!Skin.HasSetting(bookmarkbuttons) + !Skin.String(PicturesBookmark2)] + Skin.HasSetting(PicturesBM2)</visible>
+    <include>buttonpanelslide</include>
+    <include>textcolorgrey</include>
+   </control>
+
+
+
+
+<!-- overlay switch audio and video-->
+
+  <include>overlayswitch</include>
+
+
+<control>
+      <description>Progressbar</description>
+      <type>progress</type>
+      <posx>142</posx>
+      <posy>64</posy>
+      <width>436</width>
+      <height>9</height>
+      <info>Player.Progress</info>
+      <texturebg>progress-info-music-bg.png</texturebg>
+      <lefttexture>-</lefttexture>
+      <midtexture>progress_mid-info-pictures.png</midtexture>
+      <righttexture>-</righttexture>
+      <overlaytexture>progress-info-music-mid.png</overlaytexture>
+      <visible>Player.HasMedia + [Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52)]</visible>
+    </control>
+
+
+
+
+
+  </controlgroup>
+
+  <control>
+   <description>listcontrol</description>
+   <type>listcontrol</type>
+   <id>50</id>
+   <posx>140</posx>
+  <posy>130</posy>
+  <width>445</width>
+  <height>361</height>
+  <spinwidth>18</spinwidth>
+  <spinheight>16</spinheight>
+  <spinposx>404</spinposx>
+  <spinposy>-40</spinposy>
+  <spincolor>90cccccc</spincolor>
+  <spinfont>idua20</spinfont>
+  <textureup>scroll-up_mmi.png</textureup>
+  <texturedown>scroll-down_mmi.png</texturedown>
+  <textureupfocus>scroll-up-focus_mmi.png</textureupfocus>
+  <texturedownfocus>scroll-down-focus_mmi.png</texturedownfocus>
+  <texturefocus>list-focus.png</texturefocus>
+  <texturenofocus>list-nofocus.png</texturenofocus>
+  <image>icon-folder.png</image>
+  <textureheight>34</textureheight>
+  <font>idua20</font>
+  <style>bold</style>
+  <include>textcolorligelbfocus</include>
+  <textcolor2>ffCDCD00</textcolor2>
+  <include>controldefaults</include>
+  <suffix>|</suffix>
+  <textxoff>18</textxoff>
+  <textxoff2>0</textxoff2>
+  <aligny>center</aligny>
+   <onleft>2</onleft>
+   <onright>50</onright>
+   <onup>50</onup>
+   <ondown>50</ondown>
+   <include>contentpanelslide</include>
+  </control>
+
+  
+
+<control>
+  <description>thumbnailpanel</description>
+  <type>thumbnailpanel</type>
+  <id>51</id>
+  <posx>130</posx>
+  <posy>170</posy>
+  <width>465</width>
+  <height>380</height>
+  <spinwidth>18</spinwidth>
+  <spinheight>16</spinheight>
+  <spinposx>414</spinposx>
+  <spinposy>-80</spinposy>
+  <spincolor>90cccccc</spincolor>
+  <spinfont>idua20</spinfont>
+  <textureup>scroll-up_mmi.png</textureup>
+  <texturedown>scroll-down_mmi.png</texturedown>
+  <textureupfocus>scroll-up-focus_mmi.png</textureupfocus>
+  <texturedownfocus>scroll-down-focus_mmi.png</texturedownfocus>
+  <itemwidth>115</itemwidth>
+  <itemheight>130</itemheight>
+  <texturewidth>92</texturewidth>
+  <textureheight>100</textureheight>
+  <thumbwidth>82</thumbwidth>
+  <thumbheight>90</thumbheight>
+  <thumbposx>5</thumbposx>
+  <thumbposy>5</thumbposy>
+  <imagefolder>folder-nofocus.png</imagefolder>
+  <imagefolderfocus>list-bg-gelb.png</imagefolderfocus>
+  <animation effect="zoom" start="100" end="110" center="auto" time="50">focus</animation>
+   <animation effect="zoom" start="110" end="100" center="auto" time="50">unfocus</animation>
+  <font>idua18</font>
+  <selectedcolor>ffCDCD00</selectedcolor>
+  <include>controldefaults</include>
+  <texturewidthbig>134</texturewidthbig>
+  <textureheightbig>144</textureheightbig>
+  <itemwidthbig>151</itemwidthbig>
+  <itemheightbig>197</itemheightbig>
+  <thumbwidthbig>120</thumbwidthbig>
+  <thumbheightbig>133</thumbheightbig>
+  <thumbposxbig>7</thumbposxbig>
+  <thumbposybig>5</thumbposybig>
+  <suffix>-</suffix>
+ <onleft>2</onleft>
+   <onright>51</onright>
+   <onup>51</onup>
+   <ondown>51</ondown>
+   <include>contentpanelslide</include>
+  </control>
+ 
+
+<control>
+   <description>big listcontrol</description>
+   <type>listcontrol</type>
+   <id>52</id>
+   <posx>130</posx>
+   <posy>148</posy>
+   <width>465</width>
+   <height>380</height>
+   <spinwidth>18</spinwidth>
+  <spinheight>16</spinheight>
+  <spinposx>414</spinposx>
+  <spinposy>-58</spinposy>
+  <spincolor>90cccccc</spincolor>
+  <spinfont>idua20</spinfont>
+   <textureup>scroll-up_mmi.png</textureup>
+  <texturedown>scroll-down_mmi.png</texturedown>
+  <textureupfocus>scroll-up-focus_mmi.png</textureupfocus>
+  <texturedownfocus>scroll-down-focus_mmi.png</texturedownfocus>
+   <texturefocus>blue-rectangle.png</texturefocus>
+   <texturenofocus>blue-rectangleNF.png</texturenofocus>
+   <font>idua20</font>
+   <font2>idua20</font2>
+   <include>listselectedcolor</include>
+   <include>textcolorlightgrey</include>
+   <selectedcolor2>FFFFffff</selectedcolor2>
+   <textcolor2>d0ffffff</textcolor2>
+   <suffix>|</suffix>
+   <textxoff>10</textxoff>
+   <textyoff>10</textyoff>
+   <textxoff2>435</textxoff2>
+   <textyoff2>94</textyoff2>
+   <aligny>top</aligny>
+   <itemwidth>90</itemwidth>
+   <itemheight>110</itemheight>
+   <spacebetweenitems>20</spacebetweenitems>
+   <textureheight>120</textureheight>
+   <onleft>2</onleft>
+   <onright>52</onright>
+   <onup>52</onup>
+   <ondown>52</ondown>
+   <include>contentpanelslide</include>
+  </control>
+
+  
+
+
+	
+    <include>pseudoEqualizer</include>
+	<include>playerPlayinguntenLi</include>
+
+
+  <include>BigWrapList</include>
+  <include>BigWrapList2</include>
+  <include>MegaBigThumb43Picture</include>
+  <include>3D Big</include>
+  <include>WrapOverlayPictures</include>
+  
+  <control>
+      <description>Progressbar</description>
+      <type>progress</type>
+      <posx>142</posx>
+      <posy>64</posy>
+      <width>436</width>
+      <height>9</height>
+      <info>Player.Progress</info>
+      <texturebg>progress-info-music-bg.png</texturebg>
+      <lefttexture>-</lefttexture>
+      <midtexture>progress_mid-info-pictures.png</midtexture>
+      <righttexture>-</righttexture>
+      <overlaytexture>progress-info-music-mid.png</overlaytexture>
+      <visible>Player.HasMedia + [Control.HasFocus(56) | Control.HasFocus(58) | Control.HasFocus(59)]</visible>
+    </control>
+
+	<control>
+   <description>bg preview</description>
+   <type>image</type>
+   <id>0</id>
+   <posx>0</posx>
+   <posy>0</posy>
+   <width>720</width>
+   <height>576</height>
+   <include>windowswitchtransition</include>
+  </control>
+  
+ </controls>
+
+</window>
+
+
+
+

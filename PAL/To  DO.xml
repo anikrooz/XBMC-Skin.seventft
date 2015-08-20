@@ -1,0 +1,70 @@
+lastFM  buttons add to musc OSD -> noch nicht fertig
+Gamesaves -> "Symbolansicht" ?
+
+
+13:19:09 M:1385357312   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultMovies.png
+13:19:09 M:1385357312   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultTvshows.png
+13:19:09 M:1385357312   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultMusicVideos.png
+13:19:09 M:1385357312   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultRecentlyAddedMovies.png
+13:19:09 M:1385357312   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultRecentlyAddedEpisodes.png
+13:19:09 M:1385357312   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultRecentlyAddedMusicVideos.png
+13:19:11 M:1375051776 WARNING: DIRECTORY::CVideoDatabaseDirectory::GetIcon - Unknown nodetype requested
+13:19:11 M:1375051776   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\
+13:19:11 M:1375051776   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultGenre.png
+13:19:11 M:1375051776   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultTvshowTitle.png
+13:19:11 M:1375051776   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultYear.png
+13:19:11 M:1375051776   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultActor.png
+13:19:12 M:1374912512   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultTvshows.png
+13:19:16 M:1374793728 WARNING: DIRECTORY::CVideoDatabaseDirectory::GetIcon - Unknown nodetype requested
+13:19:16 M:1374793728   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\
+13:19:16 M:1374793728   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultGenre.png
+13:19:16 M:1374793728   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultMovieTitle.png
+13:19:16 M:1374793728   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultYear.png
+13:19:16 M:1374793728   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultActor.png
+13:19:16 M:1374793728   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultDirector.png
+13:19:16 M:1374789632   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultStudios.png
+13:19:18 M:1374867456   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultMovies.png
+13:19:20 M:1374691328   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultMovies.png
+13:19:20 M:1374691328   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\
+13:19:20 M:1374691328   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\
+13:19:22 M:1374601216   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultMovies.png
+13:19:22 M:1374601216   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\
+13:19:27 M:1374945280   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultTvshows.png
+13:19:29 M:1374785536   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultTvshows.png
+13:19:29 M:1374785536   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\
+13:19:29 M:1374785536   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\
+13:19:29 M:1374785536   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\
+13:19:29 M:1374785536   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\
+13:19:32 M:1373753344   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultTvshows.png
+13:19:32 M:1373753344   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\
+13:19:32 M:1373753344   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\
+13:19:36 M:1373863936   ERROR: XFILE::CFile::Delete - Error deleting file Z:\6c7f21f8.fi
+13:19:36 M:1373798400   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\defaultFileBig.png
+13:19:38 M:1373839360 WARNING: DIRECTORY::CVideoDatabaseDirectory::GetIcon - Unknown nodetype requested
+13:19:38 M:1373839360   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\
+13:19:44 M:1373257728 WARNING: DIRECTORY::CVideoDatabaseDirectory::GetIcon - Unknown nodetype requested
+13:19:44 M:1373257728   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\
+13:19:44 M:1373257728   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultGenre.png
+13:19:44 M:1373257728   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultMusicVideoTitle.png
+13:19:44 M:1373257728   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultYear.png
+13:19:44 M:1373257728   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultActor.png
+13:19:44 M:1373257728   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultDirector.png
+13:19:44 M:1373257728   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultStudios.png
+13:19:50 M:1368186880   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultMusicVideos.png
+13:19:59 M:1381810176   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultMovies.png
+13:19:59 M:1381810176   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultTvshows.png
+13:19:59 M:1381810176   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultMusicVideos.png
+13:19:59 M:1381810176   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultRecentlyAddedMovies.png
+13:19:59 M:1381810176   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultRecentlyAddedEpisodes.png
+13:19:59 M:1381810176   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultRecentlyAddedMusicVideos.png
+13:20:04 M:1371185152   ERROR: Control 402 in window 10133 has been asked to focus, but it can't
+13:20:08 M:1370550272  NOTICE: My Videos: Scanning for video info using worker thread, operation took 00:03
+13:20:12 M:1370226688 WARNING: DIRECTORY::CVideoDatabaseDirectory::GetIcon - Unknown nodetype requested
+13:20:12 M:1370226688   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\
+13:20:12 M:1370226688   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultGenre.png
+13:20:12 M:1370226688   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultMusicVideoTitle.png
+13:20:12 M:1370222592   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultYear.png
+13:20:12 M:1370222592   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultActor.png
+13:20:12 M:1370222592   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultDirector.png
+13:20:12 M:1370222592   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultStudios.png
+13:20:13 M:1371250688   ERROR: Texture manager unable to load file: Q:\skin\7TFT\media\DefaultMusicVideos.png

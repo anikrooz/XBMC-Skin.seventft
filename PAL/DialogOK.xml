@@ -1,0 +1,79 @@
+<window>
+	<id>2002</id>
+	<defaultcontrol>10</defaultcontrol>
+	<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+	<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="500" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+	<controls>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-plain.jpg</texture>
+		</control>
+		<include>custombg</include>
+		<include>UHR</include>
+		<include>pseudoEqualizer</include>
+		<control>
+			<description>dialog Heading</description>
+			<type>label</type>
+			<id>1</id>
+			<posx>140</posx>
+			<posy>214</posy>
+			<width>440</width>
+			<label>-</label>
+			<font>idua24</font>
+			<textcolor>907cfc00</textcolor>
+		</control>
+		<control>
+			<description>dialog line 1</description>
+			<type>label</type>
+			<id>2</id>
+			<posx>140</posx>
+			<posy>258</posy>
+			<width>440</width>
+			<label>-</label>
+			<font>idua20</font>
+		</control>
+		<control>
+			<description>dialog line 2</description>
+			<type>label</type>
+			<id>3</id>
+			<posx>140</posx>
+			<posy>287</posy>
+			<width>440</width>
+			<label>-</label>
+			<font>idua20</font>
+		</control>
+		<control>
+			<description>dialog line 3</description>
+			<type>label</type>
+			<id>4</id>
+			<posx>140</posx>
+			<posy>316</posy>
+			<width>440</width>
+			<label>-</label>
+			<font>idua20</font>
+		</control>
+		<control>
+			<description>OK button</description>
+			<type>button</type>
+			<id>10</id>
+			<posx>450</posx>
+			<posy>442</posy>
+			<width>90</width>
+			<height>38</height>
+			<font>idua20</font>
+			<align>center</align>
+			<label>186</label>
+			<texturenofocus>TV-series-button-nofocus2.png</texturenofocus>
+			<texturefocus>TV-series-button-focus2.png</texturefocus>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,217 @@
+<window id="12">
+        <defaultcontrol>0</defaultcontrol>
+        <allowoverlay>yes</allowoverlay>
+        <previouswindow>4</previouswindow>
+        
+		
+        <controls>
+
+				  <control>
+   <description>background image</description>
+   <type>image</type>
+   <id>1</id>
+   <posx>0</posx>
+   <posy>0</posy>
+   <width>720</width>
+   <height>576</height>
+   <texture>bg_Settings.png</texture>
+  </control>
+  
+    <!--<include>custombg</include>-->
+  <include>resolutionlogo</include>
+  
+    <control>
+      <description>Progressbar</description>
+      <type>progress</type>
+      <posx>142</posx>
+      <posy>64</posy>
+      <width>436</width>
+      <height>9</height>
+      <info>Player.Progress</info>
+      <texturebg>progress-info-music-bg.png</texturebg>
+      <lefttexture>-</lefttexture>
+      <midtexture>progress_mid-info-settings.png</midtexture>
+      <righttexture>-</righttexture>
+      <overlaytexture>progress-info-music-mid.png</overlaytexture>
+      <visible>Player.HasMedia</visible>
+    </control>
+  
+	<control type="label" id="2">
+	<description>Current category</description>
+                                        <posx>0</posx>
+                                        <posy>0</posy>
+                                        <width>300</width>
+                                        <height>34</height>
+                                        <label>Settings</label>
+                                        <font>alwin22</font>
+										<textcolor>9000D9FF</textcolor>
+                                        <align>left</align>
+	</control>
+                                
+                <control type="group">
+                        <!--<include>pageslide</include>-->
+                
+                                <control type="grouplist" id="3">
+                                        <description>Grouplist for menu</description>
+										<onfocus>SetProperty(oncats,yes)</onfocus>
+                                        <posx>40</posx>
+                                        <posy>90</posy>
+                                        <width>160</width>
+                                        <height>410</height>
+                                        <itemgap>2</itemgap>
+                                        <onleft>5</onleft>
+                                        <onright>5</onright>
+                                        <onup>3</onup>
+                                        <ondown>3</ondown>
+										<visible allowhiddenfocus="true">ControlGroup(3).HasFocus()</visible><!--Substring(Window(12).Property(oncats), "yes")</visible>-->
+                                </control>
+
+                                <control type="grouplist" id="5">
+                                        <description>control area</description>
+										<onfocus>ClearProperty(oncats)</onfocus>
+                                        <posx>210</posx>
+                                        <posy>90</posy>
+                                        <width>480</width>
+                                        <height>433</height>
+                                        <itemgap>2</itemgap>
+                                        <onleft>3</onleft>
+                                        <onright>3</onright>
+                                        <onup>5</onup>
+                                        <ondown>5</ondown>
+                                </control>
+                                
+                                <control type="button" id="7">
+                                        <description>Default Button</description>
+                                        <posx>0</posx>
+                                        <posy>0</posy>
+                                        <height>34</height>
+                                        <font>idua18</font>
+										<textcolor>9000D9FF</textcolor>
+                                        <aligny>center</aligny>
+                                        <textoffsetx>10</textoffsetx>
+                                        <texturefocus>list-focus.png</texturefocus>
+                                        <texturenofocus>list-nofocus.png</texturenofocus>
+                                </control>
+                                
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<font>idua20</font>
+			<textcolor>9000D9FF</textcolor>
+			<texturefocus>input-focus_blau_fcb.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textoffsetx>7</textoffsetx>
+			<textureradiofocus>settings-check-box_fcb.png</textureradiofocus>
+			<textureradionofocus> settings-check-boxNF_fcb.png</textureradionofocus>
+
+		</control>
+                                
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<posx>530</posx>
+			<posy>150</posy>
+			<width>300</width>
+			<texturefocus>input-focus_blau_fcb.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textureup>scroll-up_fcb.png</textureup>
+			<texturedown>scroll-down_fcb.png</texturedown>
+			<textureupfocus>scroll-up-focus_fcb.png</textureupfocus>
+			<texturedownfocus>scroll-down-focus_fcb.png</texturedownfocus>
+			<font>idua20</font>
+			<textcolor>9000D9FF</textcolor>
+			<disabledcolor>disabled</disabledcolor>
+			<textoffsetx>7</textoffsetx>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+
+		</control>
+
+                                <control type="button" id="10">
+                                        <description>Default Category Button Left</description>
+                                        <posx>100</posx>
+                                        <posy>100</posy>
+                                        <width>300</width>
+                                        <height>34</height>
+                                        <label>224</label>
+                                        <font>alwin22</font>
+										<textcolor>9000D9FF</textcolor>
+                                        <align>left</align>
+                                        <textoffsety>3</textoffsety>
+                                        <textoffsetx>10</textoffsetx>
+                                        <texturefocus border="2">list-focus.png</texturefocus>
+                                        <texturenofocus>list-nofocus.png</texturenofocus>
+                                </control>
+
+                </control>
+				
+					<include>UHR</include>
+    <include>pseudoEqualizer</include>
+
+ <control>
+   <description>bg preview</description>
+   <type>image</type>
+   <id>0</id>
+   <posx>0</posx>
+   <posy>0</posy>
+   <width>720</width>
+   <height>576</height>
+   <include>windowswitchtransition</include>
+  </control>
+
+
+
+
+
+
+
+ </controls>
+
+</window>
+
+<control>
+   <description>music bg overlay 2</description>
+   <type>image</type>
+   <id>0</id>
+   <posx>115</posx>
+   <posy>461</posy>
+   <width>488</width>
+   <height>38</height>
+   <texture>overlay2-bg.png</texture>
+   <include>mediaoverlay</include>
+   
+   </control>
+
+
+<control>
+   <description>play time label</description>
+   <type>label</type>
+   <id>0</id>
+   <posx>16</posx>
+   <posy>466</posy>
+   <label>-</label>
+   <info>MusicPlayer.Time</info>
+   <align>left</align>
+   <font>idua20</font>
+   <textcolor>90ffffff</textcolor>
+   <include>mediaoverlay</include>
+  </control>
+
+
+
+
+  <control>
+   <description>album/artist/genre etc info label</description>
+   <type>fadelabel</type>
+   <width>476</width>
+   <posx>126</posx>
+   <posy>466</posy>
+   <font>alwin20</font>
+   <label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Title, | ]$INFO[MusicPlayer.Album, | ]$INFO[MusicPlayer.Year, | ]</label>
+   <textcolor>90ffffff</textcolor>
+   <align>center</align>
+   <include>mediaoverlay</include>
+   <id>0</id>
+  </control>
+        </controls>
+</window>

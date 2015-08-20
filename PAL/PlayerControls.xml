@@ -1,0 +1,202 @@
+<window>
+	<id>114</id>
+	<defaultcontrol always="true">403</defaultcontrol>
+	<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-1" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+	<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="300" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo)</visible>
+	<type>dialog</type>
+	<coordinates>
+		<system>1</system>
+		<posx>17</posx>
+		<posy>398</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<posx>80</posx>
+			<posy>-31</posy>
+			<width>520</width>
+			<height>166</height>
+			<texture border="40">blackblack3.png</texture>
+		</control>
+		<control>
+			<type>button</type>
+			<id>400</id>
+			<posx>100</posx>
+			<posy>25</posy>
+			<width>80</width>
+			<height>80</height>
+			<label>-</label>
+			<texturefocus>music-skipminus-focus.png</texturefocus>
+			<texturenofocus>music2-skipminus-nofocus.png</texturenofocus>
+			<onleft>405</onleft>
+			<onright>401</onright>
+			<onup>406</onup>
+			<ondown>406</ondown>
+			<onclick>XBMC.PlayerControl(Previous)</onclick>
+		</control>
+		<control>
+			<type>button</type>
+			<id>401</id>
+			<posx>181</posx>
+			<posy>25</posy>
+			<width>80</width>
+			<height>80</height>
+			<label>-</label>
+			<texturefocus>music-rw-focus.png</texturefocus>
+			<texturenofocus>music2-rw-nofocus.png</texturenofocus>
+			<onleft>400</onleft>
+			<onright>402</onright>
+			<onup>406</onup>
+			<ondown>406</ondown>
+			<onclick>XBMC.PlayerControl(Rewind)</onclick>
+		</control>
+		<control>
+			<type>button</type>
+			<id>402</id>
+			<posx>261</posx>
+			<posy>25</posy>
+			<width>80</width>
+			<height>80</height>
+			<label>-</label>
+			<texturefocus>music-stop-focus.png</texturefocus>
+			<texturenofocus>music2-stop-nofocus.png</texturenofocus>
+			<onleft>401</onleft>
+			<onright>403</onright>
+			<onup>406</onup>
+			<ondown>406</ondown>
+			<onclick>XBMC.PlayerControl(Stop)</onclick>
+		</control>
+		<control>
+			<type>togglebutton</type>
+			<id>403</id>
+			<posx>341</posx>
+			<posy>25</posy>
+			<width>80</width>
+			<height>80</height>
+			<label>-</label>
+			<texturefocus>music-pause-focus.png</texturefocus>
+			<texturenofocus>music2-pause-nofocus.png</texturenofocus>
+			<usealttexture>Player.Paused|Player.Rewinding|Player.Forwarding</usealttexture>
+			<alttexturefocus>music-play-focus.png</alttexturefocus>
+			<alttexturenofocus>music2-play-nofocus.png</alttexturenofocus>
+			<onleft>402</onleft>
+			<onright>404</onright>
+			<onup>406</onup>
+			<ondown>406</ondown>
+			<onclick>XBMC.PlayerControl(Play)</onclick>
+		</control>
+		<control>
+			<type>button</type>
+			<id>404</id>
+			<posx>421</posx>
+			<posy>25</posy>
+			<width>80</width>
+			<height>80</height>
+			<label>-</label>
+			<texturefocus>music-ff-focus.png</texturefocus>
+			<texturenofocus>music2-ff-nofocus.png</texturenofocus>
+			<onleft>403</onleft>
+			<onright>405</onright>
+			<onup>406</onup>
+			<ondown>406</ondown>
+			<onclick>XBMC.PlayerControl(Forward)</onclick>
+		</control>
+		<control>
+			<type>button</type>
+			<id>405</id>
+			<posx>501</posx>
+			<posy>25</posy>
+			<width>80</width>
+			<height>80</height>
+			<label>-</label>
+			<texturefocus>music-skipplus-focus.png</texturefocus>
+			<texturenofocus>music2-skipplus-nofocus.png</texturenofocus>
+			<onleft>404</onleft>
+			<onright>400</onright>
+			<onup>406</onup>
+			<ondown>406</ondown>
+			<onclick>XBMC.PlayerControl(Next)</onclick>
+		</control>
+		<control>
+			<type>button</type>
+			<id>406</id>
+			<posx>270</posx>
+			<posy>-20</posy>
+			<width>34</width>
+			<height>34</height>
+			<label>-</label>
+			<texturefocus>Lyrics_FOCUS.png</texturefocus>
+			<texturenofocus>Lyrics_FOCUS.png</texturenofocus>
+			<onleft>407</onleft>
+			<onright>409</onright>
+			<onup>405</onup>
+			<ondown>405</ondown>
+			<onclick>q:\skin\7TFT\extras\XBMCLyrics\default.py</onclick>
+			<animation effect="zoom" start="100" end="130" center="auto" time="80">focus</animation>
+			<animation effect="zoom" start="130" end="100" center="auto" time="80">unfocus</animation>
+			<onclick>dialog.close(PlayerControls,true)</onclick>
+		</control>
+		<control>
+			<description>Last.FM Love button</description>
+			<type>button</type>
+			<id>407</id>
+			<posx>220</posx>
+			<posy>-20</posy>
+			<width>34</width>
+			<height>34</height>
+			<label>-</label>
+			<texturefocus>Love-focus.png</texturefocus>
+			<texturenofocus>Love.png</texturenofocus>
+			<onclick>XBMC.LastFM.Love</onclick>
+			<onleft>408</onleft>
+			<onright>406</onright>
+			<onup>405</onup>
+			<ondown>405</ondown>
+			<visible>LastFM.RadioPlaying</visible>
+			<animation effect="zoom" start="100" end="130" center="auto" time="80">focus</animation>
+			<animation effect="zoom" start="130" end="100" center="auto" time="80">unfocus</animation>
+			<onclick>dialog.close(PlayerControls,true)</onclick>
+		</control>
+		<control>
+			<description>Last.FM ban button</description>
+			<type>button</type>
+			<id>408</id>
+			<posx>170</posx>
+			<posy>-20</posy>
+			<width>34</width>
+			<height>34</height>
+			<label>-</label>
+			<texturefocus>Ban-focus.png</texturefocus>
+			<texturenofocus>Ban.png</texturenofocus>
+			<onclick>XBMC.LastFM.Ban</onclick>
+			<onleft>409</onleft>
+			<onright>407</onright>
+			<onup>405</onup>
+			<ondown>405</ondown>
+			<animation effect="zoom" start="100" end="130" center="auto" time="80">focus</animation>
+			<animation effect="zoom" start="130" end="100" center="auto" time="80">unfocus</animation>
+			<onclick>dialog.close(PlayerControls,true)</onclick>
+			<visible>LastFM.RadioPlaying</visible>
+		</control>
+		<control>
+			<description>Last.FM conditional button</description>
+			<type>button</type>
+			<id>409</id>
+			<posx>120</posx>
+			<posy>-20</posy>
+			<width>34</width>
+			<height>34</height>
+			<label>-</label>
+			<texturefocus>lastfm-home-button.png</texturefocus>
+			<texturenofocus>lastfm-home-button-NF.png</texturenofocus>
+			<onclick>XBMC.ActivateWindow(MyMusicLibrary,lastfm://)</onclick>
+			<onleft>406</onleft>
+			<onright>408</onright>
+			<onup>405</onup>
+			<ondown>405</ondown>
+			<animation effect="zoom" start="100" end="130" center="auto" time="80">focus</animation>
+			<animation effect="zoom" start="130" end="100" center="auto" time="80">unfocus</animation>
+			<onclick>dialog.close(PlayerControls,true)</onclick>
+		</control>
+	</controls>
+</window>

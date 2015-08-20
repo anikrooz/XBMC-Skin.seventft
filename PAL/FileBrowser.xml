@@ -1,0 +1,231 @@
+<window id="126">
+	<defaultcontrol always="true">451</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="1">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>background-plain.jpg</texture>
+		</control>
+		<include>custombg</include>
+		<control type="fadelabel" id="411">
+			<description>heading label</description>
+			<posx>28</posx>
+			<posy>20</posy>
+			<width>230</width>
+			<align>left</align>
+			<font>eth20</font>
+			<label>1023</label>
+			<textcolor>dialogheader</textcolor>
+		</control>
+		<control type="label" id="412">
+			<description>path label control</description>
+			<posx>294</posx>
+			<posy>23</posy>
+			<width>410</width>
+			<align>left</align>
+			<font>idua18</font>
+			<textcolor>dialogheader</textcolor>
+			<haspath>true</haspath>
+			<scroll>true</scroll>
+		 </control>
+		<control type="group">
+			<posx>600</posx>
+			<posy>171</posy>
+			<control type="button">
+				<posx>0</posx>
+				<posy>0</posy>
+				<include>scrollbar_width</include>
+				<height>20</height>
+				<width>24</width>
+				<colordiffuse>99FFFFFF</colordiffuse>
+				<onclick>PageUp(60)</onclick>
+				<texturefocus border="4">scrollbar_arrow_up_focus.png</texturefocus>
+				<texturenofocus border="4">scrollbar_arrow_up.png</texturenofocus>
+				<visible>Control.IsVisible(600)</visible>
+			</control>
+			<control type="button">
+				<posx>0</posx>
+				<posy>208</posy>
+				<include>scrollbar_width</include>
+				<height>20</height>
+				<width>24</width>
+				<colordiffuse>99FFFFFF</colordiffuse>
+				<onclick>PageDown(60)</onclick>
+				<texturefocus border="4">scrollbar_arrow_down_focus.png</texturefocus>
+				<texturenofocus border="4">scrollbar_arrow_down.png</texturenofocus>
+				<visible>Control.IsVisible(600)</visible>
+			</control> 
+			<control type="scrollbar" id="60">
+				<posx>0</posx>
+				<posy>-21</posy>				
+				<height>254</height>
+				<width>20</width>
+				<colordiffuse>ffFFFFFF</colordiffuse>
+				<texturesliderbackground border="4">scrollbar_background.png</texturesliderbackground>
+				<texturesliderbar>-</texturesliderbar>
+				<texturesliderbarfocus>-</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib_NF.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<onleft>450</onleft>
+				<onright>9000</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+		</control>
+		<control type="list" id="450">
+			<posx>265</posx>
+			<posy>130</posy>
+			<width>325</width>
+			<height>320</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="40">
+				<control type="image">
+					<width>320</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>input-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>4</posy>
+					<width>22</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>4</posy>
+					<width>286</width>
+					<height>32</height>
+					<font>idua18</font>
+					<aligny>-1</aligny>
+					<selectedcolor>green</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>!Container.Sort(SongRating)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout height="40">
+				<control type="image">
+					<width>320</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<visible>!Control.HasFocus(450)</visible>
+					<texture>input-nofocus.png</texture>
+				</control>
+				<control type="image">
+					<width>320</width>
+					<height>30</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<visible>Control.HasFocus(450)</visible>
+					<texture>input-focus.png</texture>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>4</posy>
+					<width>22</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>4</posy>
+					<width>286</width>
+					<height>32</height>
+					<font>idua18</font>
+					<aligny>-1</aligny>
+					<selectedcolor>ff3399FF</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>!Container.Sort(SongRating)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+		<include>FileBrowser_ThumbView</include>
+		<control type="image">
+			<posx>20</posx>
+			<posy>120</posy>
+			<height>330</height>
+			<width>225</width>
+			<texture border="10">blackblack3.png</texture>
+		</control>
+		<control type="image">
+			<posx>30</posx>
+			<posy>127</posy>
+			<height>315</height>
+			<width>205</width>
+			<info>ListItem.Icon</info>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+		</control>
+		<control type="group" id="9000">
+			<posy>85</posy>
+			<posx>-3</posx>
+			<control type="button" id="413">
+				<description>OK button</description>
+				<posx>470</posx>
+				<posy>442</posy>
+				<width>90</width>
+				<height>39</height>
+				<align>center</align>
+				<label>186</label>
+				<font>alwin16</font>
+				<texturenofocus>TV-series-button-nofocus2.png</texturenofocus>
+				<texturefocus>TV-series-button-focus2.png</texturefocus>
+				<onleft>414</onleft>
+				<onright>415</onright>
+				<onup>451</onup>
+				<ondown>451</ondown>
+			</control>
+			<control type="button" id="414">
+				<description>Cancel button</description>
+				<posx>326</posx>
+				<posy>442</posy>
+				<width>134</width>
+				<height>39</height>
+				<align>center</align>
+				<label>222</label>
+				<font>alwin16</font>
+				<texturenofocus>TV-series-button-nofocus2.png</texturenofocus>
+				<texturefocus>TV-series-button-focus.png</texturefocus>
+				<onleft>415</onleft>
+				<onright>413</onright>
+				<onup>451</onup>
+				<ondown>451</ondown>
+			</control>
+			<control type="button" id="415">
+				<description>Create folder button</description>
+				<posx>160</posx>
+				<posy>442</posy>
+				<width>155</width>
+				<height>39</height>
+				<align>center</align>
+				<label>119</label>
+				<font>alwin16</font>
+				<texturenofocus border="-2">TV-series-button-nofocus2.png</texturenofocus>
+				<texturefocus>TV-series-button-focus3.png</texturefocus>
+				<onleft>413</onleft>
+				<onright>414</onright>
+				<onup>451</onup>
+				<ondown>451</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

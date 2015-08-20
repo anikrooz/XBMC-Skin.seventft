@@ -1,0 +1,137 @@
+<window type="buttonMenu" id="2555">
+	<defaultcontrol>2</defaultcontrol>
+	<visible>Player.HasVideo + Window.IsActive(2555)</visible>
+	<controls>
+		<!--  Background!-->
+		<control type="image" id="1">
+			<description>Window name</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_video.png</texture>
+		</control>
+		<!--  Video Infos!-->
+		<control type="image" id="1">
+			<description>Video cover</description>
+			<posx>30</posx>
+			<posy>144</posy>
+			<width>118</width>
+			<height>203</height>
+			<info>VideoPlayer.Cover</info>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		<control type="image" id="1">
+			<description>Video no cover</description>
+			<posx>6</posx>
+			<posy>134</posy>
+			<width>150</width>
+			<height>232</height>
+			<texture>case-dvd.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		<control type="videowindow" id="1">
+			<description>Video preview window</description>
+			<posx>150</posx>
+			<posy>125</posy>
+			<width>430</width>
+			<height>245</height>
+		</control>
+		<control type="image" id="1">
+			<description>Videowindow over videoinfo</description>
+			<posx>150</posx>
+			<posy>125</posy>
+			<width>430</width>
+			<height>249</height>
+			<texture>Videowindow_over_videoinfo.png</texture>
+		</control>
+		<control type="label" id="1">
+			<description>Title value</description>
+			<posx>0</posx>
+			<posy>17</posy>
+			<label>$INFO[VideoPlayer.Title]</label>
+			<width>720</width>
+			<font>home_red</font>
+			<textcolor>ff999999</textcolor>
+			<align>center</align>
+		</control>
+		<control type="fadelabel" id="1">
+			<description>Director value</description>
+			<posx>170</posx>
+			<posy>460</posy>
+			<font>idua18</font>
+			<textcolor>ff777777</textcolor>
+			<label>Directed by $INFO[VideoPlayer.Director]</label>
+			<width>400</width>
+		</control>
+		<control type="fadelabel" id="1">
+			<description>Genre value</description>
+			<posx>50</posx>
+			<posy>526</posy>
+			<font>idua20</font>
+			<textcolor>ff888888</textcolor>
+			<label>$LOCALIZE[515] : $INFO[VideoPlayer.Genre]</label>
+			<width>720</width>
+			<align>center</align>
+		</control>
+		<control type="label" id="1">
+			<description>Year value</description>
+			<posx>563</posx>
+			<posy>90</posy>
+			<font>idua20</font>
+			<textcolor>ff888888</textcolor>
+			<label>$INFO[VideoPlayer.Year]</label>
+			<align>right</align>
+		</control>
+		<control type="label" id="1">
+			<description>Tracks value</description>
+			<posx>157</posx>
+			<posy>90</posy>
+			<align>left</align>
+			<font>idua20</font>
+			<textcolor>ff888888</textcolor>
+			<label>$INFO[VideoPlayer.Playlistposition]/$INFO[VideoPlayer.Playlistlength]</label>
+		</control>
+		<!--  Progress info!-->
+		<control type="progress" id="1">
+			<description>Progressbar</description>
+			<posx>150</posx>
+			<posy>378</posy>
+			<width>430</width>
+			<height>12</height>
+			<info>Player.Progress</info>
+			<texturebg>progress_back.png</texturebg>
+			<lefttexture>progress_left.png</lefttexture>
+			<midtexture>progress_mid-fcb.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>progress_over.png</overlaytexture>
+		</control>
+		<control type="label" id="1">
+			<description>Play time</description>
+			<posx>150</posx>
+			<posy>395</posy>
+			<font>idua18</font>
+			<textcolor>ff888888</textcolor>
+			<label>$INFO[VideoPlayer.TimeSpeed] / $INFO[VideoPlayer.TimeRemaining]</label>
+		</control>
+		<control type="label" id="1">
+			<description>Duration time</description>
+			<posx>580</posx>
+			<posy>395</posy>
+			<font>idua18</font>
+			<textcolor>ff888888</textcolor>
+			<label>$INFO[VideoPlayer.Duration]</label>
+			<align>right</align>
+		</control>
+		<control>
+			<description>bg preview</description>
+			<type>image</type>
+			<id>0</id>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<include>windowswitchtransition</include>
+		</control>
+	</controls>
+</window>

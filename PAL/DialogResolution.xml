@@ -1,0 +1,22 @@
+<includes>
+	<include name="resolutionlogo">
+		<control type="image" id="1">
+			<description>43 logo</description>      
+			<texture>pal43.png</texture>
+			<!-- <visible>Skin.HasSetting(resolution)</visible> -->
+			<posx>325</posx>
+			<posy>528</posy>
+			<width>130</width>
+			<height>36</height>
+		</control>
+		<control type="image" id="1">
+			<description>4_3 logo bg</description>      
+			<texture>OverlayWindowCloseTime_old.png</texture>
+			<!-- <visible>Skin.HasSetting(resolution)</visible> -->
+			<posx>320</posx>
+			<posy>527</posy>
+			<width>86</width>
+			<height>40</height>
+		</control>
+	</include>
+</includes>

@@ -1,0 +1,144 @@
+<window id="129">
+	<defaultcontrol>15</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>165</posx>
+		<posy>200</posy>
+	</coordinates>
+	<animation effect="fade" time="300" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+        <animation effect="fade" time="330" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	<controls>
+		
+		<control type="image" id="0">
+			<posx>-165</posx>
+			<posy>-200</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_dialog.png</texture>
+			<animation effect="fade" time="400">WindowOpen</animation>
+		</control>
+		<control type="label">
+			<description>heading label</description>
+			<posx>-165</posx>
+			<posy>-180</posy>
+			<width>720</width>
+			<align>center</align>
+			<font>eth24</font>
+			<label>21421</label>
+			<textcolor>907cfc00</textcolor>
+		</control>
+		<control type="label" id="0">
+			<description>Rule match label</description>
+			<posx>20</posx>
+			<posy>20</posy>
+			<width>480</width>
+			<font>idua20</font>
+			<textcolor>ff888888</textcolor>
+			<label>21422</label>
+		</control>
+		<control type="group" id="9001">
+			<control type="spincontrolex" id="15">
+				<description>Rule Field</description>
+				<posx>20</posx>
+				<posy>55</posy>
+				<width>175</width>
+				<font>idua18</font>
+				<texturefocus border="3">input-focus.png</texturefocus>
+				<texturenofocus  border="3">input-nofocus.png</texturenofocus>
+				<onright>16</onright>
+				<onleft>16</onleft>
+				<onup>9000</onup>
+				<ondown>17</ondown>
+			</control>
+			<control type="spincontrolex" id="16">
+				<description>Rule operator</description>
+				<posx>200</posx>
+				<posy>55</posy>
+				<width>180</width>
+				<font>idua18</font>
+				<texturefocus border="3">input-focus.png</texturefocus>
+				<texturenofocus  border="3">input-nofocus.png</texturenofocus>
+				<font>font12</font>
+				<onright>15</onright>
+				<onleft>15</onleft>
+				<onup>9000</onup>
+				<ondown>17</ondown>
+			</control>
+		</control>
+		<control type="button" id="17">
+			<description>Value Button</description>
+			<posx>20</posx>
+			<posy>105</posy>
+			<width>360</width>
+			<height>32</height>
+			<font>idua20</font>
+			<textoffsetx>12</textoffsetx>
+			<textwidth>380</textwidth>
+			<textcolor>ff228b22</textcolor>
+			<aligny>center</aligny>
+			<texturefocus>input-focus.png</texturefocus>
+			<texturenofocus>input-nofocus.png</texturenofocus>
+			<label>-</label>
+			<onup>9001</onup>
+			<onleft>17</onleft>
+			<onright>17</onright>
+			<ondown>20</ondown>
+		</control>
+		<control type="button" id="20">
+			<description>Browse/Search Button</description>
+			<posx>20</posx>
+			<posy>155</posy>
+			<width>90</width>
+			<height>32</height>
+			<font>font12</font>
+			<textoffsetx>12</textoffsetx>
+			<align>center</align>
+			<aligny>center</aligny>
+			<texturefocus border="1">input-focus.png</texturefocus>
+			<texturenofocus border="1">input-nofocus.png</texturenofocus>
+			<label>1024</label>
+			<onup>17</onup>
+			<onleft>20</onleft>
+			<onright>20</onright>
+			<ondown>9000</ondown>
+		</control>
+		<control type="group" id="9000">
+			<control type="button" id="18">
+				<description>Ok Button</description>
+				<posx>170</posx>
+				<posy>200</posy>
+				<width>90</width>
+				<height>38</height>
+				<font>idua18</font>
+				<textoffsetx>12</textoffsetx>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texturenofocus>TV-series-button-nofocus2.png</texturenofocus>
+				<texturefocus>TV-series-button-focus2.png</texturefocus>
+				<label>186</label>
+				<onup>20</onup>
+				<onleft>19</onleft>
+				<onright>19</onright>
+				<ondown>9001</ondown>
+			</control>
+			<control type="button" id="19">
+				<description>Cancel Button</description>
+				<posx>266</posx>
+				<posy>200</posy>
+				<width>120</width>
+				<height>38</height>
+				<font>idua18</font>
+				<textoffsetx>12</textoffsetx>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texturenofocus>TV-series-button-nofocus2.png</texturenofocus>
+				<texturefocus>TV-series-button-focus.png</texturefocus>
+				<label>222</label>
+				<onup>20</onup>
+				<onleft>18</onleft>
+				<onright>18</onright>
+				<ondown>9001</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

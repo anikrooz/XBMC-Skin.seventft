@@ -1,0 +1,781 @@
+<window id="2001">
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+	<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="500" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+	<controls>
+		<!-- <control type="image" id="0">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>black.png</texture>
+			<animation effect="fade" time="2000">WindowOpen</animation>
+		</control> -->
+		<control type="image" id="1">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_AlbumVideoInfo.png</texture>
+		</control>
+		<include>MusicBackground</include>
+		<control type="image">
+			<posx>40</posx>
+			<posy>136</posy>
+			<width>149</width>
+			<height>166</height>
+			<texture>blackblack3.png</texture>
+			<texture border="10">blackblack3.png</texture>
+		</control>
+		<control type="image">
+			<description>Artist,Album Cover image</description>
+			<posx>47</posx>
+			<posy>104</posy>
+			<width>135</width>
+			<height>230</height>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<!-- <aspectratio aligny="top">keep</aspectratio> -->
+			<info>ListItem.Thumb</info>
+		</control>
+		<control type="image">
+			<description>Artist,Album Cover image</description>
+			<posx>68</posx>
+			<posy>343</posy>
+			<width>104</width>
+			<height>124</height>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<!-- <aspectratio aligny="top">keep</aspectratio>  -->
+			<!-- <info>ListItem.Thumb</info> -->
+			<texture>bg_ListItem.property_artistthumb.png</texture>
+		</control>
+		<control type="image">
+			<description>Artist,Album Cover image</description>
+			<posx>90</posx>
+			<posy>343</posy>
+			<width>62</width>
+			<height>127</height>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<!-- <aspectratio aligny="top">keep</aspectratio> -->
+			<!-- <info>ListItem.Thumb</info> -->
+			<info>ListItem.property(artistthumb)</info>
+			<!-- <info>ListItem.Album</info> -->
+			<!-- <visible>!IsEmpty(ListItem.Album)</visible> -->
+		</control>
+		<control type="image">
+			<posx>115</posx>
+			<posy>330</posy>
+			<width>505</width>
+			<height>5</height>
+			<texture>separator.png</texture>
+		</control>
+		<control type="image">
+			<posx>140</posx>
+			<posy>85</posy>
+			<width>440</width>
+			<height>31</height>
+			<texture>folder-focus7.png</texture>
+		</control>
+		<control type="group">
+			<visible>container.content(albums)</visible>
+			<control type="label" id="1">
+				<description>description heading label</description>
+				<posx>690</posx>
+				<posy>23</posy>
+				<align>right</align>
+				<label>10523</label>
+				<textcolor>98778899</textcolor>
+				<font>eth20</font>
+			</control>
+			<control type="label">
+				<description>Artist</description>
+				<posx>200</posx>
+				<posy>123</posy>
+				<label>171</label>
+				<width>100</width>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+			</control>
+			<control type="label">
+				<description>Year</description>
+				<posx>200</posx>
+				<posy>143</posy>
+				<label>201</label>
+				<width>100</width>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+			</control>
+			<control type="label">
+				<description>Rating</description>
+				<posx>200</posx>
+				<posy>163</posy>
+				<label>173</label>
+				<width>110</width>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+			</control>
+			<control type="label">
+				<description>Genre</description>
+				<posx>200</posx>
+				<posy>183</posy>
+				<width>100</width>
+				<label>174</label>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+			</control>
+			<control type="label">
+				<description>Moods</description>
+				<posx>200</posx>
+				<posy>203</posy>
+				<width>100</width>
+				<label>175</label>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+			</control>
+			<control type="label">
+				<description>Styles</description>
+				<posx>200</posx>
+				<posy>223</posy>
+				<width>100</width>
+				<label>176</label>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+			</control>
+			<control type="label">
+				<description>Themes</description>
+				<posx>200</posx>
+				<posy>243</posy>
+				<width>100</width>
+				<label>21895</label>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+			</control>
+			<control type="label">
+				<description>Label</description>
+				<posx>200</posx>
+				<posy>263</posy>
+				<width>100</width>
+				<label>21899</label>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+			</control>
+			<control type="label">
+				<description>Type</description>
+				<posx>200</posx>
+				<posy>283</posy>
+				<width>100</width>
+				<label>146</label>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+			</control>
+			<control type="label">
+				<description>Album value</description>
+				<posx>170</posx>
+				<posy>84</posy>
+				<width>380</width>
+				<align>center</align>
+				<label fallback="416">$INFO[ListItem.Album]</label>
+				<font>idua24</font>
+				<textcolor>ff778899</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>Artist value</description>
+				<width>280</width>
+				<posx>310</posx>
+				<posy>123</posy>
+				<label fallback="416">$INFO[ListItem.Artist]</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>year value</description>
+				<width>310</width>
+				<posx>310</posx>
+				<posy>143</posy>
+				<label fallback="416">$INFO[ListItem.Year]</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>Rating value</description>
+				<width>310</width>
+				<posx>310</posx>
+				<posy>163</posy>
+				<label fallback="416">$INFO[ListItem.Rating]</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>Genre value</description>
+				<width>310</width>
+				<posx>310</posx>
+				<posy>183</posy>
+				<label fallback="416">$INFO[ListItem.Genre]</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>Moods value</description>
+				<posx>310</posx>
+				<posy>203</posy>
+				<width>315</width>
+				<label fallback="416">$INFO[ListItem.Property(AlbumMoods)]</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>Styles value</description>
+				<width>321</width>
+				<posx>310</posx>
+				<posy>223</posy>
+				<label fallback="416">$INFO[ListItem.Property(AlbumStyles)]</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>Themes value</description>
+				<width>323</width>
+				<posx>310</posx>
+				<posy>243</posy>
+				<label fallback="416">$INFO[ListItem.Property(AlbumThemes)]</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>Label value</description>
+				<width>323</width>
+				<posx>310</posx>
+				<posy>263</posy>
+				<label fallback="416">$INFO[ListItem.Property(AlbumLabel)]</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>Type value</description>
+				<width>324</width>
+				<posx>310</posx>
+				<posy>283</posy>
+				<label fallback="416">$INFO[ListItem.Property(AlbumType)]</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+			</control>
+			<!-- <control type="image" id="800">
+				<description>bg listcontrol and textarea fuer zoom funktion</description>
+				<posx>180</posx>
+				<posy>346</posy>
+				<width>400</width>
+				<height>154</height>
+				<texture>blackblack.png</texture>
+				<visible>Control.HasFocus(4)</visible>
+				<animation effect="zoom" start="100" end="150" center="auto" time="50">visiblechange</animation>
+				<animation effect="zoom" start="150" end="100" center="auto" time="50">visiblechange</animation>
+			</control> -->
+			<control type="textbox" id="4">
+				<description>textarea</description>
+				<posx>166</posx>
+				<posy>338</posy>
+				<width>392</width>
+				<height>154</height>
+				<font>alwin18</font>
+				<onleft>9000</onleft>
+				<onright>61</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<pagecontrol>61</pagecontrol>
+				<visible>Control.IsVisible(61) + !Control.IsVisible(50)</visible>
+				<include>autoscrollmedium</include>
+				<info>ListItem.Property(AlbumReview)</info>
+			</control>
+			<control type="textbox" id="4">
+				<description>textarea</description>
+				<posx>166</posx>
+				<posy>338</posy>
+				<width>392</width>
+				<height>154</height>
+				<font>alwin18</font>
+				<onleft>9000</onleft>
+				<onright>61</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<visible>!Control.IsVisible(61) + !Control.IsVisible(50)</visible>
+				<include>autoscrollmedium</include>
+				<info>ListItem.Property(AlbumReview)</info>
+			</control>
+		</control>
+		<control type="group">
+			<visible>container.content(artists)</visible>
+			<control type="label">
+				<description>description heading label</description>
+				<posx>690</posx>
+				<posy>23</posy>
+				<align>right</align>
+				<label>21891</label>
+				<textcolor>98778899</textcolor>
+				<font>eth20</font>
+			</control>
+			<control type="label">
+				<description>Artist value</description>
+				<posx>170</posx>
+				<posy>84</posy>
+				<width>380</width>
+				<align>center</align>
+				<info>ListItem.Artist</info>
+				<font>idua24</font>
+				<textcolor>ff778899</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>Artist Not Available value</description>
+				<posx>220</posx>
+				<posy>92</posy>
+				<width>300</width>
+				<label>416</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+				<visible>IsEmpty(ListItem.Artist)</visible>
+			</control>
+			<control type="label">
+				<description>Born</description>
+				<posx>200</posx>
+				<posy>123</posy>
+				<label>21893</label>
+				<width>100</width>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+				<visible>!IsEmpty(ListItem.Property(Born))</visible>
+			</control>
+			<control type="label">
+				<description>Formed</description>
+				<posx>200</posx>
+				<posy>123</posy>
+				<label>21894</label>
+				<width>100</width>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+				<visible>!IsEmpty(ListItem.Property(Formed))</visible>
+			</control>
+			<control type="label">
+				<description>Born/Formed</description>
+				<posx>200</posx>
+				<posy>123</posy>
+				<label>21900</label>
+				<width>100</width>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+				<scroll>true</scroll>
+				<visible>IsEmpty(ListItem.Property(Born)) + IsEmpty(ListItem.Property(Formed))</visible>
+			</control>
+			<control type="label">
+				<description>Genre</description>
+				<posx>200</posx>
+				<posy>143</posy>
+				<label>174</label>
+				<width>100</width>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+			</control>
+			<control type="label">
+				<description>Styles</description>
+				<posx>200</posx>
+				<posy>163</posy>
+				<label>176</label>
+				<width>100</width>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+			</control>
+			<control type="label">
+				<description>Moods</description>
+				<posx>200</posx>
+				<posy>183</posy>
+				<width>100</width>
+				<label>175</label>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+			</control>
+			<control type="label">
+				<description>Instruments</description>
+				<posx>200</posx>
+				<posy>203</posy>
+				<width>100</width>
+				<label>21892</label>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+			</control>
+			<control type="label">
+				<description>Died</description>
+				<posx>200</posx>
+				<posy>223</posy>
+				<width>100</width>
+				<label>21897</label>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+			</control>
+			<control type="label">
+				<description>Disbanded</description>
+				<posx>200</posx>
+				<posy>243</posy>
+				<width>100</width>
+				<label>21896</label>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+			</control>
+			<control type="label">
+				<description>Years Active</description>
+				<posx>200</posx>
+				<posy>263</posy>
+				<width>100</width>
+				<label>21898</label>
+				<font>ArialSettings</font>
+				<textcolor>ff999999</textcolor>
+			</control>
+			<control type="label">
+				<description>Born, Formed value</description>
+				<width>300</width>
+				<posx>310</posx>
+				<posy>123</posy>
+				<label fallback="416">$INFO[ListItem.Property(Born)]$INFO[ListItem.Property(Formed)]</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>Genre value</description>
+				<width>300</width>
+				<posx>310</posx>
+				<posy>143</posy>
+				<label fallback="416">$INFO[ListItem.Genre]</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>Styles value</description>
+				<width>305</width>
+				<posx>310</posx>
+				<posy>163</posy>
+				<label fallback="416">$INFO[ListItem.Property(Styles)]</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>Moods value</description>
+				<width>315</width>
+				<posx>310</posx>
+				<posy>183</posy>
+				<label fallback="416">$INFO[ListItem.Property(Moods)]</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>Instruments value</description>
+				<posx>310</posx>
+				<posy>203</posy>
+				<width>325</width>
+				<label fallback="416">$INFO[ListItem.Property(Instruments)]</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>Died value</description>
+				<posx>310</posx>
+				<posy>223</posy>
+				<width>325</width>
+				<label fallback="416">$INFO[ListItem.Property(Died)]</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>Disbanded value</description>
+				<posx>310</posx>
+				<posy>243</posy>
+				<width>320</width>
+				<label fallback="416">$INFO[ListItem.Property(Disbanded)]</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>Years Active value</description>
+				<posx>310</posx>
+				<posy>263</posy>
+				<width>325</width>
+				<label fallback="416">$INFO[ListItem.Property(YearsActive)]</label>
+				<font>ArialSettings</font>
+				<scroll>true</scroll>
+			</control>
+			<!-- <control type="image" id="800">
+				<description>bg listcontrol and textarea fuer zoom funktion</description>
+				<posx>180</posx>
+				<posy>346</posy>
+				<width>400</width>
+				<height>154</height>
+				<texture>blackblack.png</texture>
+				<visible>Control.HasFocus(4)</visible>
+				<animation effect="zoom" start="100" end="150" center="auto" time="50">visiblechange</animation>
+				<animation effect="zoom" start="150" end="100" center="auto" time="50">visiblechange</animation>
+			</control> -->
+			<control type="textbox" id="4">
+				<description>textarea</description>
+				<posx>166</posx>
+				<posy>338</posy>
+				<width>392</width>
+				<height>154</height>
+				<font>alwin18</font>
+				<onleft>9000</onleft>
+				<onright>61</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<pagecontrol>61</pagecontrol>
+				<visible>!Control.IsVisible(50)</visible>
+				<include>autoscrollmedium</include>
+				<info>ListItem.Property(Biography)</info>
+			</control>
+		</control>
+		<control type="group" id="9000">
+			<control type="button" id="5">
+				<description>Tracks/Review(Albums) or Discography/Biography(Artists)</description>
+				<posx>0</posx>
+				<posy>-4</posy>
+				<width>106</width>
+				<height>161</height>
+				<label>182</label>
+				<font>alwin22</font>
+				<textcolor>ff778899</textcolor>
+				<texturefocus>button-lioben-info-fo.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<textoffsetx>30</textoffsetx>
+				<textoffsety>20</textoffsety>
+				<align>left</align>
+				<aligny>bottom</aligny>
+				<onleft>61</onleft>
+				<onright>50</onright>
+				<onup>10</onup>
+				<ondown>6</ondown>
+				<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+				<animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+			</control>
+			<control type="button" id="6">
+				<description>Refresh</description>
+				<posx>10</posx>
+				<posy>418</posy>
+				<width>106</width>
+				<height>161</height>
+				<label>184</label>
+				<font>alwin22</font>
+				<textcolor>ff778899</textcolor>
+				<texturefocus>button-liunten-info-fo.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<textoffsetx>20</textoffsetx>
+				<textoffsety>107</textoffsety>
+				<align>left</align>
+				<aligny>bottom</aligny>
+				<onleft>61</onleft>
+				<onright>50</onright>
+				<onup>5</onup>
+				<ondown>10</ondown>
+				<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+				<animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+			</control>
+			<control type="button" id="10">
+				<description>GetThumb</description>
+				<posx>600</posx>
+				<posy>418</posy>
+				<width>106</width>
+				<height>161</height>
+				<label>13405</label>
+				<font>alwin22</font>
+				<textcolor>ff778899</textcolor>
+				<texturefocus>button-reunten-info-fo.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<textoffsetx>20</textoffsetx>
+				<textoffsety>107</textoffsety>
+				<align>right</align>
+				<aligny>bottom</aligny>
+				<onleft>61</onleft>
+				<onright>50</onright>
+				<onup>6</onup>
+				<ondown>5</ondown>
+				<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+				<animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+			</control>
+		</control>
+		<control type="list" id="50">
+			<description>Track List Container</description>
+			<posx>200</posx>
+			<posy>350</posy>
+			<width>455</width>
+			<height>175</height>
+			<onleft>9000</onleft>
+			<onright>61</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<orientation>vertical</orientation>
+			<pagecontrol>61</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<visible>!Control.IsVisible(4)</visible>
+			<itemlayout width="250" height="29">
+				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>17</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+					<aspectratio align="left">keep</aspectratio>
+					<visible>container.content(artists)</visible>
+				</control>
+				<control type="label">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>320</width>
+					<height>22</height>
+					<font>ArialSettings</font>
+					<aligny>center</aligny>
+					<selectedcolor>green</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.TrackNumber] - $INFO[ListItem.Label]</label>
+					<visible>container.content(albums)</visible>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>3</posy>
+					<width>320</width>
+					<height>22</height>
+					<font>ArialSettings</font>
+					<aligny>center</aligny>
+					<selectedcolor>green</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>container.content(artists)</visible>
+				</control>
+				<control type="label">
+					<posx>450</posx>
+					<posy>3</posy>
+					<width>100</width>
+					<height>22</height>
+					<font>ArialSettings</font>
+					<aligny>center</aligny>
+					<selectedcolor>green</selectedcolor>
+					<align>right</align>
+					<label>$INFO[ListItem.Duration]</label>
+					<visible>container.content(albums)</visible>
+				</control>
+				<control type="label">
+					<posx>450</posx>
+					<posy>3</posy>
+					<width>100</width>
+					<height>22</height>
+					<font>ArialSettings</font>
+					<aligny>center</aligny>
+					<selectedcolor>green</selectedcolor>
+					<align>right</align>
+					<label>$INFO[ListItem.Label2]</label>
+					<visible>container.content(artists)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout height="29" width="250">
+				<control type="image">
+					<width>455</width>
+					<height>29</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<visible>Control.HasFocus(50)</visible>
+					<texture>list-focus.png</texture>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>17</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+					<aspectratio align="left">keep</aspectratio>
+					<visible>container.content(artists)</visible>
+				</control>
+				<control type="label">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>320</width>
+					<height>22</height>
+					<font>ArialSettings</font>
+					<aligny>center</aligny>
+					<selectedcolor>green</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.TrackNumber] - $INFO[ListItem.Label]</label>
+					<visible>container.content(albums)</visible>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>3</posy>
+					<width>320</width>
+					<height>22</height>
+					<font>ArialSettings</font>
+					<aligny>center</aligny>
+					<selectedcolor>green</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>container.content(artists)</visible>
+				</control>
+				<control type="label">
+					<posx>450</posx>
+					<posy>3</posy>
+					<width>100</width>
+					<height>22</height>
+					<font>ArialSettings</font>
+					<aligny>center</aligny>
+					<selectedcolor>green</selectedcolor>
+					<align>right</align>
+					<label>$INFO[ListItem.Duration]</label>
+					<visible>container.content(albums)</visible>
+				</control>
+				<control type="label">
+					<posx>450</posx>
+					<posy>3</posy>
+					<width>100</width>
+					<height>22</height>
+					<font>ArialSettings</font>
+					<aligny>center</aligny>
+					<selectedcolor>green</selectedcolor>
+					<align>right</align>
+					<label>$INFO[ListItem.Label2]</label>
+					<visible>container.content(artists)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="button">
+			<posx>575</posx>
+			<posy>343</posy>
+			<include>scrollbar_width</include>
+			<height>20</height>
+			<width>18</width>
+			<onclick>PageUp(61)</onclick>
+			<texturefocus border="4">scrollbar_arrow_up_focus.png</texturefocus>
+			<texturenofocus border="4">scrollbar_arrow_up.png</texturenofocus>
+			<visible>Control.IsVisible(6110)</visible>
+		</control>
+		<control type="button">
+			<posx>575</posx>
+			<posy>423</posy>
+			<include>scrollbar_width</include>
+			<height>20</height>
+			<width>18</width>
+			<onclick>PageDown(61)</onclick>
+			<texturefocus border="4">scrollbar_arrow_down_focus.png</texturefocus>
+			<texturenofocus border="4">scrollbar_arrow_down.png</texturenofocus>
+			<visible>Control.IsVisible(6110)</visible>
+		</control>
+		<control type="scrollbar" id="61">
+			<posx>585</posx>
+			<posy>346</posy>
+			<include>scrollbar_width</include>
+			<height>84</height>
+			<width>24</width>
+			<texturesliderbackground border="4">scrollbar_background.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>ScrollBarNib_NF.png</textureslidernib>
+			<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+			<onleft>50</onleft>
+			<onright>9000</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+		</control>
+	</controls>
+</window>

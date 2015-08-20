@@ -1,0 +1,570 @@
+<window>
+
+ <id>25</id>
+ <defaultcontrol>58</defaultcontrol>
+ <allowoverlay>yes</allowoverlay>
+
+ <controls>
+
+  <control>
+   <description>background image</description>
+   <type>image</type>
+   <id>1</id>
+   <posx>0</posx>
+   <posy>0</posy>
+   <width>720</width>
+   <height>576</height>
+   <texture>bg_video.png</texture>
+  </control>
+
+
+	<include>UHR</include> <!--time when not playing -->
+	<include>pseudoEqualizer</include>
+	<include>VideoBackground</include>
+
+  
+
+  <control>
+   <description>description label</description>
+   <type>label</type>
+   <id>1</id>
+   <posx>148</posx>
+   <posy>84</posy>
+   <align>left</align>
+   <label>Videos</label>
+   <font>eth26</font>
+   <textcolor>963399FF</textcolor>
+<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+ <animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+</control>
+
+<control type="image" id="1000">
+			<description>Fanart background</description>
+			<posx>40</posx>
+			<posy>55</posy>
+			<width>640</width>
+			<height>466</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="Content_Panel_Diffuse.png" />
+			<info>Fanart.Image</info>
+			<include>contentpanelslide</include>
+			<visible>!IsEmpty(Fanart.Image) + Skin.HasSetting(ShowFanart)</visible> 
+		</control>
+
+<control>
+   <description>PartyMode Enabled</description>
+   <type>button</type>
+   <id>1</id>
+   <posx>662</posx>
+   <posy>78</posy>
+   <width>32</width>
+   <height>32</height>
+   <label>-</label>
+   <texturefocus>-</texturefocus>
+   <texturenofocus>partymodus.gif</texturenofocus>
+   <visible>MusicPartyMode.Enabled</visible>
+   </control>
+  
+ <control>
+   <description>number of files text label</description>
+   <type>label</type>
+   <id>12</id>
+   <posx>550</posx>
+   <posy>468</posy>
+   <align>right</align>
+   <label>-</label>
+   <font>idua18</font>
+   <textcolor>60aaaaaa</textcolor> 
+      <include>contentpanelslide</include>
+  </control>
+ 
+  
+
+  <controlgroup>
+
+
+ 		
+
+ <control>
+   <description>separator image</description>
+   <type>button</type>
+   <id>333</id>
+   <posx>421</posx>
+   <posy>462</posy>
+   <width>143</width>
+   <height>5</height>
+   <texturefocus>separator.png</texturefocus>
+   <texturenofocus>separator.png</texturenofocus>
+   <colordiffuse>503366FF</colordiffuse>
+   <animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+ <animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+</control>
+
+
+
+
+   <control>
+    <description>View As Icons button</description>
+    <type>button</type>
+    <id>2</id>
+    <posx>0</posx>
+    <posy>-4</posy>
+    <width>106</width>
+    <height>161</height>
+    <label>100</label>
+    <font>alwin22</font>
+    <textcolor>ff3366FF</textcolor>
+    <texturefocus>button-lioben-video-fo.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <textoffsetx>30</textoffsetx>
+    <textoffsety>20</textoffsety>
+    <align>left</align>
+    <aligny>bottom</aligny>
+    <onleft>50</onleft>
+    <onright>99</onright>
+    <onup>10</onup>
+    <ondown>3</ondown>
+    <animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+ <animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+</control>
+  
+ 		  
+     <control type="image">
+			<description>folder image</description>
+			<posx>250</posx>
+			<posy>1</posy>
+			<width>720</width>
+			<height>55</height>
+			<aspectratio align="left">keep</aspectratio>
+			<texture diffuse="Wide_Icon_Diffuse.png" />
+			<info>container.folderthumb</info>
+		</control> 
+
+
+   <control>
+    <description>Sort by button</description>
+    <type>button</type>
+    <id>3</id>
+    <posx>10</posx>
+    <posy>418</posy>
+    <width>106</width>
+    <height>161</height>
+    <label>103</label>
+    <font>alwin22</font>
+    <textcolor>ff3366FF</textcolor>
+    <texturefocus>button-liunten-video-fo.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <textoffsetx>20</textoffsetx>
+    <textoffsety>110</textoffsety>
+    <align>left</align>
+    <aligny>bottom</aligny>
+    <onleft>50</onleft>
+    <onright>4</onright>
+    <onup>2</onup>
+    <ondown>99</ondown>
+    <animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+ <animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+</control>
+
+
+   <control>
+    <description>Sort asc</description>
+    <type>togglebutton</type>
+    <id>4</id>
+    <posx>250</posx>
+    <posy>532</posy>
+    <width>20</width>
+    <height>20</height>
+    <label>-</label>
+    <onleft>3</onleft>
+    <onright>9</onright>
+    <onup>2</onup>
+    <ondown>2</ondown>
+    <include>buttonpanelslide</include>
+   </control>
+
+
+
+
+ <control type="radiobutton" id="99">
+				<description>Library button</description>
+				 <posx>611</posx>
+  				  <posy>-4</posy>
+ 				   <width>106</width>
+				    <height>161</height>
+				<label>Back to Video</label>
+				<font>alwin22</font>
+				<textcolor>ff3366FF</textcolor>
+				<textureradiofocus>-</textureradiofocus>
+  				  <textureradionofocus>-</textureradionofocus>
+ 				   <texturefocus>button-reoben-video-fo.png</texturefocus>
+ 				    <texturenofocus>-</texturenofocus>
+				<textoffsetx>30</textoffsetx>
+				    <textoffsety>20</textoffsety>
+   				 <align>right</align>
+  				  <aligny>bottom</aligny>
+				<font>alwin22</font>
+				<onclick>ReplaceWindow(myvideofiles)</onclick>
+				<selected>Window.IsVisible(myvideolibrary)</selected>
+				<onleft>2</onleft>
+  				  <onright>50</onright>
+   				 <onup>3</onup>
+  				  <ondown>10</ondown>
+				  <include>buttonpanelslide</include>
+			<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+ <animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+</control>
+
+<control>
+    <description>search logo smal</description>
+    <type>button</type>
+    <id>8</id>
+    <posx>355</posx>
+    <posy>530</posy>
+    <width>25</width>
+    <height>25</height>
+    <label>137</label>
+    <font>font10</font>
+    <textcolor>017cfc00</textcolor>
+    <texturefocus>search-focus-video.png</texturefocus>
+    <texturenofocus>search-nofocus.png</texturenofocus>
+    <textoffsetx>3</textoffsetx>
+    <onleft>16</onleft>
+    <onright>888</onright>
+    <onup>2</onup>
+    <ondown>50</ondown>
+	<include>buttonpanelslide</include>
+    <animation effect="zoom" start="100" end="140" center="auto" time="80">focus</animation>
+   <animation effect="zoom" start="140" end="100" center="auto" time="80">unfocus</animation>
+   </control>
+
+  <control type="radiobutton" id="16">
+	<description>party modus Library button</description>    
+    <posx>316</posx>
+    <posy>529</posy>
+    <width>28</width>
+    <height>26</height>  
+    <label>-</label>    
+	<textureradiofocus>radiobutton-focus_fcb.png</textureradiofocus>
+    <textureradionofocus>-</textureradionofocus>
+    <texturefocus>partymodus-Video.png</texturefocus>
+    <texturenofocus>partymodus_nofocus_home.png</texturenofocus>
+    <onleft>3</onleft>
+    <onright>8</onright>
+    <onup>2</onup>
+    <ondown>50</ondown>
+   <include>buttonpanelslide</include>
+<animation effect="zoom" start="100" end="140" center="auto" time="80">focus</animation>
+   <animation effect="zoom" start="140" end="100" center="auto" time="80">unfocus</animation>
+   </control>
+
+
+  <control type="radiobutton" id="17">
+	<description>Flatten Library button</description>
+    <posx>460</posx>
+    <posy>527</posy>
+    <width>32</width>
+    <height>32</height>
+    <label>-</label>
+    <textureradiofocus>radiobutton-focus_fcb.png</textureradiofocus>
+    <textureradionofocus>-</textureradionofocus>
+    <texturefocus>flattenFocus.png</texturefocus>
+    <texturenofocus>flattenNoFocus.png</texturenofocus>
+    <onleft>19</onleft>
+    <onright>10</onright>
+    <onup>50</onup>
+    <ondown>2</ondown>
+    <include>buttonpanelslide</include>
+	<animation effect="zoom" start="100" end="140" center="auto" time="80">focus</animation>
+   <animation effect="zoom" start="140" end="100" center="auto" time="80">unfocus</animation>
+   </control> 
+
+<control>
+    <description>Filter button</description>
+    <type>radiobutton</type>
+    <id>19</id>
+    <posx>419</posx>
+    <posy>527</posy>
+    <width>48</width>
+    <height>32</height>
+    <label>-</label>
+    <textureradiofocus>radiobutton-focus_fcb.png</textureradiofocus>
+    <textureradionofocus>-</textureradionofocus>
+    <texturefocus>home-filter-video-fo.png</texturefocus>
+    <texturenofocus>home-filter-nf.png</texturenofocus>
+    <onleft>888</onleft>
+    <onright>17</onright>
+    <onup>50</onup>
+    <ondown>2</ondown>
+	<include>buttonpanelslide</include>
+    <animation effect="zoom" start="100" end="140" center="auto" time="80">focus</animation>
+   <animation effect="zoom" start="140" end="100" center="auto" time="80">unfocus</animation>
+   </control>
+
+   <control>
+    <description>Show Button</description>
+    <type>button</type>
+    <id>10</id>
+    <posx>600</posx>
+    <posy>418</posy>
+    <width>106</width>
+    <height>161</height>
+    <label>-</label>
+    <font>alwin22</font>
+<textcolor>ff3366FF</textcolor>
+<textureradiofocus>radiobutton-aktiv.png</textureradiofocus>
+    <textureradionofocus>-</textureradionofocus>
+    <texturefocus>button-reunten-video-fo.png</texturefocus>
+     <texturenofocus>-</texturenofocus>
+    <textoffsetx>20</textoffsetx>
+    <textoffsety>110</textoffsety>
+    <align>right</align>
+    <aligny>bottom</aligny>
+<onleft>17</onleft>
+<onright>3</onright>
+<onup>99</onup>
+<ondown>2</ondown>
+<include>buttonpanelslide</include>
+<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+<animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+</control>
+
+
+
+
+   
+
+
+
+  <control>
+    <description>playlist logo smal</description>
+    <type>button</type>
+    <id>888</id>
+    <posx>388</posx>
+    <posy>530</posy>
+    <width>26</width>
+    <height>25</height>
+    <label>137</label>
+    <font>font10</font>
+    <textcolor>017cfc00</textcolor>
+    <texturefocus>playlist-focus.png</texturefocus>
+    <texturenofocus>playlist-nofocus.png</texturenofocus>
+    <textoffsetx>3</textoffsetx>
+    <onclick>ActivateWindow(myvideoplaylist)</onclick>
+    <onleft>8</onleft>
+    <onright>19</onright>
+    <onup>50</onup>
+    <ondown>2</ondown>
+    <include>buttonpanelslide</include>
+	<animation effect="zoom" start="100" end="140" center="auto" time="80">focus</animation>
+   <animation effect="zoom" start="140" end="100" center="auto" time="80">unfocus</animation>
+   </control>
+
+
+<!-- overlay switch audio and video-->
+
+  <include>overlayswitch</include>
+
+	<control>
+      <description>Progressbar</description>
+      <type>progress</type>
+      <posx>142</posx>
+      <posy>64</posy>
+      <width>436</width>
+      <height>9</height>
+      <info>Player.Progress</info>
+      <texturebg>progress-info-music-bg.png</texturebg>
+      <lefttexture>-</lefttexture>
+      <midtexture>progress_mid-info-video.png</midtexture>
+      <righttexture>-</righttexture>
+      <overlaytexture>progress-info-music-mid.png</overlaytexture>
+      <visible>Player.HasMedia + [Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52)]</visible>
+    </control>
+
+
+  </controlgroup>
+
+<control>
+   <description>listcontrol</description>
+   <type>listcontrol</type>
+   <id>50</id>
+   <posx>140</posx>
+  <posy>130</posy>
+  <width>445</width>
+  <height>361</height>
+  <spinwidth>18</spinwidth>
+  <spinheight>16</spinheight>
+  <spinposx>404</spinposx>
+  <spinposy>-40</spinposy>
+  <spincolor>90cccccc</spincolor>
+  <spinfont>idua20</spinfont>
+  <textureup>scroll-up_mmi.png</textureup>
+  <texturedown>scroll-down_mmi.png</texturedown>
+  <textureupfocus>scroll-up-focus_mmi.png</textureupfocus>
+  <texturedownfocus>scroll-down-focus_mmi.png</texturedownfocus>
+  <texturefocus>list-focus.png</texturefocus>
+  <texturenofocus>list-nofocus.png</texturenofocus>
+  <image>icon-folder.png</image>
+  <textureheight>34</textureheight>
+  <font>idua20</font>
+  <style>bold</style>
+  <include>textcolorlibluefocus</include>
+  <textcolor2>ff3399FF</textcolor2>
+  <include>controldefaults</include>
+  <suffix>|</suffix>
+  <textxoff>18</textxoff>
+  <textxoff2>0</textxoff2>
+  <aligny>center</aligny>
+   <onleft>2</onleft>
+   <onright>50</onright>
+   <onup>50</onup>
+   <ondown>50</ondown>
+   <include>contentpanelslide</include>
+  </control>
+
+  
+
+<control>
+  <description>thumbnailpanel</description>
+  <type>thumbnailpanel</type>
+  <id>51</id>
+  <posx>130</posx>
+  <posy>170</posy>
+  <width>465</width>
+  <height>380</height>
+  <spinwidth>18</spinwidth>
+  <spinheight>16</spinheight>
+  <spinposx>414</spinposx>
+  <spinposy>-80</spinposy>
+  <spincolor>90cccccc</spincolor>
+  <spinfont>idua20</spinfont>
+  <textureup>scroll-up_mmi.png</textureup>
+  <texturedown>scroll-down_mmi.png</texturedown>
+  <textureupfocus>scroll-up-focus_mmi.png</textureupfocus>
+  <texturedownfocus>scroll-down-focus_mmi.png</texturedownfocus>
+  <itemwidth>115</itemwidth>
+  <itemheight>130</itemheight>
+  <texturewidth>92</texturewidth>
+  <textureheight>100</textureheight>
+  <thumbwidth>82</thumbwidth>
+  <thumbheight>90</thumbheight>
+  <thumbposx>5</thumbposx>
+  <thumbposy>5</thumbposy>
+  <imagefolder>folder-nofocus.png</imagefolder>
+  <imagefolderfocus>list-bg-blue.png</imagefolderfocus>
+  <animation effect="zoom" start="100" end="110" center="auto" time="50">focus</animation>
+   <animation effect="zoom" start="110" end="100" center="auto" time="50">unfocus</animation>
+  <font>idua18</font>
+  <selectedcolor>ff3399FF</selectedcolor>
+  <include>controldefaults</include>
+  <texturewidthbig>134</texturewidthbig>
+  <textureheightbig>144</textureheightbig>
+  <itemwidthbig>151</itemwidthbig>
+  <itemheightbig>197</itemheightbig>
+  <thumbwidthbig>120</thumbwidthbig>
+  <thumbheightbig>133</thumbheightbig>
+  <thumbposxbig>7</thumbposxbig>
+  <thumbposybig>5</thumbposybig>
+  <suffix>-</suffix>
+ <onleft>2</onleft>
+   <onright>51</onright>
+   <onup>51</onup>
+   <ondown>51</ondown>
+   <include>contentpanelslide</include>
+  </control>
+ 
+
+<control>
+   <description>big listcontrol</description>
+   <type>listcontrol</type>
+   <id>52</id>
+   <posx>130</posx>
+   <posy>148</posy>
+   <width>465</width>
+   <height>380</height>
+   <spinwidth>18</spinwidth>
+  <spinheight>16</spinheight>
+  <spinposx>414</spinposx>
+  <spinposy>-58</spinposy>
+  <spincolor>90cccccc</spincolor>
+  <spinfont>idua20</spinfont>
+   <textureup>scroll-up_mmi.png</textureup>
+  <texturedown>scroll-down_mmi.png</texturedown>
+  <textureupfocus>scroll-up-focus_mmi.png</textureupfocus>
+  <texturedownfocus>scroll-down-focus_mmi.png</texturedownfocus>
+   <texturefocus>blue-rectangle.png</texturefocus>
+   <texturenofocus>blue-rectangleNF.png</texturenofocus>
+   <font>idua20</font>
+   <font2>idua20</font2>
+   <include>listselectedcolor</include>
+   <include>textcolorlightgrey</include>
+   <selectedcolor2>FFFFffff</selectedcolor2>
+   <textcolor2>d0ffffff</textcolor2>
+   <suffix>|</suffix>
+   <textxoff>10</textxoff>
+   <textyoff>10</textyoff>
+   <textxoff2>435</textxoff2>
+   <textyoff2>94</textyoff2>
+   <aligny>top</aligny>
+   <itemwidth>90</itemwidth>
+   <itemheight>70</itemheight>
+   <spacebetweenitems>20</spacebetweenitems>
+   <textureheight>80</textureheight>
+   <onleft>2</onleft>
+   <onright>52</onright>
+   <onup>52</onup>
+   <ondown>52</ondown>
+   <include>contentpanelslide</include>
+  </control>
+
+	
+	<include>playerPlayinguntenLi</include> <!--Play icon bottom left if playing -->
+
+
+ 
+
+
+ <include>BigWrapList</include>
+ <include>BigWrapList2</include> 
+ <include>BigWideVideo</include>
+ <include>MegaBig</include>
+ 
+ <include>3D_Cover_View</include>
+ <include>3D Big</include>
+ <include>WrapOverlayVideo</include>
+
+ 
+ <control>
+      <description>Progressbar</description>
+      <type>progress</type>
+      <posx>142</posx>
+      <posy>64</posy>
+      <width>436</width>
+      <height>9</height>
+      <info>Player.Progress</info>
+      <texturebg>progress-info-music-bg.png</texturebg>
+      <lefttexture>-</lefttexture>
+      <midtexture>progress_mid-info-video.png</midtexture>
+      <righttexture>-</righttexture>
+      <overlaytexture>progress-info-music-mid.png</overlaytexture>
+      <visible>Player.HasMedia + [Control.HasFocus(56) | Control.HasFocus(58) | Control.HasFocus(59)]</visible>
+    </control>
+
+	
+	 <control>
+   <description>bg preview</description>
+   <type>image</type>
+   <id>0</id>
+   <posx>0</posx>
+   <posy>0</posy>
+   <width>720</width>
+   <height>576</height>
+   <include>windowswitchtransition</include>
+  </control>
+  
+ </controls>
+
+</window>
+
+
+

@@ -1,0 +1,849 @@
+<includes>
+-	<include name="3D_Cover_View">
+-		<control type="list" id="58">
+			<!-- <coordinates>
+				<system>1</system>
+				<posx>-200</posx>
+				<posy>0</posy>
+			</coordinates> -->
+-			<!-- <visible>Window.IsVisible(MusicFiles) | Container.Content(Albums) | Container.Content(Artists)</visible> -->
+			<posx>144</posx>
+			<posy>312</posy>
+			<width>448</width>
+			<height>155</height>
+			<onleft>2</onleft>
+			<onright>61</onright>
+			<onup>58</onup>
+			<ondown>58</ondown>
+			<viewtype label="3D Wheel">list</viewtype>
+			<pagecontrol>61</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<include>contentpanelslide</include>
+-			<itemlayout height="32">
+-				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>22</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+				</control>
+-				<control type="label">
+					<posx>30</posx>
+					<posy>3</posy>
+					<width>400</width>
+					<height>22</height>
+					<font>idua20</font>
+					<aligny>center</aligny>
+					<include>textcolorligreenfocus</include>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>!Container.Sort(SongRating)</visible>
+				</control>
+-				<control type="label">
+					<posx>425</posx>
+					<posy>3</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>idua20</font>
+					<aligny>center</aligny>
+					<include>textcolorligreenfocus</include>
+					<include>textcolorgrey</include>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+					<visible>!Container.Sort(SongRating)</visible>
+				</control>
+-				<control type="label">
+					<posx>30</posx>
+					<posy>3</posy>
+					<width>345</width>
+					<height>22</height>
+					<font>idua20</font>
+					<aligny>center</aligny>
+					<include>textcolorligreenfocus</include>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>Container.Sort(SongRating)</visible>
+				</control>
+-				<control type="image" id="1">
+					<description>Song Rating Image</description>
+					<height>16</height>
+					<width>68</width>
+					<posx>383</posx>
+					<posy>5</posy>
+					<info>ListItem.Rating</info>
+					<!-- <aspectratio>stretch</aspectratio> -->
+					<texture flipx="true"/>
+					<visible>Container.Sort(SongRating)</visible>
+				</control>
+			</itemlayout>
+-			<focusedlayout height="32">
+-				<control type="image">
+					<width>440</width>
+					<height>29</height>
+					<posx>4</posx>
+					<posy>0</posy>
+					<visible>Control.HasFocus(58)</visible>
+					<texture>list-focus.png</texture>
+				</control>
+-				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>22</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+				</control>
+-				<control type="label">
+					<posx>30</posx>
+					<posy>3</posy>
+					<width>400</width>
+					<height>22</height>
+					<font>idua20</font>
+					<aligny>center</aligny>
+					<include>textcolorligreenfocus</include>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>!Container.Sort(SongRating)</visible>
+				</control>
+-				<control type="label">
+					<posx>425</posx>
+					<posy>3</posy>
+					<width>300</width>
+					<height>22</height>
+					<font>idua20</font>
+					<aligny>center</aligny>
+					<include>textcolorligreenfocus</include>
+					<include>textcolorgrey</include>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+					<visible>!Container.Sort(SongRating)</visible>
+				</control>
+-				<control type="label">
+					<posx>30</posx>
+					<posy>3</posy>
+					<width>345</width>
+					<height>22</height>
+					<font>idua20</font>
+					<aligny>center</aligny>
+					<include>textcolorligreenfocus</include>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>Container.Sort(SongRating)</visible>
+				</control>
+-				<control type="image" id="1">
+					<description>Song Rating Image</description>
+					<height>16</height>
+					<width>68</width>
+					<posx>383</posx>
+					<posy>5</posy>
+					<info>ListItem.Rating</info>
+					<!-- <aspectratio>stretch</aspectratio> -->
+					<texture flipx="true"/>
+					<visible>Container.Sort(SongRating)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+-		<!-- <control type="button">
+			<posx>680</posx>
+			<posy>290</posy>
+			<include>scrollbar_width</include>
+			<height>20</height>
+			<onclick>PageUp(61)</onclick>
+			<texturefocus border="4">scrollbar_arrow_up_focus.png</texturefocus>
+			<texturenofocus border="4">scrollbar_arrow_up.png</texturenofocus>
+			<include>contentpanelslide</include>
+			<visible>Control.IsVisible(58) + Control.IsVisible(61)</visible>
+		</control>
+-		<control type="button">
+			<posx>680</posx>
+			<posy>500</posy>
+			<include>scrollbar_width</include>
+			<height>20</height>
+			<onclick>PageDown(61)</onclick>
+			<texturefocus border="4">scrollbar_arrow_down_focus.png</texturefocus>
+			<texturenofocus border="4">scrollbar_arrow_down.png</texturenofocus>
+			<include>contentpanelslide</include>
+			<visible>Control.IsVisible(58) + Control.IsVisible(61)</visible>
+		</control>
+-		<control type="scrollbar" id="61">
+			<posx>680</posx>
+			<posy>310</posy>
+			<include>scrollbar_width</include>
+			<height>190</height>
+			<texturesliderbackground border="4">scrollbar_background.png</texturesliderbackground>
+			<texturesliderbar border="4">scrollbar_bar.png</texturesliderbar>
+			<texturesliderbarfocus border="4">scrollbar_bar_focus.png</texturesliderbarfocus>
+			<textureslidernib>-</textureslidernib>
+			<textureslidernibfocus>-</textureslidernibfocus>
+			<onleft>50</onleft>
+			<onright>9000</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<include>contentpanelslide</include>
+			<visible>Control.IsVisible(58)</visible>
+		</control> -->
+		<control type="group" id="2999">
+			<posx>-78</posx>
+			<posy>22</posy>
+			<visible>Control.IsVisible(58)</visible>
+-		<control type="group" id="3002">
+				<posx>250</posx>
+				<posy>120</posy>
+				<camera x="438.5252" y="185"/>
+				<visible>Control.IsVisible(58) + Container.OnPrevious</visible>
+				<include>contentpanelslide</include>
+				<animation effect="rotatey" center="438.5252" start="0" end="-22.5" time="200" reversible="false">Hidden</animation>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="11.25" end="-11.25" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="78.75" end="78.75" time="400" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(-2).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-123.75" end="-146.25" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="90" end="78.75" time="1000" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(4).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-11.25" end="-33.75" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="78.75" end="78.75" time="400" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(-1).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-101.25" end="-123.75" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="90" end="78.75" time="1000" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(3).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-33.75" end="-56.25" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="90" end="78.75" time="1000" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(0).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-78.75" end="-101.25" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="90" end="78.75" time="1000" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(2).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-56.25" end="-78.75" time="0" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="78.75" end="78.75" time="200" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(1).Icon</info>
+						</control>
+					</control>
+				</control>
+			</control>
+-		<control type="group" id="3001">
+				<posx>250</posx>
+				<posy>120</posy>
+				<camera x="438.5252" y="185"/>
+				<visible>Control.IsVisible(58) + Container.OnNext</visible>
+				<include>contentpanelslide</include>
+				<animation effect="rotatey" center="438.5252" start="0" end="22.5" time="200" reversible="false">Hidden</animation>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="11.25" end="-11.25" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="78.75" end="78.75" time="400" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(-4).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-123.75" end="-146.25" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="90" end="78.75" time="1000" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(2).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-11.25" end="-33.75" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="78.75" end="78.75" time="400" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(-3).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-101.25" end="-123.75" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="90" end="78.75" time="1000" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(1).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-33.75" end="-56.25" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="90" end="78.75" time="1000" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(-2).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-78.75" end="-101.25" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="90" end="78.75" time="1000" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(0).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-56.25" end="-78.75" time="0" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="78.75" end="78.75" time="200" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(-1).Icon</info>
+						</control>
+					</control>
+				</control>
+			</control>
+-		<control type="group" id="3000">
+				<posx>250</posx>
+				<posy>120</posy>
+				<camera x="438.5252" y="185"/>
+				<include>contentpanelslide</include>
+-			<visible>
+Control.IsVisible(58) + !Control.IsVisible(3001)  + !Control.IsVisible(3002)
+				</visible>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="11.25" end="-11.25" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="78.75" end="78.75" time="400" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(-3).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-123.75" end="-146.25" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="90" end="78.75" time="1000" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(3).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-11.25" end="-33.75" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="78.75" end="78.75" time="400" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(-2).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-101.25" end="-123.75" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="90" end="78.75" time="1000" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(2).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-33.75" end="-56.25" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="90" end="78.75" time="1000" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(-1).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-78.75" end="-101.25" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="90" end="78.75" time="1000" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(1).Icon</info>
+						</control>
+					</control>
+				</control>
+-			<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>70</width>
+					<animation effect="rotatey" center="188.5252" start="-56.25" end="-78.75" time="400" condition="true">Conditional</animation>
+-				<control type="group">
+						<animation effect="rotatey" center="0" start="78.75" end="78.75" time="200" condition="true">Conditional</animation>
+-					<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>130</height>
+							<keepaspectratio>true</keepaspectratio>
+							<info>Container.ListItem(0).Icon</info>
+						</control>
+					</control>
+				</control>
+			</control>
+		</control>
+-		<control type="image">
+			<posx>160</posx>
+			<posy>299</posy>
+			<width>410</width>
+			<height>10</height>
+			<texture>separator.png</texture>
+			<visible>Control.IsVisible(58)</visible>
+			<include>contentpanelslide</include>
+		</control>
+-		<!-- <control type="label">
+			<posx>200</posx>
+			<posy>255</posy>
+			<width>485</width>
+			<height>22</height>
+			<aligny>center</aligny>
+			<align>center</align>
+			<info>ListItem.Label</info>
+			<font>special13</font>
+			<visible>Control.IsVisible(58)</visible>
+			<include>contentpanelslide</include>
+		</control> -->
+		<control>
+			<description>musicoverlay Background</description>
+			<type>image</type>
+			<posx>-40</posx>
+			<posy>468</posy>
+			<width>805</width>
+			<height>130</height>
+			<texture>overlay-panel-bg-music.png</texture>
+			<visible>Player.HasAudio + [Control.HasFocus(58) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>OverlayWindowCloseTime.png</description>
+			<type>image</type>
+			<posx>4</posx>
+			<posy>424</posy>
+			<width>110</width>
+			<height>44</height>
+			<texture>OverlayWindowCloseTime.png</texture>
+			<!-- <aspectratio align="center">keep</aspectratio> -->
+			<visible>Player.HasAudio + [Control.HasFocus(58) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Elapsed Time Label</description>
+			<type>label</type>
+			<posx>-22</posx>
+			<posy>433</posy>
+			<align>center</align>
+			<include>infolabel</include>
+			<label>$INFO[MusicPlayer.Time]</label>
+			<visible>Player.HasAudio + !Player.Seeking + [Control.HasFocus(58) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Seek Time Label</description>
+			<type>label</type>
+			<posx>-22</posx>
+			<posy>433</posy>
+			<align>center</align>
+			<include>infolabel</include>
+			<label>$INFO[MusicPlayer.SeekTime]</label>
+			<visible>Player.HasAudio + Player.Seeking + [Control.HasFocus(58) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>OverlayWindowCloseTime.png</description>
+			<type>image</type>
+			<posx>606</posx>
+			<posy>424</posy>
+			<width>110</width>
+			<height>44</height>
+			<texture>OverlayWindowCloseTime.png</texture>
+			<!-- <aspectratio align="center">keep</aspectratio> -->
+			<visible>Player.HasAudio + [Control.HasFocus(58) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>duration Time Label</description>
+			<type>label</type>
+			<posx>580</posx>
+			<posy>433</posy>
+			<align>center</align>
+			<include>infolabel</include>
+			<label>$INFO[player.Duration]</label>
+			<visible>Player.HasAudio + !Player.Seeking + [Control.HasFocus(58) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Progressbar</description>
+			<type>progress</type>
+			<posx>22</posx>
+			<posy>560</posy>
+			<width>540</width>
+			<height>6</height>
+			<info>Player.Progress</info>
+			<texturebg>progress_back_wrap.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>progress_mid-music.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<visible>Player.HasMedia + [Control.HasFocus(54)]</visible>
+			<!-- <include>OverlayWindowClose</include> -->
+		</control>
+		<control>
+			<description>Artist label</description>
+			<type>label</type>
+			<posx>22</posx>
+			<posy>522</posy>
+			<width>590</width>
+			<info>MusicPlayer.Artist</info>
+			<include>infolabel_3</include>
+			<visible>Player.HasAudio + [Control.HasFocus(58) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>Title label</description>
+			<id>1</id>
+			<type>fadelabel</type>
+			<posx>22</posx>
+			<posy>489</posy>
+			<width>590</width>
+			<info>MusicPlayer.Title</info>
+			<include>infolabel_2</include>
+			<visible>Player.HasAudio + [Control.HasFocus(58) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>music cover</description>
+			<type>image</type>
+			<posx>626</posx>
+			<posy>479</posy>
+			<width>95</width>
+			<height>93</height>
+			<info>MusicPlayer.Cover</info>
+			<aspectratio align="center">keep</aspectratio>
+			<visible>Player.HasAudio + [Control.HasFocus(58) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<!-- bg oben -->
+		<!-- <control>
+			<description>musicoverlay Background</description>
+			<type>image</type>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>760</width>
+			<height>57</height>
+			<texture>overlay-panel-bg-music2.png</texture>
+			<visible>Player.HasMedia + [Control.HasFocus(58)]</visible>
+		</control>
+		<control type="label">
+			<posx>22</posx>
+			<posy>13</posy>
+			<width>680</width>
+			<height>30</height>
+			<font>alwin24</font>
+			<textcolor>ffffffff</textcolor>
+			<align>center</align>
+			<info>ListItem.Label</info>
+			<include>selectedcolor</include>
+			<visible>Player.HasMedia + [Control.HasFocus(58)]</visible>
+			<include>OverlayWindowClose</include>
+		</control> -->
+		<!-- <control type="image">
+			<posx>124</posx>
+			<posy>432</posy>
+			<width>18</width>
+			<height>30</height>
+			<texture>play_wrap2.png</texture>
+			<visible>Player.Playing + [Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control> -->
+		<control>
+			<description>Uhr label</description>
+			<type>label</type>
+			<posx>20</posx>
+			<posy>68</posy>
+			<label>time</label>
+			<info>System.Time</info>
+			<align>left</align>
+			<font>home_red</font>
+			<textcolor>30ffffff</textcolor>
+			<visible>Player.Playing + [Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>PartyMode Enabled</description>
+			<type>button</type>
+			<id>1</id>
+			<posx>664</posx>
+			<posy>70</posy>
+			<width>32</width>
+			<height>32</height>
+			<label>-</label>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>partymodus.gif</texturenofocus>
+			<visible>MusicPartyMode.Enabled + [Control.HasFocus(54)]</visible>
+		</control>
+		<!-- wenn keine musik od. video spielt -->
+		<control type="label">
+			<posx>22</posx>
+			<posy>466</posy>
+			<width>680</width>
+			<height>30</height>
+			<font>alwin24</font>
+			<textcolor>ffffffff</textcolor>
+			<align>center</align>
+			<info>ListItem.Label</info>
+			<include>selectedcolor</include>
+			<visible>!Player.HasMedia + [Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<!-- overlay switch music  ENDE -->
+		<!-- overlay switch video -->
+		<control>
+			<description>musicoverlay Background</description>
+			<type>image</type>
+			<posx>-30</posx>
+			<posy>468</posy>
+			<width>780</width>
+			<height>130</height>
+			<texture>overlay-panel-bg-music.png</texture>
+			<visible>Player.HasVideo + [Control.HasFocus(58) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>video preview window</description>
+			<type>videowindow</type>
+			<id>1</id>
+			<posx>11</posx>
+			<posy>385</posy>
+			<width>130</width>
+			<height>107</height>
+			<visible>Player.HasVideo + [Control.HasFocus(58) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+			<animation effect="fade" time="1" delay="300">WindowOpen</animation>
+			<animation effect="fade" time="1" delay="0">VisibleChange</animation>
+		</control>
+		<control>
+			<description>video rectangle</description>
+			<type>image</type>
+			<id>0</id>
+			<posx>6</posx>
+			<posy>380</posy>
+			<width>140</width>
+			<height>118</height>
+			<texture>rahmen2.png</texture>
+			<visible>Player.HasVideo + [Control.HasFocus(58) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control>
+			<description>play time label</description>
+			<type>label</type>
+			<id>0</id>
+			<posx>600</posx>
+			<posy>482</posy>
+			<label>-</label>
+			<info>VideoPlayer.Time</info>
+			<align>left</align>
+			<font>idua20</font>
+			<textcolor>ff888888</textcolor>
+			<visible>Player.HasVideo + [Control.HasFocus(58) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+		</control>
+		<control type="label" id="1">
+			<description>Title value</description>
+			<posx>0</posx>
+			<posy>510</posy>
+			<width>720</width>
+			<label>$INFO[VideoPlayer.Title]</label>
+			<font>alwin34</font>
+			<textcolor>ff999999</textcolor>
+			<visible>Player.HasVideo + [Control.HasFocus(58) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(54)]</visible>
+			<include>OverlayWindowClose</include>
+			<align>center</align>
+		</control>
+	</include>
+</includes>

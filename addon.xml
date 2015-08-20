@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon 
+	id="skin.seventft"
+	version="1.0.0"
+	name="7TFT"
+	provider-name="Ant">
+	<requires>
+		<import addon="xbmc.gui" version="4.0.0"/>
+		<import addon="service.skin.widgets" version="0.0.14"/>
+	</requires>
+	<extension
+		point="xbmc.gui.skin"
+		defaultthemename="Textures.xbt"
+		debugging="false"
+		effectslowdown="1.00">
+		<res width="720" height="576" aspect="16:9" default="true" folder="PAL16x9" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">A lean and simple design.</summary>
+		<description lang="en">7 inch</description>
+		<platform>all</platform>
+	</extension>
+</addon>

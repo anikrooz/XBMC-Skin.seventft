@@ -1,0 +1,165 @@
+<window>
+
+ <id>12</id>
+ <defaultcontrol>2</defaultcontrol>
+ <allowoverlay>yes</allowoverlay>
+ <include>zoom</include>
+	<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="250" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+ 
+
+ <controls>
+
+  <control>
+   <description>background image</description>
+   <type>image</type>
+   <id>1</id>
+   <posx>0</posx>
+   <posy>0</posy>
+   <width>720</width>
+   <height>576</height>
+   <texture>bg_syteminfo.jpg</texture>
+   <colorkey>0</colorkey>
+  </control>
+
+
+
+  <control>
+   <description>description label</description>
+   <type>label</type>
+   <id>1</id>
+   <posx>54</posx>
+   <posy>59</posy>
+   <align>left</align>
+   <label>10507</label>
+   <font>eth24</font>
+   <textcolor>ffFF945C</textcolor>
+<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+ <animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+</control>
+
+
+  
+
+  <control>
+   <description>button area</description>
+   <type>image</type>
+   <id>3</id>
+   <posx>50</posx>
+   <posy>120</posy>
+   <width>150</width>
+   <height>300</height>
+   <texture>-</texture>
+  </control>
+
+  <control>
+   <description>button gap</description>
+   <type>image</type>
+   <id>4</id>
+   <width>350</width>
+   <height>38</height>
+   <texture>-</texture>
+  </control>
+
+  <control>
+   <description>control area</description>
+   <type>image</type>
+   <id>5</id>
+   <posx>211</posx>
+   <posy>121</posy>
+   <width>435</width>
+   <height>300</height>
+   <scroll>true</scroll>
+   <texture>-</texture>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>control gap</description>
+   <type>image</type>
+   <id>6</id>
+   <width>350</width>
+   <height>34</height>
+   <texture>-</texture>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>Default Button</description>
+   <type>button</type>
+   <id>7</id>
+   <posx>530</posx>
+   <posy>150</posy>
+   <font>ArialSettings</font>
+   <textoffsetx>7</textoffsetx>
+   <texturefocus>list-focus_fcb.png</texturefocus>
+   <texturenofocus>-</texturenofocus>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>Default RadioButton</description>
+   <type>radiobutton</type>
+   <id>8</id>
+   <posx>530</posx>
+   <posy>150</posy>   
+   <font>ArialSettings</font>
+   <texturefocus>list-focus_fcb.png</texturefocus>
+   <texturenofocus>-</texturenofocus>
+   <textoffsetx>7</textoffsetx>
+   <textureradiofocus>settings-check-box_fcb.png</textureradiofocus>
+   <textureradionofocus> settings-check-boxNF_fcb.png</textureradionofocus>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>Default SpinControlex</description>
+   <type>spincontrolex</type>
+   <id>9</id>
+   <posx>530</posx>
+   <posy>150</posy>
+   <width>300</width>
+   <texturefocus>list-focus_fcb.png</texturefocus>
+   <texturenofocus>-</texturenofocus>
+   <textureup>scroll-up_fcb.png</textureup>
+   <texturedown>scroll-down_fcb.png</texturedown>
+   <textureupfocus>scroll-up-focus_fcb.png</textureupfocus>
+   <texturedownfocus>scroll-down-focus_fcb.png</texturedownfocus>
+   <font>ArialSettings</font>
+   <include>textcolorwhite</include>
+   <disabledcolor>60d0d0d0</disabledcolor>
+   <textoffsetx>7</textoffsetx>
+   <aligny>center</aligny>
+   <reverse>yes</reverse>
+   <include>contentpanelslide</include>
+  </control>
+
+  <control>
+   <description>Default Category Button</description>
+   <type>button</type>
+   <id>10</id>
+   <posx>208</posx>
+   <posy>150</posy>
+   <label>224</label>
+   <font>ArialSettings</font>   
+   <align>left</align>
+   <texturefocus>button-focus-fcb.png</texturefocus>
+   <texturenofocus>button-nofocus-fcb.png</texturenofocus>
+   <include>buttonpanelslide</include>
+  </control>
+
+  <control>
+   <description>separator image</description>
+   <type>image</type>
+   <id>11</id>
+   <width>350</width>
+   <height>5</height>
+   <texture>separator.png</texture>
+   <include>contentpanelslide</include>
+  </control>
+
+  
+
+ </controls>
+
+</window>
+

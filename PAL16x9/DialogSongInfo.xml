@@ -1,0 +1,384 @@
+<window id="135">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<posx>110</posx>
+		<posy>110</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="1">
+			<description>background image</description>
+			<posx>-110</posx>
+			<posy>-110</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_dialog.png</texture>
+		</control>
+		<control type="image" id="0">
+			<description>contentpanel slice Custom background</description>
+			<posx>-70</posx>
+			<posy>-55</posy>
+			<width>640</width>
+			<height>466</height>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<texture diffuse="Content_Panel_Diffuse.png" />
+			<info>Skin.String(MusicBackground)</info>
+			<visible>Skin.HasSetting(MusicBackground)</visible>
+			<visible>![!IsEmpty(Fanart.Image) + Skin.HasSetting(ShowFanart)]</visible>
+		</control>
+		<control type="label">
+			<description>Dialog Title</description>
+			<posx>-72</posx>
+			<posy>-93</posy>
+			<align>left</align>
+			<width>460</width>
+			<font>eth24</font>
+			<label>658</label>
+			<textcolor>917cfc00</textcolor>
+			<include>contentpanelslide</include>
+		</control>
+		<control type="label">
+			<description>Artist Title</description>
+			<posx>10</posx>
+			<posy>39</posy>
+			<width>300</width>
+			<font>idua20</font>
+			<label>Title:</label>
+		</control>
+		<control type="fadelabel">
+			<description>Song Title value shadow</description>
+			<posx>106</posx>
+			<posy>40</posy>
+			<width>400</width>
+			<font>idua20</font>
+			<textcolor>ff111111</textcolor>
+			<info>ListItem.Title</info>
+		</control>
+		<control type="fadelabel">
+			<description>Song Title value</description>
+			<posx>104</posx>
+			<posy>38</posy>
+			<width>400</width>
+			<font>idua20</font>
+			<textcolor>987cfc00</textcolor>
+			<info>ListItem.Title</info>
+		</control>
+		<control type="label">
+			<description>Artist Title</description>
+			<posx>10</posx>
+			<posy>65</posy>
+			<width>300</width>
+			<font>idua20</font>
+			<label>171</label>
+		</control>
+		<control type="fadelabel">
+			<description>Artist value</description>
+			<posx>104</posx>
+			<posy>65</posy>
+			<width>365</width>
+			<font>idua20</font>
+			<info>ListItem.Artist</info>
+		</control>
+		<control type="label">
+			<description>Album Title</description>
+			<posx>10</posx>
+			<posy>90</posy>
+			<width>300</width>
+			<font>idua20</font>
+			<label>170</label>
+		</control>
+		<control type="fadelabel">
+			<description>Album value</description>
+			<posx>104</posx>
+			<posy>90</posy>
+			<width>418</width>
+			<info>ListItem.Album</info>
+			<font>idua20</font>
+		</control>
+		<control type="label">
+			<description>Genre</description>
+			<posx>10</posx>
+			<posy>115</posy>
+			<label>174</label>
+			<font>idua20</font>
+		</control>
+		<control type="fadelabel">
+			<description>Genre value</description>
+			<posx>104</posx>
+			<posy>115</posy>
+			<width>365</width>
+			<info>ListItem.Genre</info>
+			<font>idua20</font>
+		</control>
+		<control type="label">
+			<description>Year</description>
+			<posx>10</posx>
+			<posy>140</posy>
+			<label>201</label>
+			<font>idua20</font>
+		</control>
+		<control type="fadelabel">
+			<description>year value</description>
+			<posx>104</posx>
+			<posy>140</posy>
+			<width>210</width>
+			<info>ListItem.Year</info>
+			<font>idua20</font>
+		</control>
+		<control type="label">
+			<description>Track Number</description>
+			<posx>10</posx>
+			<posy>165</posy>
+			<label>$LOCALIZE[435] :</label>
+			<font>idua20</font>
+		</control>
+		<control type="fadelabel">
+			<description>Track Number value</description>
+			<posx>104</posx>
+			<posy>165</posy>
+			<width>210</width>
+			<info>ListItem.TrackNumber</info>
+			<font>idua20</font>
+		</control>
+		<control type="label">
+			<description>Rating</description>
+			<posx>10</posx>
+			<posy>190</posy>
+			<label>173</label>
+			<font>idua20</font>
+		</control>
+		<control type="image">
+			<description>Rating value</description>
+			<posx>94</posx>
+			<posy>192</posy>
+			<width>110</width>
+			<height>20</height>
+			<info>ListItem.Rating</info>
+		</control>
+		<!-- <control type="label">
+			<description>Comment</description>
+			<posx>10</posx>
+			<posy>220</posy>
+			<label>659</label>
+			<textcolor>ff777777</textcolor>
+			<font>idua20</font>
+		</control> -->
+		<control type="textbox">
+			<description>Comment value</description>
+			<posx>10</posx>
+			<posy>229</posy>
+			<width>290</width>
+			<height>80</height>
+			<font>idua18</font>
+			<textcolor>ff777777</textcolor>
+			<pagecontrol>999999999</pagecontrol>
+			<info>ListItem.Comment</info>
+		</control>
+		<control type="button" id="14">
+			<description>Decrease Rating</description>
+			<posx>210</posx>
+			<posy>195</posy>
+			<width>18</width>
+			<height>16</height>
+			<onclick>DecreaseRating</onclick>
+			<texturenofocus>scroll-down_fcb.png</texturenofocus>
+			<texturefocus>scroll-down-focus_fcb.png</texturefocus>
+			<onleft>50</onleft>
+			<onright>15</onright>
+			<ondown>10</ondown>
+			<onup>10</onup>
+			<animation effect="zoom" start="100" end="140" center="auto" time="80">focus</animation>
+			<animation effect="zoom" start="140" end="100" center="auto" time="80">unfocus</animation>
+		</control>
+		<control type="button" id="15">
+			<description>Increase Rating</description>
+			<posx>228</posx>
+			<posy>195</posy>
+			<width>18</width>
+			<height>16</height>
+			<onclick>IncreaseRating</onclick>
+			<texturenofocus>scroll-up_fcb.png</texturenofocus>
+			<texturefocus>scroll-up-focus_fcb.png</texturefocus>
+			<onleft>14</onleft>
+			<onright>50</onright>
+			<ondown>10</ondown>
+			<onup>10</onup>
+			<animation effect="zoom" start="100" end="140" center="auto" time="80">focus</animation>
+			<animation effect="zoom" start="140" end="100" center="auto" time="80">unfocus</animation>
+		</control>
+		<control type="button" id ="13">
+			<description>Get Thumb button</description>
+			<posx>-60</posx>
+			<posy>399</posy>
+			<width>100</width>
+			<height>80</height>
+			<label>Cover</label>
+			<font>idua20</font>
+			<align>center</align>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>sp_TV-series-button-focus3.png</texturefocus>
+			<onleft>11</onleft>
+			<onright>12</onright>
+			<onup>14</onup>
+			<ondown>14</ondown>
+		</control>
+		<control type="button" id="12">
+			<description>Album Info button</description>
+			<posx>80</posx>
+			<posy>399</posy>
+			<width>140</width>
+			<height>80</height>
+			<label>Album Info</label>
+			<font>idua20</font>
+			<align>center</align>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>sp_TV-series-button-focus3.png</texturefocus>
+			<onleft>13</onleft>
+			<onright>10</onright>
+			<onup>14</onup>
+			<ondown>14</ondown>
+		</control>
+		<control type="button" id ="10">
+			<description>Yes button</description>
+			<posx>310</posx>
+			<posy>399</posy>
+			<width>100</width>
+			<height>80</height>
+			<label>186</label>
+			<font>idua20</font>
+			<align>center</align>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>sp_TV-series-button-focus2.png</texturefocus>
+			<onleft>12</onleft>
+			<onright>11</onright>
+			<onup>14</onup>
+			<ondown>14</ondown>
+		</control>
+		<control type="button" id="11">
+			<description>No button</description>
+			<posx>430</posx>
+			<posy>399</posy>
+			<width>140</width>
+			<height>80</height>
+			<label>222</label>
+			<font>idua20</font>
+			<align>center</align>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>sp_TV-series-button-focus5.png</texturefocus>
+			<onleft>10</onleft>
+			<onright>13</onright>
+			<onup>14</onup>
+			<ondown>14</ondown>
+		</control>
+		<control type="image">
+			<description>Album Cover image</description>
+			<posx>319</posx>
+			<posy>130</posy>
+			<width>126</width>
+			<height>180</height>
+			<!-- <aspectratio aligny="bottom">keep</aspectratio> -->
+			<info>ListItem.Icon</info>
+		</control>
+		<!-- <control type="image">
+			<description>Album Cover image</description>
+			<posx>315</posx>
+			<posy>295</posy>
+			<width>180</width>
+			<height>180</height>
+			<texture flipy="true" diffuse="diffuse_mirror.png" />
+			<aspectratio aligny="bottom">keep</aspectratio>
+			<info>ListItem.Icon</info>
+		</control> -->
+		<control type="image">
+			<description>black_bg image</description>
+			<posx>-110</posx>
+			<posy>-110</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>blackblack2.png</texture>
+			<animation effect="fade" time="490">VisibleChange</animation>
+			<visible>Control.HasFocus(50)</visible>
+		</control>
+		<control type="image">
+			<description>Album Cover image zoom</description>
+			<posx>240</posx>
+			<posy>32</posy>
+			<width>236</width>
+			<height>342</height>
+			<info>ListItem.Icon</info>
+			<animation effect="fade" time="70">Visible</animation>
+			<visible>Control.HasFocus(50)</visible>
+		</control>
+		<control type="button" id ="50">
+			<description>Cover-CD image and zoom</description>
+			<posx>304</posx>
+			<posy>88</posy>
+			<width>212</width>
+			<height>307</height>
+			<label>-</label>
+			<font>-</font>
+			<!-- <aspectratio aligny="bottom">keep</aspectratio> -->
+			<texturenofocus>cover-CD.png</texturenofocus>
+			<texturefocus>cover-CD.png</texturefocus>
+			<animation effect="zoom" start="100" end="188" center="auto" time="80">focus</animation>
+			<animation effect="zoom" start="188" end="100" center="auto" time="80">unfocus</animation>
+			<onleft>14</onleft>
+			<onright>14</onright>
+			<ondown>10</ondown>
+			<onup>10</onup>
+		</control>
+		<!-- <control type="image">
+			<description>Cover-CD image</description>
+			<posx>282</posx>
+			<posy>88</posy>
+			<width>298</width>
+			<height>307</height>
+			<texture flipy="true" diffuse="diffuse_mirror.png" />
+			<aspectratio aligny="bottom">keep</aspectratio>
+			<texture>cover-CD.png</texture>
+		</control> -->
+		<control type="multiimage">
+			<description>equalizer </description>
+			<posx>468</posx>
+			<posy>-100</posy>
+			<width>120</width>
+			<height>44</height>
+			<imagepath>EQ</imagepath>
+			<timeperimage>50</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>1</fadetime>
+			<colordiffuse>95FFFFFFF</colordiffuse>
+			<animation effect="fade" time="100">VisibleChange</animation>
+			<visible>Player.HasAudio + !Player.Seeking + !Player.Paused + !Player.Forwarding + !Player.Rewinding</visible>
+		</control>
+		<!-- equlizer -->
+		<control>
+			<description>Uhr label</description>
+			<type>label</type>
+			<id>0</id>
+			<posx>504</posx>
+			<posy>-94</posy>
+			<label>time</label>
+			<info>System.Time</info>
+			<align>left</align>
+			<font>home_red</font>
+			<textcolor>ff444444</textcolor>
+			<visible>!Player.Playing</visible>
+		</control>
+		<control>
+			<description>PartyMode Enabled</description>
+			<type>button</type>
+			<id>1</id>
+			<posx>662</posx>
+			<posy>78</posy>
+			<width>32</width>
+			<height>32</height>
+			<label>-</label>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>partymodus.gif</texturenofocus>
+			<visible>MusicPartyMode.Enabled</visible>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,730 @@
+<window id="56">
+	<defaultcontrol always="true">11</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<coordinates>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>bg_settings.png</texture>
+		</control>
+		<include>custombg</include>
+		<control type="label" id="1">
+			<description>Uhr label</description>
+			<posx>320</posx>
+			<posy>532</posy>
+			<label>time</label>
+			<info>System.Time</info>
+			<align>left</align>
+			<font>home_red</font>
+			<textcolor>ff444444</textcolor>
+		</control>
+
+		<control type="label" id="1">
+			<description>description label skin setup</description>
+			<posx>355</posx>
+			<posy>19</posy>
+			<align>center</align>
+			<label>SKIN-SETUP</label>
+			<font>eth24</font>
+			<textcolor>ff33A3CC</textcolor>
+			<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+		<control type="group" id="9001">
+			<posx>-30</posx>
+			<posy>80</posy>
+
+			<control type="button" id="11">
+				<description>General Settings</description>
+				<posx>30</posx>
+				<posy>-84</posy>
+				<width>106</width>
+				<height>161</height>
+				<label>128</label>
+				<font>alwin22</font>
+				<textcolor>9000D9FF</textcolor>
+				<texturefocus>button-lioben-settings-fo.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<textoffsetx>30</textoffsetx>
+				<textoffsety>20</textoffsety>
+				<align>left</align>
+				<aligny>bottom</aligny>
+				<onfocus>Skin.SetString(SkinSettings,1)</onfocus>
+				<onleft>9002</onleft>
+				<onright>9002</onright>
+				<onup>14</onup>
+				<ondown>13</ondown>
+				<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+				<animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+			</control>
+			
+			<control type="button" id="12">
+				<description>Home Settings</description>
+				<posx>641</posx>
+				<posy>-84</posy>
+				<width>106</width>
+				<height>161</height>
+				<label>513</label>
+				<font>alwin22</font>
+				<textcolor>9000D9FF</textcolor>
+				<texturefocus>button-reoben-settings-fo.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<textoffsetx>30</textoffsetx>
+				<textoffsety>20</textoffsety>
+				<align>right</align>
+				<aligny>bottom</aligny>
+				<onfocus>Skin.SetString(SkinSettings,2)</onfocus>
+				<onleft>9003</onleft>
+				<onright>9003</onright>
+				<onup>13</onup>
+				<ondown>14</ondown>
+				<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+				<animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+			</control>
+			<control type="button" id="13">
+				<description>costum background Settings</description>
+				<posx>40</posx>
+				<posy>338</posy>
+				<width>106</width>
+				<height>161</height>
+				<label>Backgrounds</label>
+				<font>alwin22</font>
+				<textcolor>9000D9FF</textcolor>
+				<texturefocus>button-liunten-settings-fo.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<textoffsetx>20</textoffsetx>
+				<textoffsety>110</textoffsety>
+				<align>left</align>
+				<aligny>bottom</aligny>
+				<onfocus>Skin.SetString(SkinSettings,5)</onfocus>
+				<!-- <onclick>ActivateWindow(2778)</onclick> -->
+				<onleft>9006</onleft>
+				<onright>9006</onright>
+				<onup>11</onup>
+				<ondown>12</ondown>
+				<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+				<animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+			</control>
+			<control type="button" id="14">
+				<description>Custom Settings</description>
+				<posx>630</posx>
+				<posy>338</posy>
+				<width>106</width>
+				<height>161</height>
+				<label>31505</label>
+				<font>alwin22</font>
+				<textcolor>9000D9FF</textcolor>
+				<texturefocus>button-reunten-settings-fo.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<textoffsetx>20</textoffsetx>
+				<textoffsety>110</textoffsety>
+				<align>right</align>
+				<aligny>bottom</aligny>
+				<onfocus>Skin.SetString(SkinSettings,3)</onfocus>
+				<onleft>9005</onleft>
+				<onright>9005</onright>
+				<onup>12</onup>
+				<ondown>11</ondown>
+				<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+				<animation effect="fade" time="200" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+			</control>
+		</control>
+		<!-- Global Options -->
+		<control type="group">
+			<include>contentpanelslide</include>
+			<control type="grouplist" id="9002">
+				<posx>116</posx>
+				<posy>140</posy>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>9002</onup>
+				<ondown>9002</ondown>
+				<visible>Skin.String(SkinSettings,1)</visible>
+				<control type="radiobutton" id="120">
+					<description>enable animations</description>
+					<width>485</width>
+					<label>20079</label>
+					<font>idua18</font>
+					<onclick>Skin.ToggleSetting(animated)</onclick>
+					<selected>!Skin.HasSetting(animated)</selected>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="radiobutton" id="121">
+					<description>enable tween animations</description>
+					<width>485</width>
+					<label>21399</label>
+					<onclick>Skin.ToggleSetting(tween_animated)</onclick>
+					<selected>Skin.HasSetting(tween_animated)</selected>
+					<visible>false</visible>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<enable>!Skin.HasSetting(animated)</enable>
+				</control>
+				<control type="image" id="122">
+					<width>510</width>
+					<height>5</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="radiobutton" id="124">
+					<description>QWERTY Keyboard Button</description>
+					<width>485</width>
+					<label>QWERTY $LOCALIZE[15028]</label>
+					<font>idua18</font>
+					<onclick>Skin.ToggleSetting(QWERTYKeys)</onclick>
+					<selected>Skin.HasSetting(QWERTYKeys)</selected>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="radiobutton" id="125">
+					<description>make watched filtering a toggle in video library Button</description>
+					<width>485</width>
+					<label>21384</label>
+					<font>ArialSettings</font>
+					<onclick>Skin.ToggleSetting(watched_filtering_toggle)</onclick>
+					<selected>Skin.HasSetting(watched_filtering_toggle)</selected>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<scroll>true</scroll>
+				</control>
+				<control type="image" id="126">
+					<width>510</width>
+					<height>5</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="radiobutton" id="127">
+					<description>Enable Playlist Toggle</description>
+					<width>485</width>
+					<label>21398</label>
+					<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
+					<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="button" id="128">
+					<description>Startup Playlist Path</description>
+					<width>485</width>
+					<label>15311</label>
+					<font>idua18</font>
+					<label2>$INFO[Skin.String(Startup_Playlist_Path)]</label2>
+					<onclick>Skin.SetFile(Startup_Playlist_Path,.m3u,Q:\UserData\playlists\music\)</onclick>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
+				</control>
+				<control type="image" id="129">
+					<width>510</width>
+					<height>5</height>
+					<texture>separator.png</texture>
+				</control>
+			</control>
+			<!-- Homescreen Options -->
+			<control type="group" id="9003">
+				<posx>-76</posx>
+				<posy>22</posy>
+				<visible>Skin.String(SkinSettings,2)</visible>
+				<control type="radiobutton" id="31">
+					<description>enable video info</description>
+					<posx>190</posx>
+					<posy>137</posy>
+					<width>485</width>
+					<label>20176</label>
+					<font>idua18</font>
+					<onclick>Skin.ToggleSetting(homepageVideoinfo)</onclick>
+					<selected>!Skin.HasSetting(homepageVideoinfo)</selected>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+					<onup>37</onup>
+					<ondown>32</ondown>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="radiobutton" id="32">
+					<description>enable music info</description>
+					<posx>190</posx>
+					<posy>174</posy>
+					<width>485</width>
+					<font>idua18</font>
+					<label>20083</label>
+					<onclick>Skin.ToggleSetting(homepageMusicinfo)</onclick>
+					<selected>!Skin.HasSetting(homepageMusicinfo)</selected>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+					<onup>31</onup>
+					<ondown>33</ondown>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="radiobutton" id="33">
+					<description>enable weather info</description>
+					<posx>190</posx>
+					<posy>211</posy>
+					<width>485</width>
+					<font>idua18</font>
+					<label>20084</label>
+					<onclick>Skin.ToggleSetting(homepageWeatherinfo)</onclick>
+					<selected>!Skin.HasSetting(homepageWeatherinfo)</selected>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+					<onup>32</onup>
+					<ondown>34</ondown>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="radiobutton" id="34">
+					<description>enable System info</description>
+					<posx>190</posx>
+					<posy>248</posy>
+					<width>485</width>
+					<font>idua18</font>
+					<label>20085</label>
+					<onclick>Skin.ToggleSetting(homepageSysteminfo)</onclick>
+					<selected>!Skin.HasSetting(homepageSysteminfo)</selected>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+					<onup>33</onup>
+					<ondown>35</ondown>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<control type="radiobutton" id="35">
+					<description>enable homepage drive stats C: E: F:</description>
+					<posx>190</posx>
+					<posy>285</posy>
+					<width>485</width>
+					<font>ArialSettings</font>
+					<label>20086</label>
+					<selected>!Skin.HasSetting(homepageDriveinfo1)</selected>
+					<onclick>Skin.ToggleSetting(homepageDriveinfo1)</onclick>
+					<onclick>Skin.ResetSetting(homepageDriveinfo2)</onclick>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+					<onup>34</onup>
+					<ondown>36</ondown>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<enable>!Skin.HasSetting(homepageDriveinfo2)</enable>
+					<visible>!System.Platform.Linux</visible>
+				</control>
+				<control type="radiobutton" id="36">
+					<description>enable homepage drive stats E: F: G:</description>
+					<posx>190</posx>
+					<posy>322</posy>
+					<width>485</width>
+					<font>ArialSettings</font>
+					<label>20087</label>
+					<selected>Skin.HasSetting(homepageDriveinfo2)</selected>
+					<onclick>Skin.ToggleSetting(homepageDriveinfo2)</onclick>
+					<onclick>Skin.ResetSetting(homepageDriveinfo1)</onclick>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+					<onup>35</onup>
+					<ondown>37</ondown>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<enable>Skin.HasSetting(homepageDriveinfo1)</enable>
+					<visible>!System.Platform.Linux</visible>
+				</control>
+				<control type="radiobutton" id="37">
+					<description>enable RSS</description>
+					<posx>190</posx>
+					<posy>359</posy>
+					<width>485</width>
+					<label>20080</label>
+					<font>ArialSettings</font>
+					<onclick>Skin.ToggleSetting(NoAudioRSS)</onclick>
+					<selected>!Skin.HasSetting(NoAudioRSS)</selected>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+					<onup>36</onup>
+					<ondown>31</ondown>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+			</control>
+			<!-- Custom Options -->
+			<control type="grouplist" id="9005">
+				<posx>120</posx>
+				<posy>190</posy>
+				<width>500</width>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>9005</onup>
+				<ondown>9005</ondown>
+				<visible>Skin.String(SkinSettings,3)</visible>
+				<control type="radiobutton" id="80">
+					<description>enable Autoscroll</description>
+					<width>485</width>
+					<label>20189</label>
+					<onclick>Skin.ToggleSetting(AutoScroll)</onclick>
+					<selected>Skin.HasSetting(AutoScroll)</selected>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<font>idua18</font>
+				</control>
+				<control type="radiobutton" id="81">
+					<description>enable Fanart</description>
+					<width>485</width>
+					<label>20414</label>
+					<onclick>Skin.ToggleSetting(ShowFanart)</onclick>
+					<selected>Skin.HasSetting(ShowFanart)</selected>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<font>idua18</font>
+				</control>
+				<!-- <control type="radiobutton" id="43">
+					<description>Enable Scroll Bars</description>
+					<width>485</width>
+					<height>30</height>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<selected>Skin.HasSetting(ScrollBars)</selected>
+					<onclick>Skin.ToggleSetting(ScrollBars)</onclick>
+					<label>enable Scroll Bar</label>
+					<font>WindowTextFont</font>
+					<textcolor>WindowText</textcolor>
+					<focusedcolor>WindowFocusText</focusedcolor>
+					<font>idua18</font>
+				</control> -->
+				<control type="radiobutton" id="43">
+					<description>Enable Scroll Bars</description>
+					<width>485</width>
+					<label>Enable Scroll Bar</label>
+					<selected>Skin.HasSetting(ScrollBars)</selected>
+					<onclick>Skin.ToggleSetting(ScrollBars)</onclick>				
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<font>idua18</font>
+				</control>
+				<control type="button" id="121">
+					<description>reset skin</description>
+					<width>485</width>
+					<label>Reset settings</label>
+					<onclick>XBMC.ActivateWindow(8155)</onclick>
+					<!-- <onclick>Skin.ResetSettings</onclick>
+					<onclick>XBMC.RestartApp</onclick> -->					
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<font>idua18</font>
+				</control>
+
+			</control>
+			<control type="group" id="9006">
+				<posx>-40</posx>
+				<posy>-220</posy>
+				<width>485</width>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>9006</onup>
+				<ondown>9006</ondown>
+				<textcolor2>60ffffff</textcolor2>
+				<font2>ff888888</font2>
+				<selectedcolor2>60ffffff</selectedcolor2>
+				<visible>Skin.String(SkinSettings,5)</visible>
+				<!--custom  Video Backgrund-->
+				<control type="image">
+					<posx>155</posx>
+					<posy>381</posy>
+					<width>510</width>
+					<height>4</height>
+					<include>contentpanelslide</include>
+					<texture>separator.png</texture>
+				</control>
+				<control type="radiobutton" id="1020">
+					<description>Enable Video Background Toggle</description>
+					<posx>180</posx>
+					<posy>307</posy>
+					<width>395</width>
+					<label>31500</label>
+					<font>idua18</font>
+					<onclick>Skin.ToggleSetting(VideoBackground)</onclick>
+					<selected>Skin.HasSetting(VideoBackground)</selected>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onup>1061</onup>
+					<ondown>1021</ondown>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+				</control>
+				<control type="button" id="1021">
+					<posx>252</posx>
+					<posy>341</posy>
+					<description>Video_Background Path</description>
+					<width>395</width>
+					<label>15311</label>
+					<font>idua18</font>
+					<textcolor>FF888888</textcolor>
+					<onclick>Skin.SetImage(VideoBackground)</onclick>
+					<textoffsetx>-65</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<enable>Skin.HasSetting(VideoBackground)</enable>
+					<onup>1020</onup>
+					<ondown>1030</ondown>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+				</control>
+				<control type="label">
+					<description>Video Background label</description>
+					<posx>260</posx>
+					<posy>357</posy>
+					<font>idua18</font>
+					<width>376</width>
+					<align>left</align>
+					<textcolor>9000D9FF</textcolor>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<info>Skin.String(VideoBackground)</info>
+					<enable>Skin.HasSetting(VideoBackground)</enable>
+				</control>
+				<!-- custom  MUSIK Backgrund -->
+				<control type="image">
+					<posx>155</posx>
+					<posy>466</posy>
+					<width>510</width>
+					<height>4</height>
+					<include>contentpanelslide</include>
+					<texture>separator.png</texture>
+				</control>
+				<control type="radiobutton" id="1030">
+					<description>Enable Music Background Toggle</description>
+					<posx>180</posx>
+					<posy>392</posy>
+					<width>395</width>
+					<label>31501</label>
+					<font>idua18</font>
+					<onclick>Skin.ToggleSetting(MusicBackground)</onclick>
+					<selected>Skin.HasSetting(MusicBackground)</selected>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onup>1021</onup>
+					<ondown>1031</ondown>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+				</control>
+				<control type="button" id="1031">
+					<posx>252</posx>
+					<posy>426</posy>
+					<description>Music_Background Path</description>
+					<width>425</width>
+					<label>15311</label>
+					<font>idua18</font>
+					<textcolor>FF888888</textcolor>
+					<onclick>Skin.SetImage(MusicBackground)</onclick>
+					<textoffsetx>-65</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<enable>Skin.HasSetting(MusicBackground)</enable>
+					<onup>1030</onup>
+					<ondown>1040</ondown>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+				</control>
+				<control type="label">
+					<description>Music Background label</description>
+					<posx>260</posx>
+					<posy>442</posy>
+					<font>idua18</font>
+					<width>405</width>
+					<align>left</align>
+					<textcolor>9000D9FF</textcolor>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<info>Skin.String(MusicBackground)</info>
+					<enable>Skin.HasSetting(MusicBackground)</enable>
+				</control>
+				<!--custom  Picture Backgrund-->
+				<control type="image">
+					<posx>155</posx>
+					<posy>546</posy>
+					<width>510</width>
+					<height>4</height>
+					<include>contentpanelslide</include>
+					<texture>separator.png</texture>
+				</control>
+				<control type="radiobutton" id="1040">
+					<description>Enable picture Background Toggle</description>
+					<posx>180</posx>
+					<posy>474</posy>
+					<width>395</width>
+					<label>31502</label>
+					<font>idua18</font>
+					<onclick>Skin.ToggleSetting(PictureBackground)</onclick>
+					<selected>Skin.HasSetting(PictureBackground)</selected>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onup>1031</onup>
+					<ondown>1041</ondown>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+				</control>
+				<control type="button" id="1041">
+					<posx>252</posx>
+					<posy>508</posy>
+					<description>picture_Background Path</description>
+					<width>432</width>
+					<label>15311</label>
+					<font>idua18</font>
+					<textcolor>FF888888</textcolor>
+					<onclick>Skin.SetImage(PictureBackground)</onclick>
+					<textoffsetx>-65</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<enable>Skin.HasSetting(PictureBackground)</enable>
+					<onup>1040</onup>
+					<ondown>1050</ondown>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+				</control>
+				<control type="label">
+					<description>picture Background label</description>
+					<posx>260</posx>
+					<posy>524</posy>
+					<font>idua18</font>
+					<width>413</width>
+					<align>left</align>
+					<textcolor>9000D9FF</textcolor>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<info>Skin.String(PictureBackground)</info>
+					<enable>Skin.HasSetting(PictureBackground)</enable>
+				</control>
+				<!--custom  Programs Backgrund-->
+				<control type="image">
+					<posx>155</posx>
+					<posy>626</posy>
+					<width>510</width>
+					<height>4</height>
+					<include>contentpanelslide</include>
+					<texture>separator.png</texture>
+				</control>
+				<control type="radiobutton" id="1050">
+					<description>Enable Programs Background Toggle</description>
+					<posx>180</posx>
+					<posy>554</posy>
+					<width>395</width>
+					<label>31503</label>
+					<font>idua18</font>
+					<onclick>Skin.ToggleSetting(ProgramsBackground)</onclick>
+					<selected>Skin.HasSetting(ProgramsBackground)</selected>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onup>1041</onup>
+					<ondown>1051</ondown>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+				</control>
+				<control type="button" id="1051">
+					<posx>252</posx>
+					<posy>588</posy>
+					<description>programs_Background Path</description>
+					<width>411</width>
+					<label>15311</label>
+					<font>idua18</font>
+					<textcolor>FF888888</textcolor>
+					<onclick>Skin.SetImage(ProgramsBackground)</onclick>
+					<textoffsetx>-65</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<enable>Skin.HasSetting(ProgramsBackground)</enable>
+					<onup>1050</onup>
+					<ondown>1060</ondown>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+				</control>
+				<control type="label">
+					<description>programs Background label</description>
+					<posx>260</posx>
+					<posy>604</posy>
+					<font>idua18</font>
+					<width>392</width>
+					<align>left</align>
+					<textcolor>9000D9FF</textcolor>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<info>Skin.String(ProgramsBackground)</info>
+					<enable>Skin.HasSetting(ProgramsBackground)</enable>
+				</control>
+				<!--custom  Picture Backgrund-->				
+				<control type="radiobutton" id="1060">
+					<description>Enable Custom Background Toggle</description>
+					<posx>180</posx>
+					<posy>634</posy>
+					<width>395</width>
+					<label>31504</label>
+					<font>idua18</font>
+					<onclick>Skin.ToggleSetting(Use_Custom_Background)</onclick>
+					<selected>Skin.HasSetting(Use_Custom_Background)</selected>
+					<textoffsetx>7</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onup>1051</onup>
+					<ondown>1061</ondown>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+				</control>
+				<control type="button" id="1061">
+					<posx>252</posx>
+					<posy>668</posy>
+					<description>custom_Background Path</description>
+					<width>355</width>
+					<label>15311</label>
+					<font>idua18</font>
+					<textcolor>FF888888</textcolor>
+					<onclick>Skin.SetImage(Custom_Background)</onclick>
+					<textoffsetx>-65</textoffsetx>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<enable>Skin.HasSetting(Use_Custom_Background)</enable>
+					<onup>1060</onup>
+					<ondown>1020</ondown>
+					<onleft>9001</onleft>
+					<onright>9001</onright>
+				</control>
+				<control type="label">
+					<description>Custom Background label</description>
+					<posx>260</posx>
+					<posy>684</posy>
+					<font>idua18</font>
+					<width>336</width>
+					<align>left</align>
+					<textcolor>9000D9FF</textcolor>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<info>Skin.String(Custom_Background)</info>
+					<enable>Skin.HasSetting(Use_Custom_Background)</enable>
+				</control>
+			</control>
+		</control>
+
+		<include>windowswitchtransition</include>
+	</controls>
+</window>

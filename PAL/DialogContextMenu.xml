@@ -1,0 +1,55 @@
+<window>
+	<id>106</id>
+	<defaultcontrol>1000</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control>
+			<description>background top image</description>
+			<type>image</type>
+			<id>997</id>
+			<posx>0</posx>
+			<posy>-25</posy>
+			<width>340</width>
+			<height>26</height>
+			<texture>dialog-context-top_fcb.png</texture>
+		</control>
+		<control>
+			<description>background image</description>
+			<type>image</type>
+			<id>999</id>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>340</width>
+			<texture>dialog-context-middle_fcb.png</texture>
+		</control>
+		<control>
+			<description>background bottom image</description>
+			<type>image</type>
+			<id>998</id>
+			<posx>0</posx>
+			<width>340</width>
+			<height>25</height>
+			<texture>dialog-context-bottom_fcb.png</texture>
+		</control>
+		<control>
+			<description>button template</description>
+			<type>button</type>
+			<id>1000</id>
+			<posx>22</posx>
+			<posy>15</posy>
+			<width>305</width>
+			<height>32</height>
+			<font>idua20</font>
+			<align>center</align>
+			<aligny>top</aligny>
+			<textoffsety>4</textoffsety>
+			<texturenofocus>dialog_contex_butten_nofocus.png</texturenofocus>
+			<texturefocus>dialog_contex_butten_focus.png</texturefocus>
+		</control>
+	</controls>
+</window>

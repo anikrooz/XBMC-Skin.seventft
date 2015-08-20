@@ -1,0 +1,256 @@
+<window>
+	<id>104</id>
+	<defaultcontrol>1</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<!-- Normal GUI -->
+		<!-- <control>
+			<description>Popup Volume Dialog Background</description>
+			<type>image</type>
+			<posx>0</posx>
+			<posy>2</posy>
+			<width>350</width>
+			<height>60</height>
+			<texture>SlideBar.png</texture>
+		</control> -->
+		<control>
+			<description>Progressbar Music</description>
+			<type>progress</type>
+			<posx>142</posx>
+			<posy>64</posy>
+			<width>436</width>
+			<height>9</height>
+			<info>Player.Volume</info>
+			<texturebg>progress-info-music-bg.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>progress_mid-info-music.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>progress-info-music-mid.png</overlaytexture>
+			<!-- <overlaytexture>progress_over.png</overlaytexture> -->
+			<!-- <visible>Window.IsActive(501)</visible> -->
+			<visible>Window.IsActive(500) | Window.IsActive(501)| Window.IsActive(502)| Window.IsActive(2333)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Progressbar Video</description>
+			<type>progress</type>
+			<posx>142</posx>
+			<posy>64</posy>
+			<width>436</width>
+			<height>9</height>
+			<info>Player.Volume</info>
+			<texturebg>progress-info-music-bg.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>progress_mid-info-video.png
+			</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>progress-info-music-mid.png</overlaytexture>
+			<visible>Window.IsActive(24) | Window.IsActive(28)| Window.IsActive(25)| Window.IsActive(2555)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Progressbar Picture</description>
+			<type>progress</type>
+			<posx>142</posx>
+			<posy>64</posy>
+			<width>436</width>
+			<height>9</height>
+			<info>Player.Volume</info>
+			<texturebg>progress-info-music-bg.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>progress_mid-info-pictures.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>progress-info-music-mid.png</overlaytexture>
+			<visible>Window.IsActive(2)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Progressbar Programms</description>
+			<type>progress</type>
+			<posx>142</posx>
+			<posy>64</posy>
+			<width>436</width>
+			<height>9</height>
+			<info>Player.Volume</info>
+			<texturebg>progress-info-music-bg.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>progress_mid-info-programme.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>progress-info-music-mid.png</overlaytexture>
+			<visible>Window.IsActive(1)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Progressbar Scripts</description>
+			<type>progress</type>
+			<posx>142</posx>
+			<posy>64</posy>
+			<width>436</width>
+			<height>9</height>
+			<info>Player.Volume</info>
+			<texturebg>progress-info-music-bg.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>progress_mid-info-scripts.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>progress-info-music-mid.png</overlaytexture>
+			<visible>Window.IsActive(20)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Progressbar weather</description>
+			<type>progress</type>
+			<posx>125</posx>
+			<posy>56</posy>
+			<width>472</width>
+			<height>9</height>
+			<info>Player.Volume</info>
+			<texturebg>progress-info-music-bg.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>progress_mid-info-wetter.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>progress-info-music-mid.png</overlaytexture>
+			<visible>Window.IsActive(2600)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control> 
+		<control>
+			<description>Progressbar videoInfo</description>
+			<type>progress</type>
+			<posx>124</posx>
+			<posy>57</posy>
+			<width>472</width>
+			<height>9</height>
+			<info>Player.Volume</info>
+			<texturebg>progress-info-music-bg.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>progress_mid-info-wetter.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>progress-info-music-mid.png</overlaytexture>
+			<visible>Window.IsActive(2003)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Progressbar Settings</description>
+			<type>progress</type>
+			<posx>142</posx>
+			<posy>64</posy>
+			<width>436</width>
+			<height>9</height>
+			<info>Player.Volume</info>
+			<texturebg>progress-info-music-bg.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>progress_mid-info-settings.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>progress-info-music-mid.png</overlaytexture>
+			<visible>Window.IsActive(56) | Window.IsActive(4)| Window.IsActive(12)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Progressbar Profile</description>
+			<type>progress</type>
+			<posx>142</posx>
+			<posy>64</posy>
+			<width>436</width>
+			<height>9</height>
+			<info>Player.Volume</info>
+			<texturebg>progress-info-music-bg.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>progress_mid-info-wetter.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>progress-info-music-mid.png</overlaytexture>
+			<visible>Window.IsActive(34) | Window.IsActive(130)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+		<control>
+			<description>Progressbar home</description>
+			<type>progress</type>
+			<posx>142</posx>
+			<posy>64</posy>
+			<width>436</width>
+			<height>9</height>
+			<info>Player.Volume</info>
+			<texturebg>progress-info-music-bg.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>progress_mid-idle-home.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>progress-info-music-mid.png</overlaytexture>
+			<visible>Window.IsActive(0)</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control>
+
+
+		<control>
+			<description>Popup Volume Dialog Background</description>
+			<type>image</type>
+			<posx>307</posx>
+			<posy>114</posy>
+			<width>316</width>
+			<height>176</height>
+			<texture>volume_bagground_leiste_oben.png</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="zoom" start="1" center="360,280" time="300" acceleration="-1" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="300" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+		</control>
+		<control>
+			<description>Volume dB Label</description>
+			<type>label</type>
+			<posx>544</posx>
+			<posy>160</posy>
+			<width>370</width>
+			<height>130</height>
+			<font>idua40aspect</font>
+			<textcolor>ffece9e9</textcolor>
+			<info>Player.Volume</info>
+			<align>right</align>
+			<animation effect="zoom" start="1" center="360,280" time="300" acceleration="-1" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="300" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+		</control>
+		<control>
+			<description>Progressbar der Rest</description>
+			<type>progress</type>
+			<posx>344</posx>
+			<posy>236</posy>
+			<width>232</width>
+			<height>7</height>
+			<info>Player.Volume</info>
+			<texturebg>progress-info-music-bg.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>progress-info-midtexture_default_volumebar-mid.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>prog-overlaytexture_default_volumebar-mid.png</overlaytexture>
+			<visible>!Window.IsActive(0) + !Window.IsActive(500) + !Window.IsActive(501) + !Window.IsActive(502) + !Window.IsActive(2333) + !Window.IsActive(34) + !Window.IsActive(130) + !Window.IsActive(56) + !Window.IsActive(4) + !Window.IsActive(12) + !Window.IsActive(2003) + !Window.IsActive(2600) + !Window.IsActive(20) + !Window.IsActive(1) + !Window.IsActive(2) + !Window.IsActive(24) + !Window.IsActive(28) + !Window.IsActive(25) + !Window.IsActive(2555)</visible>
+
+
+
+
+
+			<animation effect="zoom" start="1" center="360,280" time="300" acceleration="-1" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<animation effect="zoom" start="100" end="0" center="360,288" reverted="false" acceleration="1" time="300" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+		</control>
+		<!-- <control>
+			<description>Volume Slider</description>
+			<type>slider</type>
+			<posx>120</posx>
+			<posy>57</posy>
+			<width>200</width>
+			<height>9</height>
+			<texturesliderbar>seekslider.png</texturesliderbar>
+			<textureslidernib>-</textureslidernib>
+			<textureslidernibFocus>slider_nibFO.png</textureslidernibFocus>
+			<info>Player.Volume</info>
+		</control> -->
+	</controls>
+</window>

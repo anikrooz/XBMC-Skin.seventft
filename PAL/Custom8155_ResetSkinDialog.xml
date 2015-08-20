@@ -1,0 +1,169 @@
+<window type="dialog" id="8155">
+	<defaultcontrol>8</defaultcontrol>
+	<previouswindow>56</previouswindow>
+	<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+	<animation effect="slide" time="300" start="0,0" end="760,0" acceleration="1.1" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	<controls>
+		<control type="group" id="666">
+			<posx>270</posx>
+			<posy>60</posy>
+			<animation effect="slide" time="400" start="-360,0" end="-40,0" acceleration="-3.8">visible</animation>
+			<animation effect="slide" time="380" start="600,0" end="-40,0" acceleration="1.1">visibleChange</animation>
+
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posx>-30</posx>
+				<posy>28</posy>
+				<width>234</width>
+				<height>406</height>
+				<texture>subpanel_playlists.png</texture>				
+			</control>
+			<control type="image">
+				<description>warning Icon</description>
+				<posx>63</posx>
+				<posy>48</posy>
+				<width>40</width>
+				<height>40</height>
+				<aspectratio>keep</aspectratio>
+				<texture>stop.png</texture>
+				<animation effect="fade" delay="350" time="200">WindowOpen</animation>
+				<animation effect="fade" time="200">WindowClose</animation>
+			</control>
+			<control type="image">
+				<posx>-20</posx>
+				<posy>102</posy>
+				<width>214</width>
+				<height>5</height>
+				<texture>separator.png</texture>
+				<animation effect="fade" delay="350" time="200">WindowOpen</animation>
+				<animation effect="fade" time="200">WindowClose</animation>
+			</control>
+			<control type="textbox" id="4">
+				<description>dialog line</description>
+				<posx>-10</posx>
+				<posy>110</posy>
+				<width>200</width>
+				<height>300</height>
+				<label>31204</label>
+				<font>idua18</font>
+				<pagecontrol>-</pagecontrol>			
+				<animation effect="fade" delay="350" time="200">WindowOpen</animation>
+				<animation effect="fade" time="200">WindowClose</animation>
+			</control>
+			<!-- <control type="image">
+				<posx>-20</posx>
+				<posy>262</posy>
+				<width>214</width>
+				<height>5</height>
+				<texture>separator.png</texture>
+				<animation effect="fade" delay="350" time="200">WindowOpen</animation>
+				<animation effect="fade" time="200">WindowClose</animation>
+			</control> -->
+			<control>
+				<description>Yes Button</description>
+				<visible>yes</visible>
+				<type>button</type>
+				<id>11</id>
+				<label>-</label>
+				<posx>-7</posx>
+				<posy>360</posy>
+				<width>190</width>
+				<height>62</height>
+				<font>alwin22</font>
+				<textcolor>ffF73300</textcolor>
+				<onleft>11</onleft>
+				<onright>11</onright>
+				<onup>8</onup>
+				<ondown>8</ondown>
+				<alignx>center</alignx>
+				<aligny>top</aligny>
+				<textoffsetx>33</textoffsetx>
+				<textoffsety>14</textoffsety>
+				<texturefocus>sp_TV-series-button-focus4.png</texturefocus>
+				<texturenofocus>sp_TV-series-button-nofocus2.png</texturenofocus>
+				<onclick>Skin.ResetSettings</onclick>
+				<onclick>XBMC.Dialog.Close(8155)</onclick>
+				<animation effect="fade" delay="350" time="200">WindowOpen</animation>
+				<animation effect="fade" time="200">WindowClose</animation>
+			</control>
+			<control type="label">
+				<description>yes</description>
+				<label>12019</label>
+				<posx>-30</posx>
+				<posy>374</posy>
+				<width>234</width>
+				<font>alwin22</font>
+				<align>center</align>
+				<textcolor>ff696969</textcolor>
+				<animation effect="fade" delay="350" time="200">WindowOpen</animation>
+				<animation effect="fade" time="200">WindowClose</animation>
+			</control>
+			<control type="label">
+				<description>yes</description>
+				<label>12019</label>
+				<posx>-30</posx>
+				<posy>374</posy>
+				<width>234</width>
+				<font>alwin22</font>
+				<align>center</align>
+				<textcolor>ffCD3278</textcolor>
+				<visible>Control.HasFocus(11)</visible>
+				<animation effect="fade" delay="350" time="200">WindowOpen</animation>
+				<animation effect="fade" time="200">WindowClose</animation>
+			</control>
+			<control>
+				<description>no button</description>
+				<visible>yes</visible>
+				<type>button</type>
+				<id>8</id>
+				<label>-</label>
+				<posx>-7</posx>
+				<posy>298</posy>
+				<width>190</width>
+				<height>66</height>
+				<font>alwin22</font>
+				<textcolor>ffF73300</textcolor>
+				<onleft>8</onleft>
+				<onright>8</onright>
+				<onup>11</onup>
+				<ondown>11</ondown>
+				<alignx>center</alignx>
+				<aligny>top</aligny>
+				<textoffsetx>30</textoffsetx>
+				<textoffsety>14</textoffsety>
+				<texturefocus>sp_TV-series-button-focus2.png</texturefocus>
+				<texturenofocus>sp_TV-series-button-nofocus2.png</texturenofocus>
+				<onclick>XBMC.Dialog.Close(8155)</onclick>
+				<animation effect="fade" delay="350" time="200">WindowOpen</animation>
+				<animation effect="fade" time="200">WindowClose</animation>
+			</control>
+			<control type="label">
+				<description>no</description>
+				<label>12018</label>
+				<posx>-30</posx>
+				<posy>312</posy>
+				<width>234</width>
+				<font>alwin22</font>
+				<align>center</align>
+				<textcolor>ff696969</textcolor>
+				<animation effect="fade" delay="350" time="200">WindowOpen</animation>
+				<animation effect="fade" time="200">WindowClose</animation>
+			</control>
+			<control type="label">
+				<description>no</description>
+				<label>12018</label>
+				<posx>-30</posx>
+				<posy>312</posy>
+				<width>234</width>
+				<font>alwin22</font>
+				<align>center</align>
+				<textcolor>987cfc00</textcolor>
+				<visible>Control.HasFocus(8)</visible>
+				<animation effect="fade" delay="350" time="200">WindowOpen</animation>
+				<animation effect="fade" time="200">WindowClose</animation>
+			</control>
+		</control>
+
+	</controls>
+</window>

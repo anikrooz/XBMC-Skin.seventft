@@ -1,0 +1,18 @@
+<skin>
+  <defaultresolution>pal</defaultresolution>
+  <defaultresolutionwide>pal16x9</defaultresolutionwide>
+  <version>2.1</version>
+  
+  <!-- amount to zoom skin to remove overscan compensation -->
+  <zoom>1.0</zoom>
+  
+  <credits>
+    <skinname>7 TFT___10.Mai.2008</skinname>
+    <skinversion>beta_6.60</skinversion>
+    <name>by .:djtoll:.</name>
+	<name>Testing: by Djtoll</name>
+    <name>7TFT is an special XBMC skin for mini TFT´s  (Car, xbox additive LCD´s -  or portable screens)</name>
+	<name>Thanks to the devs of XBMC</name>
+    <name>...and  thanks to everybody who loves my skin!</name>    
+  </credits>
+</skin>

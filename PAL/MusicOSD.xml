@@ -1,0 +1,259 @@
+﻿<window id="120">
+	<defaultcontrol>213</defaultcontrol>
+
+	<animation effect="zoom" start="1" center="360,280" time="200" acceleration="-1" reversible="false"             condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+	<animation effect="fade" time="500" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	<controls>
+
+
+
+
+		<control type="image" id="1">
+			<description>Panel</description>
+			<posx>-2</posx>
+			<posy>60</posy>
+			<height>256</height>
+			<width>724</width>
+			<texture>osd_music_FF_bg.png</texture>
+			<visible>yes</visible>
+		</control>
+
+		<control type="togglebutton" id="211">
+			<description>Rewind</description>
+			<posx>-2</posx>
+			<posy>60</posy>
+			<height>256</height>
+			<width>724</width>
+			<texturefocus>osd_music_RR_fo_onclik.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<usealttexture>Player.Rewinding</usealttexture>
+			<alttexturefocus>osd_music_RR_fo_onclik.png</alttexturefocus>
+			<alttexturenofocus>osd_music_RR_alNF.png</alttexturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>210</onleft>
+			<onright>213</onright>
+			<onup>208</onup>
+			<ondown>444</ondown>
+			<include>OSD button music</include>
+			<onclick>XBMC.PlayerControl(Rewind)</onclick>
+		</control>
+
+		<control type="togglebutton" id="214">
+			<description>Fast Forward</description>
+			<posx>-2</posx>
+			<posy>60</posy>
+			<height>256</height>
+			<width>724</width>
+			<texturefocus>osd_music_FF_fo_onclik.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<usealttexture>Player.Forwarding</usealttexture>
+			<alttexturefocus>osd_music_FF_fo_onclik.png</alttexturefocus>
+			<alttexturenofocus>osd_music_FF_alNF.png</alttexturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>213</onleft>
+			<onright>215</onright>
+			<onup>208</onup>
+			<ondown>444</ondown>
+			<onclick>XBMC.PlayerControl(Forward)</onclick>
+			<include>OSD button music to right</include>
+		</control>
+
+		<control type="togglebutton" id="213">
+			<description>Play</description>
+			<posx>-2</posx>
+			<posy>60</posy>
+			<height>256</height>
+			<width>724</width>
+			<texturefocus>osd_music_pause_fo.png</texturefocus>
+			<texturenofocus>osd_music_pause_nf.png</texturenofocus>
+			<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+			<alttexturefocus>osd_music_play_fo.png</alttexturefocus>
+			<alttexturenofocus>osd_music_play_nf.png</alttexturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>211</onleft>
+			<onright>214</onright>
+			<onup>208</onup>
+			<ondown>444</ondown>
+			<include>OSD button music</include>
+			<onclick>XBMC.PlayerControl(Play)</onclick>
+		</control>
+
+		<control type="button" id="210">
+			<description>Skip Bwd</description>
+			<posx>-2</posx>
+			<posy>60</posy>
+			<height>256</height>
+			<width>724</width>
+			<texturefocus>osd_music_RRskip_fo_onclik.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>500</onleft>
+			<onright>211</onright>
+			<onup>208</onup>
+			<ondown>444</ondown>
+			<include>OSD button music</include>
+			<onclick>XBMC.PlayerControl(Previous)</onclick>
+		</control>
+
+		<control type="button" id="215">
+			<description>Skip Fwd</description>
+			<posx>-2</posx>
+			<posy>60</posy>
+			<height>256</height>
+			<width>724</width>
+			<texturefocus>osd_music_FFskip_fo_onclik.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>214</onleft>
+			<onright>220</onright>
+			<onup>208</onup>
+			<ondown>444</ondown>
+			<include>OSD button music to right</include>
+			<onclick>XBMC.PlayerControl(Next)</onclick>
+		</control>
+
+
+
+		<control type="button" id="499">
+			<description>playlist Button</description>
+			<posx>-2</posx>
+			<posy>60</posy>
+			<height>256</height>
+			<width>724</width>
+			<texturefocus>osd_music_playlist_fo_onclik.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>XBMC.ActivateWindow(500)</onclick>
+			<label>-</label>
+			<font>-</font>
+			<onleft>219</onleft>
+			<onright>500</onright>
+			<onup>208</onup>
+			<ondown>444</ondown>
+		<include>OSD button music</include>
+			
+		</control>
+		<control type="button" id="500">
+			<description>Popup Vis Select Button</description>
+			<posx>-2</posx>
+			<posy>60</posy>
+			<height>256</height>
+			<width>724</width>
+			<texturefocus>osd_music_VIZselect_fo_onclik.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>499</onleft>
+			<onright>210</onright>
+			<onup>208</onup>
+			<ondown>444</ondown>
+			<include>OSD button music</include>
+		</control>
+		<control type="button" id="220">
+			<description>Popup Vis Preset List</description>
+			<posx>-2</posx>
+			<posy>60</posy>
+			<height>256</height>
+			<width>724</width>
+			<texturefocus>osd_music_presets_fo_onclik.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>215</onleft>
+			<onright>219</onright>
+			<onup>208</onup>
+			<ondown>444</ondown>
+			<include>OSD button music to right</include>
+			<onclick>XBMC.ActivateWindow(122)</onclick>
+		</control>
+		<control type="button" id="219">
+			<description>Popup Vis Settings</description>
+			<posx>-2</posx>
+			<posy>60</posy>
+			<height>256</height>
+			<width>724</width>
+			<texturefocus>osd_music_setup_fo_onclik.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>220</onleft>
+			<onright>499</onright>
+			<onup>208</onup>
+			<ondown>444</ondown>
+			<include>OSD button music to right</include>
+			<onclick>XBMC.ActivateWindow(121)</onclick>
+		</control>
+
+		<control>
+			<description>Lyrics button</description>		
+			<visible>yes</visible>
+			<type>button</type>					
+			<onclick>q:\skin\7TFT\extras\XBMCLyrics\default.py</onclick>
+			<id>444</id>					
+			<label>-</label>
+			<posx>240</posx>
+			<posy>270</posy>
+			<height>126</height>
+			<width>75</width>
+			<font>-</font>
+			<texturefocus>osd_music_Lyrics_FO.png</texturefocus>
+			<texturenofocus>osd_music_Lyrics_NF .png</texturenofocus>
+			<onclick>dialog.close(MusicOSD,true)</onclick>
+			<onleft>213</onleft>
+			<onright>213</onright>
+			<onup>213</onup>
+			<ondown>208</ondown>
+			<animation effect="zoom" start="100" end="140" center="auto" time="80">focus</animation>
+			<animation effect="zoom" start="140" end="100" center="auto" time="80">unfocus</animation>
+		</control>
+
+
+		<control type="togglebutton" id="208">
+			<description>REC button</description>
+			<posx>240</posx>
+			<posy>54</posy>
+			<height>126</height>
+			<width>75</width>
+			<texturefocus>osd_music_REC_FO.png</texturefocus>
+			<texturenofocus>osd_music_REC_NF.png</texturenofocus>
+			<usealttexture>Player.Record</usealttexture>
+			<alttexturefocus>osd_music_REC_RECORDING.png</alttexturefocus>
+			<alttexturenofocus>osd_music_REC_RECORDING_NF.png</alttexturenofocus>
+			<label>-</label>
+			<font>-</font>
+			<onleft>213</onleft>
+			<onright>213</onright>
+			<onup>444</onup>
+			<ondown>213</ondown>
+			<visible>Player.CanRecord</visible>
+			<animation effect="zoom" start="1" center="360,280" time="400" acceleration="-0.8" reversible="false" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+			<include>OSD button music</include>
+			<onclick>XBMC.PlayerControl(Record)</onclick>
+		</control>
+
+
+
+
+		<control type="selectbutton" id="503">
+			<description>Visualisation Select Button</description>
+			<posx>26</posx>
+			<posy>16</posy>
+			<width>290</width>
+			<height>84</height>
+			<label>-</label>
+			<font>alwin24</font>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<texturebg>voulume-panel-bg.png</texturebg>
+			<onleft>500</onleft>
+			<onright>500</onright>
+			<onup>500</onup>
+			<ondown>500</ondown>
+		</control>
+	</controls>
+</window>
+
